@@ -1,0 +1,192 @@
+{
+  "speed_profile": {
+    "qualification": "simulation_only",
+    "assumed_torque_nm": 0.3,
+    "directions": {
+      "forward": {
+        "period_s": 2.0,
+        "stride_m": 0.02,
+        "planner": "abd",
+        "source_case": "forward_period_2",
+        "measured_speed_mm_s": 18.797759093951612,
+        "baseline_speed_mm_s": 9.3587914082834,
+        "speedup": 2.0085669477913406
+      },
+      "backward": {
+        "period_s": 2.0,
+        "stride_m": 0.02,
+        "planner": "abd",
+        "source_case": "backward_period_2",
+        "measured_speed_mm_s": 19.002092848548255,
+        "baseline_speed_mm_s": 9.894030345038088,
+        "speedup": 1.9205614078268833
+      },
+      "left": {
+        "period_s": 2.0,
+        "stride_m": 0.024,
+        "planner": "cartesian",
+        "source_case": "left_period_2_stride_24mm",
+        "measured_speed_mm_s": 21.959281965392126,
+        "baseline_speed_mm_s": 6.545925520225592,
+        "speedup": 3.354648918253403
+      },
+      "right": {
+        "period_s": 2.0,
+        "stride_m": 0.024,
+        "planner": "cartesian",
+        "source_case": "right_period_2_stride_24mm",
+        "measured_speed_mm_s": 21.293858805421348,
+        "baseline_speed_mm_s": 8.207610563422854,
+        "speedup": 2.5944041375838722
+      }
+    },
+    "selection": "fastest eligible measured post-ramp speed; no increase of torque or joint rate limits"
+  },
+  "screen_pass": true,
+  "stop_reason": "duration_completed",
+  "simulation_seconds": 43.00000000000659,
+  "segments": [
+    {
+      "index": 0,
+      "label": "Ready",
+      "kind": "hold",
+      "start_s": 0.0,
+      "requested_duration_s": 1.0,
+      "displacement_xyz_mm": [
+        -1.9060543241717112,
+        0.17389428609788443,
+        -2.8825934904027353
+      ],
+      "com_height_range_mm": 2.4367114580263056
+    },
+    {
+      "index": 1,
+      "label": "Hello dip",
+      "kind": "dip",
+      "start_s": 1.0000000000000007,
+      "requested_duration_s": 4.0,
+      "displacement_xyz_mm": [
+        0.03763272349516884,
+        0.03688325375669093,
+        -0.040094314295552325
+      ],
+      "com_height_range_mm": 3.836162098668522
+    },
+    {
+      "index": 2,
+      "label": "Backward shuffle",
+      "kind": "backward",
+      "start_s": 4.999999999999671,
+      "requested_duration_s": 8.0,
+      "displacement_xyz_mm": [
+        -106.52236886120896,
+        -3.210867147313067,
+        -0.23472693003501188
+      ],
+      "com_height_range_mm": 1.5994733807766504,
+      "requested_direction_progress_mm": 106.52236886120896
+    },
+    {
+      "index": 3,
+      "label": "Slide left",
+      "kind": "left",
+      "start_s": 13.00000000000101,
+      "requested_duration_s": 8.0,
+      "displacement_xyz_mm": [
+        -12.851857378326322,
+        119.97430383368267,
+        0.24167023892637807
+      ],
+      "com_height_range_mm": 1.647464935299367,
+      "requested_direction_progress_mm": 119.97430383368267
+    },
+    {
+      "index": 4,
+      "label": "Slide right",
+      "kind": "right",
+      "start_s": 20.99999999999924,
+      "requested_duration_s": 8.0,
+      "displacement_xyz_mm": [
+        -4.634119071591197,
+        -118.94892307029525,
+        0.05084999370899568
+      ],
+      "com_height_range_mm": 2.29614172715098,
+      "requested_direction_progress_mm": 118.94892307029525
+    },
+    {
+      "index": 5,
+      "label": "Forward shuffle",
+      "kind": "forward",
+      "start_s": 28.999999999994806,
+      "requested_duration_s": 8.0,
+      "displacement_xyz_mm": [
+        103.03750107907028,
+        9.155620416546418,
+        -0.20838197243391865
+      ],
+      "com_height_range_mm": 1.0715384179764698,
+      "requested_direction_progress_mm": 103.03750107907028
+    },
+    {
+      "index": 6,
+      "label": "Final dip",
+      "kind": "dip",
+      "start_s": 36.999999999999254,
+      "requested_duration_s": 4.0,
+      "displacement_xyz_mm": [
+        0.050445647550280415,
+        -0.12561859302096662,
+        0.14985713663667743
+      ],
+      "com_height_range_mm": 3.818952877714832
+    },
+    {
+      "index": 7,
+      "label": "Finish",
+      "kind": "hold",
+      "start_s": 41.00000000000414,
+      "requested_duration_s": 2.0,
+      "displacement_xyz_mm": [
+        -0.0012162925592737461,
+        -0.002597190358410474,
+        0.024538517812283667
+      ],
+      "com_height_range_mm": 0.016293094029479205
+    }
+  ],
+  "max_tilt_deg": 5.6205184283872995,
+  "max_ik_residual_mm": 0.09858102543893973,
+  "max_tracking_error_deg": 6.48516957082406,
+  "torque_saturation_fraction": 0.04942151162790698,
+  "max_contact_penetration_mm": 0.4926495894288091,
+  "command_bounds": {
+    "peak_command_velocity_rad_s": 1.8323957622761677,
+    "peak_command_acceleration_rad_s2": 8.00000000000023
+  },
+  "root_displacement_xyz_mm": [
+    -22.79003647774174,
+    7.05269578909596,
+    -2.898880820082883
+  ],
+  "assumed_torque_limit_nm": 0.3,
+  "physics_timestep_s": 0.002,
+  "root_resets_during_sequence": 0,
+  "source_sha256": {
+    "tools/dance.py": "c61b43cf2655b142ad71982aaeaad69f953c16cd86664720f88db3c04f62ca8c",
+    "tools/locomotion_tasks.py": "0fd4c1f4c72206a9398b4b59c06168fca19905bf898539fd54335c89fdc1f1b2",
+    "tools/build_model.py": "9a64ca230928cc2022a9d1084e11acacfbae1c5c215bc593fba2585f7359e089",
+    "tools/sim2real.py": "ffc0ed819b9062f15833ebae07ca80b79009787ecc297fb888c103ccd47d8615",
+    "tools/hand_interface.py": "551af5850f3340cb3c15b07b131d16820c53b5dc27e2c31c4026b6004b819b8c",
+    "tools/trajectory.py": "eac0d6505084cf9fce1c5b10753055b445d7ca79ca3a10d87f409adbfdb4effe",
+    "tools/walk_x.py": "bbc6941dcd28273eecbebad9b9c327746ce8c867ab94ddd53e78f33f867a2d50",
+    "configs/xc330_hand.json": "95b4d70daf83dc7400d53a01eede54728f927903b6f342d8227357555389732f",
+    "model/full_hand_final/robot.urdf": "95ea9a9b7d29b5839147aebd13fad9d82a4a4df784ef0c8c886544f4560f460b"
+  },
+  "qualification": "continuous_free_dynamics_simulation_only_not_hardware_validated",
+  "limitations": [
+    "self-collision disabled; CAD convex hull terrain contacts",
+    "unmeasured servo response, supply voltage and physical calibration",
+    "timed open-loop choreography, not precise tracking or return-to-start control"
+  ]
+}

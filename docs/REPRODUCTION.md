@@ -16,7 +16,7 @@ yaw was -8.34 degrees; final minimum fingertip height was -3.85 mm relative
 to the floor. The source README reports 302 mm travel, so forward displacement
 was reproduced closely. Its yaw number used the different calculation noted below.
 
-The new video is `outputs/reproduction/hand_walk_10s_complete.mp4`:
+The new video is `outputs/baselines/reproduction/hand_walk_10s_complete.mp4`:
 640x360, 30 fps, 300 decodable frames, exactly 10 seconds. Numeric results are
 in `metrics.json`; container/frame checks are in `video_validation.json`.
 
@@ -24,7 +24,7 @@ in `metrics.json`; container/frame checks are in `video_validation.json`.
 
 Python 3.11.17 is installed under `.runtime/python` and the isolated environment
 is `.venv`. Exact package versions are saved in
-`outputs/reproduction/environment.txt`. This run uses MuJoCo 3.17.0.
+`outputs/baselines/reproduction/environment.txt`. This run uses MuJoCo 3.17.0.
 
 Both shared NVIDIA GPUs were busy at startup. Rendering therefore uses the
 system OSMesa library and CPU llvmpipe, with two rendering threads. CUDA devices
@@ -45,8 +45,8 @@ export CUDA_VISIBLE_DEVICES=''
 
 .venv/bin/python -B tools/build_model.py --check
 .venv/bin/python -B tools/walk_x.py 10 --render --width 640 --height 360 \
-  --output outputs/reproduction/hand_walk_10s_complete.mp4 \
-  --report outputs/reproduction/metrics.json
+  --output outputs/baselines/reproduction/hand_walk_10s_complete.mp4 \
+  --report outputs/baselines/reproduction/metrics.json
 ```
 
 Choose a new output filename for another recording: the recorder rejects an

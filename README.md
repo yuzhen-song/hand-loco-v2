@@ -8,17 +8,27 @@ This is the second iteration of the project. The hand is a 16-DOF tendon-free fi
 assembly exported from CAD as `model/full_hand_final/robot.urdf`. Instead of grasping,
 four fingers are used as legs and the whole hand becomes a tiny quadruped.
 
+## Start here
+
+- [Workspace folders and current videos](docs/WORKSPACE.md)
+- [Faster forward/backward/sideways movement](docs/SPEED.md)
+- [All documentation](docs/README.md), [tool index](tools/README.md), [configuration index](configs/README.md)
+
+The selected CPU simulation profile roughly doubles forward/backward speed and
+increases lateral speed by 2.6–3.4x in the measured post-ramp interval. The dance CLI
+uses this profile by default; `--baseline` retains the original slow sequence.
+
 ## Sim-to-real preparation
 
 The new CPU workflow adds bounded 50 Hz position commands, lower assumed torque,
 slower gaits, whole-assembly floor contact, 11 sensitivity checks, and an explicit
-encoder calibration path. See [SIM2REAL.md](SIM2REAL.md) for commands, evidence,
+encoder calibration path. See [SIM2REAL.md](docs/SIM2REAL.md) for commands, evidence,
 a read-only device audit, and the remaining physical-validation requirements.
 There is no live robot motion executor and no claim of validated real walking.
 
 ## Direction, terrain and jump exploration
 
-The CPU-only [locomotion experiments](LOCOMOTION_TASKS.md) add backward and sideways
+The CPU-only [locomotion experiments](docs/LOCOMOTION_TASKS.md) add backward and sideways
 walking, inclined terrain, single low steps, and exploratory jump commands. Fifteen
 trials include all failures: backward/sideways and tested gentle slopes passed a
 narrow simulation screen; steps and jumps remain unsuccessful. A faster gait made
@@ -27,7 +37,7 @@ reproduction commands, recorded-state video replay, and sim-to-real limitations.
 
 ## A continuous four-finger dance
 
-[Four fingers / one dance](DANCE.md) combines a small body dip, backward shuffle,
+[Four fingers / one dance](docs/DANCE.md) combines a small body dip, backward shuffle,
 left/right slides and forward walking in one 43-second free-dynamics rollout.
 It includes CPU video rendering at normal speed with a measured XY path overlay.
 The sequence completed in simulation; hardware deployment remains unvalidated.
@@ -51,7 +61,7 @@ The sequence completed in simulation; hardware deployment remains unvalidated.
 
 The table below preserves the original reported result. The corrected yaw
 calculation and fresh CPU reproduction are documented in
-[REPRODUCTION.md](REPRODUCTION.md); the original yaw figure is not comparable.
+[REPRODUCTION.md](docs/REPRODUCTION.md); the original yaw figure is not comparable.
 
 ![stance](figures/stances.png)
 
@@ -68,6 +78,10 @@ Videos: `figures/walk_x.mp4` (final gait), `figures/walk.mp4` (earlier gait).
 ## Layout
 
 ```
+docs/                 guides, experimental results and workspace map
+configs/              simulation profiles and calibration templates
+validation/           compact recorded evidence
+outputs/              local runs grouped by purpose (ignored by Git)
 tools/build_model.py   compile URDF -> model/quadruped_sim_v2.xml (+ keyframes, --check)
 tools/stance.py        report / render the two standing poses
 tools/walk.py          earlier gait
@@ -80,7 +94,7 @@ figures/               renders and videos
 ## Setup
 
 The verified environment uses Python 3.11.17 and MuJoCo 3.17.0; see
-[REPRODUCTION.md](REPRODUCTION.md) for CPU rendering and measured results.
+[REPRODUCTION.md](docs/REPRODUCTION.md) for CPU rendering and measured results.
 
 ```bash
 pip install -r requirements.txt
@@ -116,7 +130,7 @@ Record a new video without overwriting the shipped reference video:
 
 ```bash
 MUJOCO_GL=egl python tools/walk_x.py 10 --render \
-  --output outputs/walk_new.mp4 --report outputs/walk_new.json
+  --output outputs/baselines/walk_new.mp4 --report outputs/baselines/walk_new.json
 ```
 
 ## How the gait works
@@ -150,6 +164,6 @@ Together this keeps the penetration near 7 mm instead of 42 mm, so the fingers s
 
 The simulation now has an optional position-command interface matching the
 confirmed motor IDs 0–15 and the reference 50 Hz command / 20 Hz feedback cadence.
-See [HARDWARE_INTERFACE.md](HARDWARE_INTERFACE.md) for the mapping, CPU command,
+See [HARDWARE_INTERFACE.md](docs/HARDWARE_INTERFACE.md) for the mapping, CPU command,
 validation and remaining hardware-calibration requirements. This is simulation
 interface validation; no physical robot connection or deployment is implemented.

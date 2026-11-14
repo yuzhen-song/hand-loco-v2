@@ -43,7 +43,7 @@ position interface explicitly:
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 CUDA_VISIBLE_DEVICES='' \
   .venv/bin/python -B tools/walk_x.py 10 \
   --controller position --sim-torque-limit-nm 0.95 \
-  --report outputs/xc330_interface_check_new/metrics.json
+  --report outputs/sim2real/interface_check_new/metrics.json
 ```
 
 This example deliberately uses the old model's 0.95 Nm simulation ceiling for
@@ -74,7 +74,7 @@ assumption. This validates the software integration, not physical deployment.
 The maximum requested-position tracking error was 0.1856 rad. Approximately
 65.5% of joint/physics-step samples hit the assumed torque ceiling, which is
 a material limitation of the baseline plant and requires actuator/load validation.
-Raw evidence is in `outputs/xc330_interface_check/metrics.json` (ignored by Git).
+Raw evidence is in `outputs/sim2real/interface_check/metrics.json` (ignored by Git).
 
 Before adding a physical output backend, measure/confirm native-model-to-encoder
 axis directions, zero offsets, actual supply voltage and usable torque/current

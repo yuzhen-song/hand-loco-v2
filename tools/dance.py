@@ -49,11 +49,21 @@ def dance_scene(xml):
 
 
 class Choreography:
-    def __init__(self,m,base):
+    def __init__(self,m,base,profile=None):
         self.ik=FeetIK(m,base);self.neutral=base[self.ik.idx].copy();self.seed=self.neutral.copy()
-        self.walkers={direction:Planner(m,base,Task(direction=direction,
-            planner='cartesian' if direction in ('left','right') else 'abd',stride_m=.016))
-            for direction in ('backward','left','right','forward')}
+        self.walkers={}
+        if profile is not None:
+            if profile.get('qualification')!='simulation_only' or profile.get('assumed_torque_nm')!=.3:
+                raise ValueError('expected simulation-only profile with unchanged 0.3 Nm assumption')
+            if set(profile.get('directions',{}))!={'backward','left','right','forward'}:
+                raise ValueError('profile must define all four directions')
+        for direction in ('backward','left','right','forward'):
+            params={'planner':'cartesian' if direction in ('left','right') else 'abd',
+                    'stride_m':.016,'period_s':4.}
+            if profile is not None:
+                params={k:profile['directions'][direction][k] for k in params}
+            task=Task(direction=direction,**params);task.validate()
+            self.walkers[direction]=Planner(m,base,task)
 
     def target(self,t,data):
         _,label,kind,local,duration=segment_at(t)
@@ -80,10 +90,10 @@ class Choreography:
         return max([self.ik.max_residual]+[p.ik.max_residual for p in self.walkers.values()])
 
 
-def run(output):
+def run(output,profile=None):
     output=Path(output);output.mkdir(parents=True,exist_ok=False)
     m,keys=B.build(write=False,xml_transform=dance_scene);base=keys['stance1'].copy()
-    dance=Choreography(m,base);ik=dance.ik
+    dance=Choreography(m,base,profile);ik=dance.ik
     d=mujoco.MjData(m);d.qpos[:]=base;mujoco.mj_forward(m,d)
     assert np.array_equal(m.actuator_trnid[:,0],[m.joint(n).id for n in ik.qadr])
     servo=SampledPositionInterface(base[ik.idx],m.opt.timestep,.3,60,3,
@@ -143,7 +153,7 @@ def run(output):
     sources=['tools/dance.py','tools/locomotion_tasks.py','tools/build_model.py','tools/sim2real.py',
              'tools/hand_interface.py','tools/trajectory.py','tools/walk_x.py','configs/xc330_hand.json',
              'model/full_hand_final/robot.urdf']
-    result={'screen_pass':passed,'stop_reason':stop,'simulation_seconds':float(d.time),'segments':sections,
+    result={'speed_profile':profile,'screen_pass':passed,'stop_reason':stop,'simulation_seconds':float(d.time),'segments':sections,
             'max_tilt_deg':max_tilt,'max_ik_residual_mm':dance.max_ik_residual*1000,
             'max_tracking_error_deg':float(np.degrees(servo.max_tracking_error_rad)),
             'torque_saturation_fraction':servo.report()['torque_saturation_fraction'],
@@ -163,7 +173,12 @@ def run(output):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',required=True,type=Path)
-    args=p.parse_args();run(args.output)
+    group=p.add_mutually_exclusive_group()
+    group.add_argument('--profile',type=Path,default=Path(B.ROOT)/'configs/directional_speed.json')
+    group.add_argument('--baseline',action='store_true',help='use the original 4-second gait and 16 mm lateral stride')
+    args=p.parse_args()
+    profile=None if args.baseline else json.loads(args.profile.read_text())
+    run(args.output,profile)
 
 
 if __name__=='__main__':main()

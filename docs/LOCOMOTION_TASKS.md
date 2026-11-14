@@ -10,7 +10,7 @@ Fifteen trials were completed in order: the 12-case initial suite, then three ta
 follow-ups. All trials reached their requested duration without a non-fingertip terrain
 contact or the 45-degree emergency tilt stop. Completing a run does **not** imply task success.
 Machine-readable parameters and results, including failures, are in
-[`validation/locomotion_tasks_v1.json`](validation/locomotion_tasks_v1.json).
+[`validation/locomotion_tasks_v1.json`](../validation/locomotion_tasks_v1.json).
 
 | Task | Time | Progress along requested direction | Result of narrow screen |
 | --- | ---: | ---: | --- |
@@ -112,7 +112,7 @@ Run commands from the repository root. Every output directory must be new.
 ```bash
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MUJOCO_GL=disable CUDA_VISIBLE_DEVICES='' \
   .venv/bin/python -B tools/locomotion_tasks.py \
-  --suite --output outputs/locomotion_tasks_my_suite
+  --suite --output outputs/experiments/terrain/my_suite
 ```
 
 The suite runs backward, left, right, 3/5/10-degree slopes, 5/10/20-mm steps, then
@@ -137,12 +137,12 @@ import json
 from pathlib import Path
 results = json.loads(Path('validation/locomotion_tasks_v1.json').read_text())['results']
 case = next(r['task'] for r in results if r['task']['name'] == 'slope_10deg_faster')
-Path('outputs').mkdir(exist_ok=True)
-Path('outputs/slope_case.json').write_text(json.dumps(case, indent=2) + '\n')
+Path('outputs/experiments/terrain').mkdir(parents=True, exist_ok=True)
+Path('outputs/experiments/terrain/slope_case.json').write_text(json.dumps(case, indent=2) + '\n')
 PY
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MUJOCO_GL=disable CUDA_VISIBLE_DEVICES='' \
   .venv/bin/python -B tools/locomotion_tasks.py \
-  --case outputs/slope_case.json --output outputs/slope_my_retry
+  --case outputs/experiments/terrain/slope_case.json --output outputs/experiments/terrain/my_slope_retry
 ```
 
 Use `step_5mm_terrain_abd` or `jump_short_push` in the extraction command to
@@ -152,11 +152,11 @@ reproduce the other follow-ups. Preserving these failures is intentional.
 
 ```bash
 .venv/bin/python -B tools/replay_locomotion_tasks.py \
-  --runs outputs/locomotion_tasks_my_suite/01_reverse \
-         outputs/locomotion_tasks_my_suite/02_left \
-         outputs/locomotion_tasks_my_suite/03_right \
-         outputs/slope_my_retry \
-  --output outputs/locomotion_review.mp4
+  --runs outputs/experiments/terrain/my_suite/01_reverse \
+         outputs/experiments/terrain/my_suite/02_left \
+         outputs/experiments/terrain/my_suite/03_right \
+         outputs/experiments/terrain/my_slope_retry \
+  --output outputs/videos/locomotion_review.mp4
 ```
 
 The renderer forces OSMesa/llvmpipe, checks the renderer identity, limits CPU threads,
@@ -167,7 +167,7 @@ only; the original rollouts used free dynamics. A JSON manifest records input
 hashes and clip frame counts. Source changes to the shared model builders are
 rejected to avoid silently replaying with a different geometry pipeline.
 
-The development run produced `outputs/locomotion_tasks_review/all_attempts.mp4`,
+The development run produced `outputs/videos/terrain_review/all_attempts.mp4`,
 including every initial and follow-up attempt, with successful and failed cases
 clearly labeled. Videos are generated artifacts and are not committed to Git.
 

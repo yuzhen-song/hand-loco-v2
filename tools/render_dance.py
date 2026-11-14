@@ -32,7 +32,7 @@ def main():
     font=ImageFont.load_default(size=13);small=ImageFont.load_default(size=11)
     heading=ImageFont.load_default(size=19);fps=10;frames=0
     xy=np.array([row['qpos'][:2] for row in states]);xy-=xy[0]
-    center=np.array([513,294]);scale=360
+    center=np.array([513,294]);scale=min(360,35/max(.001,float(np.max(abs(xy)))))
     with imageio.get_writer(str(output),fps=fps,quality=8,macro_block_size=1,
                             ffmpeg_params=['-threads','1']) as writer:
         with mujoco.Renderer(model,width=576,height=288) as renderer:

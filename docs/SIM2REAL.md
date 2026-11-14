@@ -41,12 +41,12 @@ No GPU, training or GPT API is required. Choose fresh output directories.
 ```bash
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 CUDA_VISIBLE_DEVICES='' \
   .venv/bin/python -B tools/sim2real.py --sweep \
-  --output outputs/sim2real_screen_new
+  --output outputs/sim2real/screen_new
 
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 CUDA_VISIBLE_DEVICES='' \
   .venv/bin/python -B tools/sim2real.py \
   --case configs/sim2real_candidate.json --render \
-  --output outputs/sim2real_video_new
+  --output outputs/sim2real/video_new
 
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
   .venv/bin/python -B -m unittest discover -s tests -v
@@ -104,7 +104,7 @@ simulation requirements and have not been installed on the simulation server:
 ```bash
 python -m pip install -r requirements-hardware.txt
 python tools/audit_hardware.py --port YOUR_SERIAL_DEVICE \
-  --output outputs/hardware_audit.json
+  --output outputs/sim2real/hardware_audit.json
 ```
 
 Select the actual device explicitly (for example a Windows COM port or a Linux
@@ -135,9 +135,9 @@ physical hand permits those poses. Resolve this with actual mechanical evidence.
 
 ```bash
 python tools/prepare_hardware.py \
-  --run outputs/sim2real_screen_new/trot_torque_0.3 \
+  --run outputs/sim2real/screen_new/trot_torque_0.3 \
   --calibration configs/hardware_calibration.local.json \
-  --output outputs/encoder_candidate.json
+  --output outputs/sim2real/encoder_candidate.json
 ```
 
 The shipped unmeasured template is deliberately rejected. With complete measured

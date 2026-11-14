@@ -1,0 +1,43 @@
+{
+  "qualification": "simulation_only",
+  "assumed_torque_nm": 0.3,
+  "directions": {
+    "forward": {
+      "period_s": 2.0,
+      "stride_m": 0.02,
+      "planner": "abd",
+      "source_case": "forward_period_2",
+      "measured_speed_mm_s": 18.797759093951612,
+      "baseline_speed_mm_s": 9.3587914082834,
+      "speedup": 2.0085669477913406
+    },
+    "backward": {
+      "period_s": 2.0,
+      "stride_m": 0.02,
+      "planner": "abd",
+      "source_case": "backward_period_2",
+      "measured_speed_mm_s": 19.002092848548255,
+      "baseline_speed_mm_s": 9.894030345038088,
+      "speedup": 1.9205614078268833
+    },
+    "left": {
+      "period_s": 2.0,
+      "stride_m": 0.024,
+      "planner": "cartesian",
+      "source_case": "left_period_2_stride_24mm",
+      "measured_speed_mm_s": 21.959281965392126,
+      "baseline_speed_mm_s": 6.545925520225592,
+      "speedup": 3.354648918253403
+    },
+    "right": {
+      "period_s": 2.0,
+      "stride_m": 0.024,
+      "planner": "cartesian",
+      "source_case": "right_period_2_stride_24mm",
+      "measured_speed_mm_s": 21.293858805421348,
+      "baseline_speed_mm_s": 8.207610563422854,
+      "speedup": 2.5944041375838722
+    }
+  },
+  "selection": "fastest eligible measured post-ramp speed; no increase of torque or joint rate limits"
+}

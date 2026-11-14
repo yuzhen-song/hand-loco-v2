@@ -1,5 +1,8 @@
 # Four fingers / one dance
 
+The CLI now uses the faster profile described in [SPEED.md](SPEED.md). The recorded
+results below describe the original baseline; pass `--baseline` to reproduce it.
+
 A 43-second continuous choreography in MuJoCo: a small body dip, backward shuffle,
 left slide, right slide, forward shuffle, another dip, and a standing finish.
 The robot uses one free-base dynamics rollout. There are **no root resets, imposed
@@ -33,7 +36,7 @@ not a jumping or acrobatic demonstration.
   simulated PD response as the earlier locomotion experiments.
 - The maximum command speed was 0.990 rad/s, maximum tracking error 3.59 degrees,
   and maximum IK residual 0.099 mm. No non-tip floor contact or tilt stop occurred.
-- [`validation/dance_v1.json`](validation/dance_v1.json) records each section,
+- [`validation/dance_v1.json`](../validation/dance_v1.json) records each section,
   command limits, physical metrics, source hashes and limitations.
 
 The dance screen checks full sequence completion, positive progress in the requested
@@ -52,9 +55,9 @@ Choose a new output directory for each run:
 
 ```bash
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MUJOCO_GL=disable CUDA_VISIBLE_DEVICES='' \
-  .venv/bin/python -B tools/dance.py --output outputs/dance_my_run
+  .venv/bin/python -B tools/dance.py --baseline --output outputs/experiments/dance/my_baseline_run
 
-.venv/bin/python -B tools/render_dance.py --run outputs/dance_my_run
+.venv/bin/python -B tools/render_dance.py --run outputs/experiments/dance/my_baseline_run
 ```
 
 The first command writes `metrics.json`, `interface.json`, `trace.json`, and
@@ -65,7 +68,7 @@ floor and colored fingertips are visual styling only. No music is included.
 
 The final pose is held for one video frame, making the full clip approximately
 43.1 seconds. `video_validation.json` records decoded frame count and input hashes.
-The original completed development run is in `outputs/dance_v1/`; generated videos
+The original completed development run is in `outputs/experiments/dance/baseline_v1/`; generated videos
 and raw logs remain local and are ignored by Git.
 
 ```bash
@@ -73,5 +76,5 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MUJOCO_GL=disable CUDA_VISIBLE_DEVICES=
   .venv/bin/python -B -m unittest discover -s tests -v
 ```
 
-All 26 tests passed. The new tests check segment boundaries, continuous commands
+At the baseline revision, all 26 tests passed. The current suite has 30 tests. The new tests check segment boundaries, continuous commands
 at every transition, and that planning does not modify the rollout's state.

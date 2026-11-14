@@ -1,0 +1,32 @@
+{
+  "scope": "hand-loco-v2 only; no files deleted",
+  "moves": {
+    "outputs/reproduction": "outputs/baselines/reproduction",
+    "outputs/baseline_regression_after_sim2real.json": "outputs/baselines/baseline_regression_after_sim2real.json",
+    "outputs/xc330_interface_check": "outputs/sim2real/interface_check",
+    "outputs/xc330_position_video": "outputs/sim2real/position_baseline_video",
+    "outputs/sim2real_screen_v2": "outputs/sim2real/screen_v2",
+    "outputs/sim2real_candidate_video_v2": "outputs/sim2real/candidate_video_v2",
+    "outputs/sim2real_screen_v1": "outputs/archive/sim2real_screen_v1",
+    "outputs/sim2real_candidate_video_v1": "outputs/archive/sim2real_candidate_video_v1",
+    "outputs/locomotion_tasks_v1_reverse": "outputs/experiments/terrain/reverse_initial",
+    "outputs/locomotion_tasks_suite_v1": "outputs/experiments/terrain/suite_v1",
+    "outputs/locomotion_tasks_followup_v2": "outputs/experiments/terrain/followup_v2",
+    "outputs/locomotion_tasks_review": "outputs/videos/terrain_review",
+    "outputs/dance_v1": "outputs/experiments/dance/baseline_v1",
+    "DANCE.md": "docs/DANCE.md",
+    "HARDWARE_INTERFACE.md": "docs/HARDWARE_INTERFACE.md",
+    "LOCOMOTION_TASKS.md": "docs/LOCOMOTION_TASKS.md",
+    "REPRODUCTION.md": "docs/REPRODUCTION.md",
+    "SIM2REAL.md": "docs/SIM2REAL.md"
+  },
+  "preserved": [
+    ".venv",
+    ".runtime",
+    ".bootstrap",
+    "outputs/handoff",
+    "model",
+    "configs",
+    "tools"
+  ]
+}
