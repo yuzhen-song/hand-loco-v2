@@ -1,0 +1,149 @@
+{
+  "screen_pass": true,
+  "stop_reason": "duration_completed",
+  "simulation_seconds": 43.00000000000659,
+  "segments": [
+    {
+      "index": 0,
+      "label": "Ready",
+      "kind": "hold",
+      "start_s": 0.0,
+      "requested_duration_s": 1.0,
+      "displacement_xyz_mm": [
+        -1.9060543241717112,
+        0.17389428609788443,
+        -2.8825934904027353
+      ],
+      "com_height_range_mm": 2.4367114580263056
+    },
+    {
+      "index": 1,
+      "label": "Hello dip",
+      "kind": "dip",
+      "start_s": 1.0000000000000007,
+      "requested_duration_s": 4.0,
+      "displacement_xyz_mm": [
+        0.03763272349516884,
+        0.03688325375669093,
+        -0.040094314295552325
+      ],
+      "com_height_range_mm": 3.836162098668522
+    },
+    {
+      "index": 2,
+      "label": "Backward shuffle",
+      "kind": "backward",
+      "start_s": 4.999999999999671,
+      "requested_duration_s": 8.0,
+      "displacement_xyz_mm": [
+        -64.92647973680165,
+        -0.23094677391996019,
+        0.08739887195491347
+      ],
+      "com_height_range_mm": 1.4464060297012664,
+      "requested_direction_progress_mm": 64.92647973680165
+    },
+    {
+      "index": 3,
+      "label": "Slide left",
+      "kind": "left",
+      "start_s": 13.00000000000101,
+      "requested_duration_s": 8.0,
+      "displacement_xyz_mm": [
+        -2.1663516510214142,
+        45.00929400046349,
+        -0.12954802581888192
+      ],
+      "com_height_range_mm": 1.0003451674446966,
+      "requested_direction_progress_mm": 45.00929400046349
+    },
+    {
+      "index": 4,
+      "label": "Slide right",
+      "kind": "right",
+      "start_s": 20.99999999999924,
+      "requested_duration_s": 8.0,
+      "displacement_xyz_mm": [
+        -2.2645858284680296,
+        -45.551087895305336,
+        0.07555481487853122
+      ],
+      "com_height_range_mm": 1.0779542824240624,
+      "requested_direction_progress_mm": 45.551087895305336
+    },
+    {
+      "index": 5,
+      "label": "Forward shuffle",
+      "kind": "forward",
+      "start_s": 28.999999999994806,
+      "requested_duration_s": 8.0,
+      "displacement_xyz_mm": [
+        65.41838833060393,
+        2.2046858173789565,
+        -0.03941408823407433
+      ],
+      "com_height_range_mm": 0.9953713980214857,
+      "requested_direction_progress_mm": 65.41838833060393
+    },
+    {
+      "index": 6,
+      "label": "Final dip",
+      "kind": "dip",
+      "start_s": 36.999999999999254,
+      "requested_duration_s": 4.0,
+      "displacement_xyz_mm": [
+        0.1986429931197728,
+        0.04288756137340384,
+        0.005847567564748468
+      ],
+      "com_height_range_mm": 3.8278190128490515
+    },
+    {
+      "index": 7,
+      "label": "Finish",
+      "kind": "hold",
+      "start_s": 41.00000000000414,
+      "requested_duration_s": 2.0,
+      "displacement_xyz_mm": [
+        0.000579793039298844,
+        6.407002977205228e-05,
+        0.02398897780458986
+      ],
+      "com_height_range_mm": 0.015319325865778555
+    }
+  ],
+  "max_tilt_deg": 5.664112843369442,
+  "max_ik_residual_mm": 0.09858102543893973,
+  "max_tracking_error_deg": 3.5945292728680958,
+  "torque_saturation_fraction": 0.018767441860465115,
+  "max_contact_penetration_mm": 0.4926495894288091,
+  "command_bounds": {
+    "peak_command_velocity_rad_s": 0.9899275252600037,
+    "peak_command_acceleration_rad_s2": 8.00000000000023
+  },
+  "root_displacement_xyz_mm": [
+    -5.608227700204641,
+    1.6856743198748991,
+    -2.8988596865484606
+  ],
+  "assumed_torque_limit_nm": 0.3,
+  "physics_timestep_s": 0.002,
+  "root_resets_during_sequence": 0,
+  "source_sha256": {
+    "tools/dance.py": "153f34e89e6e83caa79cce3e33c1b5610ee9ffbb0db10005a7a4097a4e6da856",
+    "tools/locomotion_tasks.py": "0fd4c1f4c72206a9398b4b59c06168fca19905bf898539fd54335c89fdc1f1b2",
+    "tools/build_model.py": "9a64ca230928cc2022a9d1084e11acacfbae1c5c215bc593fba2585f7359e089",
+    "tools/sim2real.py": "ffc0ed819b9062f15833ebae07ca80b79009787ecc297fb888c103ccd47d8615",
+    "tools/hand_interface.py": "551af5850f3340cb3c15b07b131d16820c53b5dc27e2c31c4026b6004b819b8c",
+    "tools/trajectory.py": "eac0d6505084cf9fce1c5b10753055b445d7ca79ca3a10d87f409adbfdb4effe",
+    "tools/walk_x.py": "bbc6941dcd28273eecbebad9b9c327746ce8c867ab94ddd53e78f33f867a2d50",
+    "configs/xc330_hand.json": "95b4d70daf83dc7400d53a01eede54728f927903b6f342d8227357555389732f",
+    "model/full_hand_final/robot.urdf": "95ea9a9b7d29b5839147aebd13fad9d82a4a4df784ef0c8c886544f4560f460b"
+  },
+  "qualification": "continuous_free_dynamics_simulation_only_not_hardware_validated",
+  "limitations": [
+    "self-collision disabled; CAD convex hull terrain contacts",
+    "unmeasured servo response, supply voltage and physical calibration",
+    "timed open-loop choreography, not precise tracking or return-to-start control"
+  ]
+}

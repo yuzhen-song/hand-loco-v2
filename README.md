@@ -25,6 +25,13 @@ narrow simulation screen; steps and jumps remain unsuccessful. A faster gait mad
 limited progress on the tested 10-degree slope. The document includes exact results,
 reproduction commands, recorded-state video replay, and sim-to-real limitations.
 
+## A continuous four-finger dance
+
+[Four fingers / one dance](DANCE.md) combines a small body dip, backward shuffle,
+left/right slides and forward walking in one 43-second free-dynamics rollout.
+It includes CPU video rendering at normal speed with a measured XY path overlay.
+The sequence completed in simulation; hardware deployment remains unvalidated.
+
 ## Highlights
 
 - Compiles the CAD URDF into a **free-base MuJoCo model** for locomotion, keeping only the
