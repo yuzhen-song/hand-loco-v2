@@ -87,3 +87,10 @@ The baseline still uses fingertip-only collision and unusually high friction.
 Whole-body collision, realistic contact, motor response and load/thermal limits
 remain to be validated. The modeled mass remains 0.785912524 kg; omission of the
 16 small adaptors and one screw is the user's accepted approximation.
+
+## Subsequent sim-to-real workflow
+
+[SIM2REAL.md](SIM2REAL.md) documents the newer rate-limited trajectory generator,
+whole-assembly floor collision, lower-torque screening, read-only hardware audit
+and offline encoder conversion. The results above remain the historical
+position-interface baseline; they are not relabeled as results of the new scene.

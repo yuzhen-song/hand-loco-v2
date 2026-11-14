@@ -20,3 +20,6 @@ model/_check_all.xml
 .bootstrap/
 .runtime/
 outputs/
+
+# Machine-specific measurements and connection settings
+configs/*.local.json

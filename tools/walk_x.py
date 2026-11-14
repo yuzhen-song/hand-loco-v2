@@ -55,7 +55,7 @@ def tip(m, d, base, qadr, leg, abd, pip, dip, flx):
     return P[i].copy()
 
 
-def build_tables(m, d, base, qadr, flx):
+def build_tables(m, d, base, qadr, flx, abd_lo=ABD_LO, abd_hi=ABD_HI):
     """per leg: rows of (abd, PIP, DIP) keeping fingertip y,z at its stance value,
        tracking continuously from the stance1 seed so the solution never jumps."""
     d.qpos[:] = base
@@ -68,7 +68,7 @@ def build_tables(m, d, base, qadr, flx):
         pip = float(base[qadr[f"unit{leg}-PIP"]])
         dip = float(base[qadr[f"unit{leg}-DIP"]])
         rows = []
-        for abd in np.arange(ABD_LO - 0.05, ABD_HI + 0.06, 0.05):
+        for abd in np.arange(abd_lo - 0.05, abd_hi + 0.06, 0.05):
             for _ in range(60):
                 p = tip(m, d, base, qadr, leg, abd, pip, dip, flx)
                 err = np.array([p[1] - y0, p[2] - z0])

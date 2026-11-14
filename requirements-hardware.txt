@@ -1,0 +1,4 @@
+# Optional read-only audit on the physically connected computer.
+# Versions used by the reference hardware project; not installed/qualified here.
+dynamixel-sdk==4.0.5
+pyserial==3.5

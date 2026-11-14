@@ -1,0 +1,18 @@
+{
+  "name": "slow_trot_candidate",
+  "seconds": 10.0,
+  "stance": "stance1",
+  "gait": "trot",
+  "period_s": 4.0,
+  "settle_s": 1.0,
+  "ramp_s": 2.0,
+  "abd_amplitude_rad": 0.6,
+  "lift_rad": 0.08,
+  "torque_limit_nm": 0.3,
+  "kp": 60.0,
+  "kd": 3.0,
+  "friction": 0.8,
+  "contact_time_s": 0.004,
+  "velocity_limit_rad_s": 2.0,
+  "acceleration_limit_rad_s2": 8.0
+}

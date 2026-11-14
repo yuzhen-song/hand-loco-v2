@@ -52,7 +52,8 @@ class SampledPositionInterface:
     step. Host feedback sampling must not slow that local loop to 20 Hz.
     This approximates the command boundary, not XC firmware/electrical dynamics.
     """
-    def __init__(self, initial_position, dt, torque_limit_nm, kp, kd, config=None):
+    def __init__(self, initial_position, dt, torque_limit_nm, kp, kd, config=None,
+                 rate_limits=None, joint_limits=None):
         self.config = load_config() if config is None else config
         self.dt = float(dt)
         self.torque_limit_nm = float(torque_limit_nm)
@@ -72,6 +73,18 @@ class SampledPositionInterface:
                 raise ValueError(f"{key} must be an integer number of physics steps")
             self.periods[name] = steps
         self.command = model_to_motor_order(initial_position)
+        self.rate_limits = rate_limits
+        self.governor = None
+        if rate_limits is not None:
+            from trajectory import PositionGovernor
+            self.governor = PositionGovernor(self.command, self.periods["command"]*self.dt,
+                                              rate_limits[0], rate_limits[1])
+        self.joint_limits = None if joint_limits is None else np.asarray(joint_limits,dtype=float)
+        if self.joint_limits is not None:
+            if (self.joint_limits.shape != (16,2) or not np.all(np.isfinite(self.joint_limits))
+                    or np.any(self.joint_limits[:,0]>=self.joint_limits[:,1])):
+                raise ValueError("expected 16 valid model-space joint ranges")
+        self.command_samples = []
         self.tick = 0
         self.counts = {name: 0 for name in self.periods}
         self.position_samples = []
@@ -83,7 +96,15 @@ class SampledPositionInterface:
         requested, position, velocity = map(vector, (requested_position, position, velocity))
         t = self.tick * self.dt
         if self.tick % self.periods["command"] == 0:
-            self.command = model_to_motor_order(requested)
+            desired = model_to_motor_order(requested)
+            self.command = self.governor.update(desired) if self.governor else desired
+            if self.joint_limits is not None:
+                q = motor_to_model_order(self.command)
+                if np.any(q<self.joint_limits[:,0]) or np.any(q>self.joint_limits[:,1]):
+                    raise ValueError("shaped command crossed model joint limits")
+            self.command_samples.append({"time_s": t,
+                "requested_native_rad_by_motor_id": desired.tolist(),
+                "command_native_rad_by_motor_id": self.command.tolist()})
             self.counts["command"] += 1
         target = motor_to_model_order(self.command)
         error = target - position
@@ -113,6 +134,8 @@ class SampledPositionInterface:
                 "simulation_torque_limit_nm": self.torque_limit_nm,
                 "max_tracking_error_rad": self.max_tracking_error_rad,
                 "torque_saturation_fraction": self.saturated_joint_steps / max(1, 16*self.tick),
+                "command_samples": self.command_samples,
+                "host_rate_limits": self.rate_limits,
                 "position_samples": self.position_samples,
                 "diagnostic_samples": self.diagnostic_samples,
                 "qualification": "simulation_only_no_current_to_torque_calibration_no_hardware_output",

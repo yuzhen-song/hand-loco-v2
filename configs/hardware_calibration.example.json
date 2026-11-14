@@ -1,0 +1,153 @@
+{
+  "status": "unmeasured",
+  "measurement_reference": null,
+  "model": "XC330-M288-T",
+  "model_number": 1240,
+  "supply_voltage_v": null,
+  "joints": [
+    {
+      "motor_id": 0,
+      "model_joint": "unitA-DIP",
+      "native_to_encoder_sign": null,
+      "encoder_at_native_zero_rad": null,
+      "native_lower_rad": null,
+      "native_upper_rad": null,
+      "drive_mode_raw": null
+    },
+    {
+      "motor_id": 1,
+      "model_joint": "unitA-PIP",
+      "native_to_encoder_sign": null,
+      "encoder_at_native_zero_rad": null,
+      "native_lower_rad": null,
+      "native_upper_rad": null,
+      "drive_mode_raw": null
+    },
+    {
+      "motor_id": 2,
+      "model_joint": "unitA-MCP-ABD",
+      "native_to_encoder_sign": null,
+      "encoder_at_native_zero_rad": null,
+      "native_lower_rad": null,
+      "native_upper_rad": null,
+      "drive_mode_raw": null
+    },
+    {
+      "motor_id": 3,
+      "model_joint": "unitA-MCP-FLX",
+      "native_to_encoder_sign": null,
+      "encoder_at_native_zero_rad": null,
+      "native_lower_rad": null,
+      "native_upper_rad": null,
+      "drive_mode_raw": null
+    },
+    {
+      "motor_id": 4,
+      "model_joint": "unitB-DIP",
+      "native_to_encoder_sign": null,
+      "encoder_at_native_zero_rad": null,
+      "native_lower_rad": null,
+      "native_upper_rad": null,
+      "drive_mode_raw": null
+    },
+    {
+      "motor_id": 5,
+      "model_joint": "unitB-PIP",
+      "native_to_encoder_sign": null,
+      "encoder_at_native_zero_rad": null,
+      "native_lower_rad": null,
+      "native_upper_rad": null,
+      "drive_mode_raw": null
+    },
+    {
+      "motor_id": 6,
+      "model_joint": "unitB-MCP-ABD",
+      "native_to_encoder_sign": null,
+      "encoder_at_native_zero_rad": null,
+      "native_lower_rad": null,
+      "native_upper_rad": null,
+      "drive_mode_raw": null
+    },
+    {
+      "motor_id": 7,
+      "model_joint": "unitB-MCP-FLX",
+      "native_to_encoder_sign": null,
+      "encoder_at_native_zero_rad": null,
+      "native_lower_rad": null,
+      "native_upper_rad": null,
+      "drive_mode_raw": null
+    },
+    {
+      "motor_id": 8,
+      "model_joint": "unitC-DIP",
+      "native_to_encoder_sign": null,
+      "encoder_at_native_zero_rad": null,
+      "native_lower_rad": null,
+      "native_upper_rad": null,
+      "drive_mode_raw": null
+    },
+    {
+      "motor_id": 9,
+      "model_joint": "unitC-PIP",
+      "native_to_encoder_sign": null,
+      "encoder_at_native_zero_rad": null,
+      "native_lower_rad": null,
+      "native_upper_rad": null,
+      "drive_mode_raw": null
+    },
+    {
+      "motor_id": 10,
+      "model_joint": "unitC-MCP-ABD",
+      "native_to_encoder_sign": null,
+      "encoder_at_native_zero_rad": null,
+      "native_lower_rad": null,
+      "native_upper_rad": null,
+      "drive_mode_raw": null
+    },
+    {
+      "motor_id": 11,
+      "model_joint": "unitC-MCP-FLX",
+      "native_to_encoder_sign": null,
+      "encoder_at_native_zero_rad": null,
+      "native_lower_rad": null,
+      "native_upper_rad": null,
+      "drive_mode_raw": null
+    },
+    {
+      "motor_id": 12,
+      "model_joint": "unitD-DIP",
+      "native_to_encoder_sign": null,
+      "encoder_at_native_zero_rad": null,
+      "native_lower_rad": null,
+      "native_upper_rad": null,
+      "drive_mode_raw": null
+    },
+    {
+      "motor_id": 13,
+      "model_joint": "unitD-PIP",
+      "native_to_encoder_sign": null,
+      "encoder_at_native_zero_rad": null,
+      "native_lower_rad": null,
+      "native_upper_rad": null,
+      "drive_mode_raw": null
+    },
+    {
+      "motor_id": 14,
+      "model_joint": "unitD-MCP-ABD",
+      "native_to_encoder_sign": null,
+      "encoder_at_native_zero_rad": null,
+      "native_lower_rad": null,
+      "native_upper_rad": null,
+      "drive_mode_raw": null
+    },
+    {
+      "motor_id": 15,
+      "model_joint": "unitD-MCP-FLX",
+      "native_to_encoder_sign": null,
+      "encoder_at_native_zero_rad": null,
+      "native_lower_rad": null,
+      "native_upper_rad": null,
+      "drive_mode_raw": null
+    }
+  ]
+}

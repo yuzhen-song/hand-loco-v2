@@ -8,6 +8,14 @@ This is the second iteration of the project. The hand is a 16-DOF tendon-free fi
 assembly exported from CAD as `model/full_hand_final/robot.urdf`. Instead of grasping,
 four fingers are used as legs and the whole hand becomes a tiny quadruped.
 
+## Sim-to-real preparation
+
+The new CPU workflow adds bounded 50 Hz position commands, lower assumed torque,
+slower gaits, whole-assembly floor contact, 11 sensitivity checks, and an explicit
+encoder calibration path. See [SIM2REAL.md](SIM2REAL.md) for commands, evidence,
+a read-only device audit, and the remaining physical-validation requirements.
+There is no live robot motion executor and no claim of validated real walking.
+
 ## Highlights
 
 - Compiles the CAD URDF into a **free-base MuJoCo model** for locomotion, keeping only the

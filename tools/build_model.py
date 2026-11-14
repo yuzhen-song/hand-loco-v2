@@ -18,6 +18,7 @@ import argparse
 import os
 import re
 import sys
+from pathlib import Path
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC_DIR = os.path.join(ROOT, "model", "full_hand_final")
@@ -33,10 +34,9 @@ JOINTS = ("MCP-FLX", "MCP-ABD", "PIP", "DIP")
 TIP_BODY = {"A": "finger_tip_bone_2", "B": "finger_tip_bone_3",
             "C": "finger_tip_bone", "D": "finger_tip_bone_4"}
 
-# Two standing poses, both interference-free (see JOINT_LIMITS below).
-# stance1: MCP-FLX = 0 so the MCP-ABD axis (the steering servo) is exactly parallel to the
-# ground - that is the walking stance. PIP/DIP are folded to keep the fingertip vertical;
-# the leg stands 0.213 m high.
+# Historical simulation standing poses; physical ROM is not yet calibrated.
+# stance1: MCP-FLX is about pi/2, placing the steering axis approximately vertical.
+# PIP/DIP are folded to keep the fingertip near vertical.
 # stance2: keeps the leg longer but the tip bone tilts ~5 deg off vertical.
 STANCES = {
     "stance1": {"MCP-FLX": 1.5708, "MCP-ABD": 0.00, "PIP": -1.40, "DIP": -0.20},
@@ -45,17 +45,15 @@ STANCES = {
 DEFAULT_STANCE = "stance1"
 STAND_HEIGHT = 0.2130    # placeholder; each keyframe gets its own measured height
 
-# Swept on the fully-collidable model (all parts collidable, parent-child filtering off):
-# these are the ranges at which no two parts touch. The export's PIP/DIP numbers were
-# mirror-inconsistent with their axes and gave 0.49/0.35 rad of forward fold where the
-# real hand has 1.89/1.96, so every joint gets its verified range here.
+# Historical simulation overrides. Their claimed collision/ROM verification is
+# not reproduced here; do not treat these ranges as measured hardware limits.
 JOINT_LIMITS = {
     "MCP-FLX": (-0.2268, 2.2000),
     "MCP-ABD": (-1.4580, 1.4580),
     "PIP": (-2.0000, 0.4890),
     "DIP": (-0.5000, 1.9580),
 }
-TORQUE = 0.95            # XC330-M288-T stall torque, N*m
+TORQUE = 0.95            # Historical simulated ceiling, NOT a continuous rating
 ARM_DAMP = 0.10
 TIP_FRICTION = "10.0 0.05 0.01"
 
@@ -104,7 +102,7 @@ def weld_linear_actuator(xml):
 
 
 def apply_joint_limits(xml):
-    """Replace the CAD's joint ranges with the interference-verified ones from JOINT_LIMITS."""
+    """Apply historical simulation ranges, not hardware-calibrated ROM."""
 
     def fix(mt):
         tag = mt.group(0)
@@ -149,7 +147,7 @@ def keep_collision_only_at_tips(xml):
 
 
 def compile_xml():
-    txt = open(URDF, encoding="utf-8").read().replace("package://", "")
+    txt = Path(URDF).read_text(encoding="utf-8").replace("package://", "")
     txt = txt.replace(
         "</robot>",
         '  <mujoco><compiler discardvisual="false" balanceinertia="true" '
@@ -166,7 +164,7 @@ def compile_xml():
     os.makedirs(raw_dir, exist_ok=True)
     raw_path = os.path.join(raw_dir, "built_raw.xml")
     mujoco.mj_saveLastXML(raw_path, m0)
-    xml = open(raw_path, encoding="utf-8").read()
+    xml = Path(raw_path).read_text(encoding="utf-8")
 
     xml = weld_linear_actuator(xml)
 
@@ -260,12 +258,16 @@ def measure(m, d):
     return out
 
 
-def build(write=True, clearance=0.0016):
+def build(write=True, clearance=0.0016, xml_transform=None):
     """Compile, then bake one keyframe per stance with its own measured standing height."""
     xml = compile_xml()
-    with open(OUT_XML, "w", encoding="utf-8") as fh:
-        fh.write(xml)
-    m = mujoco.MjModel.from_xml_path(OUT_XML)
+    if xml_transform is not None:
+        xml = xml_transform(xml)
+    def load(text):
+        # Absolute meshdir permits an in-memory build without rewriting baseline XML.
+        return mujoco.MjModel.from_xml_string(text.replace(
+            'meshdir="full_hand_final"', f'meshdir="{SRC_DIR}"'))
+    m = load(xml)
 
     keyframes = {}
     for name, st in STANCES.items():
@@ -284,11 +286,10 @@ def build(write=True, clearance=0.0016):
         kf.append(f'    <key name="{name}" qpos="{" ".join(f"{v:.6f}" for v in q)}"/>')
     kf.append("  </keyframe>")
     xml = xml.replace("</mujoco>", "\n".join(kf) + "\n</mujoco>")
-    with open(OUT_XML, "w", encoding="utf-8") as fh:
-        fh.write(xml)
-
-    m = mujoco.MjModel.from_xml_path(OUT_XML)
-    return m, keyframes
+    if write:
+        with open(OUT_XML, "w", encoding="utf-8") as fh:
+            fh.write(xml)
+    return load(xml), keyframes
 
 
 def keyframe_qpos(m, name):
