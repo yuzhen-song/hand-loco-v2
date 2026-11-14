@@ -25,6 +25,10 @@ four fingers are used as legs and the whole hand becomes a tiny quadruped.
 
 ## Result
 
+The table below preserves the original reported result. The corrected yaw
+calculation and fresh CPU reproduction are documented in
+[REPRODUCTION.md](REPRODUCTION.md); the original yaw figure is not comparable.
+
 ![stance](figures/stances.png)
 
 | Metric | Value |
@@ -51,7 +55,8 @@ figures/               renders and videos
 
 ## Setup
 
-Requires Python 3.9+ and MuJoCo 3.x.
+The verified environment uses Python 3.11.17 and MuJoCo 3.17.0; see
+[REPRODUCTION.md](REPRODUCTION.md) for CPU rendering and measured results.
 
 ```bash
 pip install -r requirements.txt
@@ -65,7 +70,7 @@ export MUJOCO_GL=egl
 
 ## Usage
 
-Build the MuJoCo model from the URDF and verify the standing keyframe holds for 3 s:
+Build the MuJoCo model from the URDF and verify both standing keyframes hold for 5 s each:
 
 ```bash
 python tools/build_model.py --check
@@ -83,10 +88,11 @@ Run the walking gait (10 s, prints travel / drift / yaw / height):
 python tools/walk_x.py 10
 ```
 
-Record a video to `figures/walk_x.mp4`:
+Record a new video without overwriting the shipped reference video:
 
 ```bash
-MUJOCO_GL=egl python tools/walk_x.py 10 --render
+MUJOCO_GL=egl python tools/walk_x.py 10 --render \
+  --output outputs/walk_new.mp4 --report outputs/walk_new.json
 ```
 
 ## How the gait works
@@ -115,3 +121,11 @@ contact stiff:
 - fingertip geoms use `condim="4" solref="0.0005 1" solimp="0.999 0.9999 0.0001"`
 
 Together this keeps the penetration near 7 mm instead of 42 mm, so the fingers stay visible.
+
+## XC330 hardware interface preparation
+
+The simulation now has an optional position-command interface matching the
+confirmed motor IDs 0–15 and the reference 50 Hz command / 20 Hz feedback cadence.
+See [HARDWARE_INTERFACE.md](HARDWARE_INTERFACE.md) for the mapping, CPU command,
+validation and remaining hardware-calibration requirements. This is simulation
+interface validation; no physical robot connection or deployment is implemented.

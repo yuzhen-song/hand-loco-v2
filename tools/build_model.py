@@ -162,8 +162,11 @@ def compile_xml():
         m0 = mujoco.MjModel.from_xml_path(tmp)
     finally:
         os.remove(tmp)
-    mujoco.mj_saveLastXML("/tmp/_built_raw.xml", m0)
-    xml = open("/tmp/_built_raw.xml", encoding="utf-8").read()
+    raw_dir = os.path.join(ROOT, ".runtime", "tmp")
+    os.makedirs(raw_dir, exist_ok=True)
+    raw_path = os.path.join(raw_dir, "built_raw.xml")
+    mujoco.mj_saveLastXML(raw_path, m0)
+    xml = open(raw_path, encoding="utf-8").read()
 
     xml = weld_linear_actuator(xml)
 

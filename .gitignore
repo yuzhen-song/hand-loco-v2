@@ -15,3 +15,8 @@ model/_check_all.xml
 
 # temp renders
 *.tmp
+
+# Local reproduction environment and newly generated records
+.bootstrap/
+.runtime/
+outputs/

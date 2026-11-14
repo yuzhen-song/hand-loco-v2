@@ -1,0 +1,66 @@
+{
+  "model": "XC330-M288-T",
+  "model_number": 1240,
+  "protocol_version": 2.0,
+  "baud_rate": 1000000,
+  "motor_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "fingers": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "motor_joint_order": [
+    "DIP",
+    "PIP",
+    "MCP-ABD",
+    "MCP-FLX"
+  ],
+  "operating_mode": 5,
+  "command_interval_ms": 20,
+  "position_feedback_interval_ms": 50,
+  "diagnostics_interval_ms": 200,
+  "reference_register_settings": {
+    "goal_current_ma": 350,
+    "position_p_gain_raw": 600,
+    "position_i_gain_raw": 0,
+    "position_d_gain_raw": 200,
+    "abd_gain_multiplier": 0.75,
+    "profile_velocity_rad_s": 2.0,
+    "profile_acceleration_rad_s2": 8.0
+  },
+  "hardware_calibration": {
+    "native_model_to_motor_directions": null,
+    "encoder_zero_offsets_rad": null,
+    "supply_voltage_v": null,
+    "measured_torque_limit_nm": null,
+    "status": "Not measured on the current assembly; hardware output is not implemented."
+  },
+  "source": {
+    "reference_repository": "https://github.com/wimsu/msc-in-hand-assembly",
+    "reference_files": [
+      "hardware/platform/joint_names.py",
+      "hardware/platform/platform_io.py",
+      "calibration/control_timing.yaml"
+    ],
+    "motor_manual": "https://emanual.robotis.com/docs/en/dxl/x/xc330-m288/",
+    "note": "User confirmed XC model, original IDs/order, control mode and cadence. Register settings are reference defaults, not device readbacks. No reference zero offsets or axis signs are imported."
+  }
+}
