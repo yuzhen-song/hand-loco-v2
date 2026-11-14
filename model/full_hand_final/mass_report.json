@@ -1,0 +1,4029 @@
+{
+  "status": "partial_mass_assignment_not_physical_validation",
+  "assumptions": {
+    "source_branch": "locomotion",
+    "source_revision": "4013393",
+    "source_urdf": "sim/full-hand-with-cameraV2/robot.urdf",
+    "lb_to_kg": 0.45359237,
+    "printed_mass_fraction": 0.15,
+    "servo_mass_kg": 0.023,
+    "actuator_assembly_mass_kg": 0.04,
+    "remove_meshes": [
+      "cameramount.stl",
+      "твердое_тело1.stl"
+    ],
+    "solid_mass_lb": {
+      "dc15_a01_hinge_1.stl": 0.0069632,
+      "finger_tip_bone.stl": 0.0289903,
+      "dip_spacer.stl": 0.006,
+      "cable_spacer.stl": 0.008,
+      "mcp_bracket.stl": 0.0163916,
+      "movingbaseyuno.stl": 0.096,
+      "staticbaseyuno.stl": 0.1261785,
+      "baseplate.stl": 0.3242477,
+      "adapterplate.stl": 0.3375157,
+      "leaphousinglid.stl": 0.2168064,
+      "elexhousingcover.stl": 0.177,
+      "bottomspacer.stl": 0.1381421,
+      "6725k41_12_mm_wide_x_150_mm_long_rail_for_ball_bearing_carriage.stl": 0.1423708
+    },
+    "full_mass_meshes": [
+      "dc15_a01_hinge_1.stl",
+      "6725k41_12_mm_wide_x_150_mm_long_rail_for_ball_bearing_carriage.stl"
+    ],
+    "guide_block_assembly_mass_lb": 0.1084209,
+    "actuator_meshes": [
+      "clamshell_bot_10417.stl",
+      "clamshell_top_10416.stl",
+      "extension_10404_50mm.stl",
+      "guide_10429.stl",
+      "plug_10428.stl",
+      "shaft_10409_50mm.stl"
+    ],
+    "notes": [
+      "User-provided solid masses; all listed printed parts except the solid hinge use a 0.15 mass factor.",
+      "Uniform volume density is assumed within each part or purchased assembly, not equal mass per STL file.",
+      "One servo mass covers its 11 motor_* mesh occurrences, including caps, horns and connectors.",
+      "Each MGN12C mass covers five mesh components; the model contains two complete blocks.",
+      "The 40 g actuator mass is shared by volume over its six mesh components on both rail links.",
+      "Unspecified parts retain visual/collision geometry but contribute no assigned mass.",
+      "No automatic normalization to a hypothetical whole-hand mass is performed."
+    ],
+    "servo_mass_source": "https://emanual.robotis.com/docs/en/dxl/x/xc330-m288/#specifications"
+  },
+  "source_urdf_sha256": "fd97c0397be66bbde017dc62201f52d2e9b34f857b14308548f15f32a161b022",
+  "input_mesh_sha256": {
+    "6725k41_12_mm_wide_x_150_mm_long_rail_for_ball_bearing_carriage.stl": "956a815d630209b87d84cd0c082381495b166b503dd71ed80c7490a9b8a612ad",
+    "adapterplate.stl": "db6028c0e9148089a48bd398e270b596b4bb05dbad796ddae91559a43aaa162e",
+    "baseplate.stl": "f816dc626fbacd18f9dd5ed182e6e9a31d6bb7a51abc5dfd0506486b780be604",
+    "bottomspacer.stl": "10def74a979b040e86f870a8bef61229edef63a0a45f9339b76d5f29e354a9aa",
+    "cable_spacer.stl": "1c292a7b190e4f98898b874b962859403d5fc52cfc5526d5831f27f134870d5b",
+    "clamshell_bot_10417.stl": "4acda461166f739b0e437ed7bd672ccfdb9c7c085565f645117c3ea1131a633c",
+    "clamshell_top_10416.stl": "b461365aa86c2c3bd2cce4531f602554f6f917076c4693b9e84fcb712946b180",
+    "dc15_a01_adaptor_1.stl": "206a774c452c699ac110f5853742d2c2bcb081ad2b6b96d49875578740734261",
+    "dc15_a01_adaptor_2.stl": "ef131bf0e75dc1c86ed8d074a57a1ad2d6f1e146dc051c8fdad7819f9c29322a",
+    "dc15_a01_hinge_1.stl": "dd852ae9d62709b68805170d80e017607d95d6c3dca8c72d475909f7fd2e1d3e",
+    "dip_spacer.stl": "2de727336aa027dac0a280a741db593f14f77bd097ede33796366663187690e7",
+    "elexhousingcover.stl": "257bdb4862a13de498f2fc9435a936b071b91690c956ed47064c63d3d2107acc",
+    "extension_10404_50mm.stl": "5423ff55ede2eaf06bca5a238fcfa4b67edef7ba1710b4d07d5ba68dd64ee52c",
+    "finger_tip_bone.stl": "c1e751e2c3afd73e564db8a79ce1b18453314922bce399e6f37bd2c457caca50",
+    "guide_10429.stl": "f3484e40ae35ad0aad2e08928c55c98eaad6217809c1b8319811c1c416540eef",
+    "hex_socket_head_cap_screw_m4x0_70_x_20__832e47d784177ea3f1dabbaab534416e.stl": "c697bb981da3b5d1326fa644d1490e7966946bdbd8e2dac9e441a4243e410569",
+    "leaphousinglid.stl": "a70422458b43219c87931965d74807d014737642a25e00f5ed9e395f3501bb8e",
+    "mcp_bracket.stl": "237fa409a3100c970f55de9a7179db67636e07af9cad0a1738548539664a5dcf",
+    "mgn12c__linear_guide_block.stl": "ea878c5ffc3e70206ac9dc20900028d975fdc88925bd3b6aa7d6e6753a0ff280",
+    "mgn12c__linear_guide_block__2.stl": "ad234ca23c4c17b4053a719ee31031ec75a59f23cfcfb8dfc32e1efc46754e7e",
+    "mgn12c__linear_guide_block__3.stl": "81347e96443fd78c47818acd55b9c0b8a250bb3f4d6881f1a73b1053b0be4891",
+    "mgn12c__linear_guide_block__4.stl": "cd0e1eb3c7d50d902ee1bb8891abf57ef3b65a94faac3a5fe3e6b8b0bd489a86",
+    "mgn12c__linear_guide_block__5.stl": "68fded58a0e8fff88bd680e7ba09509b92b4507864dbb5d1a33631cd7fceb454",
+    "motor_b3b_eh.stl": "7cc3e96a1a427ed70fe42f05855b52ba2bca88beb87825e94ae084637390847c",
+    "motor_bts2_m2_6x8.stl": "a2a74e6ef12940577ac15183adb5bbc8ade0d1d5794dc05fe8fac03e39d192e7",
+    "motor_dc15_a01_case_b_dummy.stl": "c6901f9f2d89c0e39eb9f4223eeb443d8151d29b9b3081574391dc2ea8d34102",
+    "motor_dc15_a01_case_f_dummy.stl": "a41d03e034fd0781a3a4be7a957d07b274d7baead23309c1ce85bb2822d6aa77",
+    "motor_dc15_a01_case_m_dummy.stl": "9fa66e9f8ea3482db39a5821c8fe5d5fa886af5a382bbfbbe5f880fb1e37189c",
+    "motor_dc15_a01_horn_dummy.stl": "745d9e5a95356df4b1c608a54fba69ceac21fc88626c223726060e5f2f028eae",
+    "motor_dc15_a01_horn_idle2_dummy.stl": "af10c987127e05afb5794d4420b3c94acd41756bf4c2c3e56c9309b83126cc6c",
+    "motor_dc15_a01_idle_cap_dummy.stl": "847b3a9fa8f7630da4f75a2fde01b4bf5be9a4cba6070fcac26bdd3eaea428de",
+    "motor_dc15_a01_led_cap2_dummy.stl": "fd7fd85ae09300f4597d797cef26edc81031026b8c2925b113b9ff84c11b8682",
+    "movingbaseyuno.stl": "2b9880bb7a9d5eec98c5b0fe18bc6182d4647db4dab6349bd5eaf6a39193e3da",
+    "plug_10428.stl": "e8eeec5507a7600bf042bfc069d20f674ef2666bd2a9296a44759e91d14f99d1",
+    "shaft_10409_50mm.stl": "353a1639e20411ec9abde308883f4043711fd9cd8aeb870d3ada9f7e055bcbcf",
+    "staticbaseyuno.stl": "15317eec5584e3a0b582f938be8246cf3ed307daf77eb870481fb574fff5b70e"
+  },
+  "assigned_total_mass_kg": 0.785912524231165,
+  "category_mass_kg": {
+    "guide_block": 0.098357785977066,
+    "actuator": 0.04000000000000001,
+    "unassigned": 0.0,
+    "printed_15_percent": 0.11249666838309898,
+    "servo": 0.36799999999999994,
+    "solid": 0.16705806987099991
+  },
+  "servo_count": 16,
+  "guide_block_count": 2,
+  "removed_meshes": {
+    "cameramount.stl": 2,
+    "твердое_тело1.stl": 2
+  },
+  "unassigned_occurrences": {
+    "dc15_a01_adaptor_2.stl": 12,
+    "hex_socket_head_cap_screw_m4x0_70_x_20__832e47d784177ea3f1dabbaab534416e.stl": 1,
+    "dc15_a01_adaptor_1.stl": 4
+  },
+  "links": [
+    {
+      "link": "mgn12c__linear_guide_block",
+      "mass_kg": 0.15954485963019358,
+      "center_m": [
+        0.0060396418366582315,
+        0.045202624674819315,
+        0.0952415038898925
+      ],
+      "inertia_kg_m2": [
+        [
+          0.00024281631279479143,
+          4.6733612725912314e-07,
+          2.8691693563550963e-06
+        ],
+        [
+          4.6733612725912314e-07,
+          5.311420419025426e-05,
+          1.29626652277025e-07
+        ],
+        [
+          2.8691693563550963e-06,
+          1.29626652277025e-07,
+          0.0002416893998674926
+        ]
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "mass_kg": 0.29630510585790165,
+      "center_m": [
+        0.008369818397459232,
+        -7.633041934913931e-05,
+        0.06242748813435193
+      ],
+      "inertia_kg_m2": [
+        [
+          0.001005661990909362,
+          7.508565229886367e-07,
+          -9.963617580304783e-05
+        ],
+        [
+          7.508565229886367e-07,
+          0.0008946696005871722,
+          2.138546641307262e-06
+        ],
+        [
+          -9.963617580304783e-05,
+          2.138546641307262e-06,
+          0.0005424297033890856
+        ]
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1",
+      "mass_kg": 0.0278180309385978,
+      "center_m": [
+        -0.022937134161845365,
+        0.039756756669427164,
+        0.01468996704669838
+      ],
+      "inertia_kg_m2": [
+        [
+          7.65928396518214e-06,
+          2.681286816770781e-06,
+          2.3611717903356362e-08
+        ],
+        [
+          2.681286816770781e-06,
+          4.959918347576111e-06,
+          2.5466262417228288e-08
+        ],
+        [
+          2.3611717903356362e-08,
+          2.5466262417228288e-08,
+          9.822703703283848e-06
+        ]
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm",
+      "mass_kg": 0.023000000000000003,
+      "center_m": [
+        -0.008071607500496581,
+        -0.00021233003279394136,
+        -0.01298642522178764
+      ],
+      "inertia_kg_m2": [
+        [
+          1.863524007605885e-06,
+          7.112880340633658e-09,
+          -2.2503352584010957e-09
+        ],
+        [
+          7.112880340633658e-09,
+          2.8429612708924276e-06,
+          6.191220422438637e-10
+        ],
+        [
+          -2.2503352584010957e-09,
+          6.191220422438637e-10,
+          3.3278129839557953e-06
+        ]
+      ]
+    },
+    {
+      "link": "dip_spacer",
+      "mass_kg": 0.026566687523784,
+      "center_m": [
+        0.005998248268058214,
+        -0.03277331987619302,
+        0.01431610426676234
+      ],
+      "inertia_kg_m2": [
+        [
+          4.553865232558686e-06,
+          5.34533610616402e-07,
+          1.1660143011493326e-08
+        ],
+        [
+          5.34533610616402e-07,
+          4.17802088568971e-06,
+          -1.69013518139068e-08
+        ],
+        [
+          1.1660143011493326e-08,
+          -1.69013518139068e-08,
+          5.2146226337537715e-06
+        ]
+      ]
+    },
+    {
+      "link": "finger_tip_bone",
+      "mass_kg": 0.00513092122338565,
+      "center_m": [
+        1.9794562379240515e-08,
+        -0.019413630639571213,
+        0.014499821902500432
+      ],
+      "inertia_kg_m2": [
+        [
+          1.7281135383765978e-06,
+          3.689308404137629e-12,
+          -2.949490487420363e-12
+        ],
+        [
+          3.689308404137629e-12,
+          7.807371470350871e-07,
+          2.1228297579664628e-11
+        ],
+        [
+          -2.949490487420363e-12,
+          2.1228297579664628e-11,
+          1.2636877326936516e-06
+        ]
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_2",
+      "mass_kg": 0.0278180309385978,
+      "center_m": [
+        -0.022937104225874805,
+        0.039756773179328755,
+        0.014689966990159765
+      ],
+      "inertia_kg_m2": [
+        [
+          7.65928921338196e-06,
+          2.6812736843102164e-06,
+          2.3611838791399904e-08
+        ],
+        [
+          2.6812736843102164e-06,
+          4.959912961932869e-06,
+          2.5466357568036152e-08
+        ],
+        [
+          2.3611838791399904e-08,
+          2.5466357568036152e-08,
+          9.822703517960352e-06
+        ]
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_2",
+      "mass_kg": 0.023000000000000003,
+      "center_m": [
+        -0.008071607500496581,
+        -0.00021233003279394136,
+        -0.01298642522178764
+      ],
+      "inertia_kg_m2": [
+        [
+          1.863524007605885e-06,
+          7.112880340633658e-09,
+          -2.2503352584010957e-09
+        ],
+        [
+          7.112880340633658e-09,
+          2.8429612708924276e-06,
+          6.191220422438637e-10
+        ],
+        [
+          -2.2503352584010957e-09,
+          6.191220422438637e-10,
+          3.3278129839557953e-06
+        ]
+      ]
+    },
+    {
+      "link": "dip_spacer_2",
+      "mass_kg": 0.026566687523784,
+      "center_m": [
+        0.005998248268058214,
+        -0.032773318530774094,
+        0.014316102050930365
+      ],
+      "inertia_kg_m2": [
+        [
+          4.553866120394337e-06,
+          5.345338249980887e-07,
+          1.165978990063322e-08
+        ],
+        [
+          5.345338249980887e-07,
+          4.178020864201456e-06,
+          -1.6902216661668556e-08
+        ],
+        [
+          1.165978990063322e-08,
+          -1.6902216661668556e-08,
+          5.214623543077675e-06
+        ]
+      ]
+    },
+    {
+      "link": "finger_tip_bone_2",
+      "mass_kg": 0.00513092122338565,
+      "center_m": [
+        1.9794562379240515e-08,
+        -0.019413630640550156,
+        0.014499809141567122
+      ],
+      "inertia_kg_m2": [
+        [
+          1.7281135382980567e-06,
+          3.689292748847699e-12,
+          -2.949501870472065e-12
+        ],
+        [
+          3.689292748847699e-12,
+          7.807371471737063e-07,
+          1.968606794907481e-11
+        ],
+        [
+          -2.949501870472065e-12,
+          1.968606794907481e-11,
+          1.263687732476491e-06
+        ]
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_3",
+      "mass_kg": 0.0278180309385978,
+      "center_m": [
+        -0.022937104225874805,
+        0.039756773179328755,
+        0.014689966990159765
+      ],
+      "inertia_kg_m2": [
+        [
+          7.65928921338196e-06,
+          2.6812736843102164e-06,
+          2.3611838791399904e-08
+        ],
+        [
+          2.6812736843102164e-06,
+          4.959912961932869e-06,
+          2.5466357568036152e-08
+        ],
+        [
+          2.3611838791399904e-08,
+          2.5466357568036152e-08,
+          9.822703517960352e-06
+        ]
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_3",
+      "mass_kg": 0.023000000000000003,
+      "center_m": [
+        -0.008071607569011882,
+        -0.00021233003279394136,
+        -0.01298642522178764
+      ],
+      "inertia_kg_m2": [
+        [
+          1.863524007605885e-06,
+          7.1128816823118106e-09,
+          -2.2503469509575944e-09
+        ],
+        [
+          7.1128816823118106e-09,
+          2.8429612643633346e-06,
+          6.191220422438637e-10
+        ],
+        [
+          -2.2503469509575944e-09,
+          6.191220422438637e-10,
+          3.327812977426702e-06
+        ]
+      ]
+    },
+    {
+      "link": "dip_spacer_3",
+      "mass_kg": 0.026566687523784,
+      "center_m": [
+        0.005998248268058214,
+        -0.03277331853058502,
+        0.01431610451549594
+      ],
+      "inertia_kg_m2": [
+        [
+          4.553866144664331e-06,
+          5.345338250438722e-07,
+          1.1660182648086347e-08
+        ],
+        [
+          5.345338250438722e-07,
+          4.178020888120081e-06,
+          -1.69015491631153e-08
+        ],
+        [
+          1.1660182648086347e-08,
+          -1.69015491631153e-08,
+          5.214623543429042e-06
+        ]
+      ]
+    },
+    {
+      "link": "finger_tip_bone_3",
+      "mass_kg": 0.00513092122338565,
+      "center_m": [
+        1.9794562379240515e-08,
+        -0.019413630639571213,
+        0.014499821902500432
+      ],
+      "inertia_kg_m2": [
+        [
+          1.7281135383765978e-06,
+          3.689308404137629e-12,
+          -2.949490487420363e-12
+        ],
+        [
+          3.689308404137629e-12,
+          7.807371470350871e-07,
+          2.1228297579664628e-11
+        ],
+        [
+          -2.949490487420363e-12,
+          2.1228297579664628e-11,
+          1.2636877326936516e-06
+        ]
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_4",
+      "mass_kg": 0.0278180309385978,
+      "center_m": [
+        -0.022937104225726448,
+        0.039756773179328755,
+        0.014689967046808344
+      ],
+      "inertia_kg_m2": [
+        [
+          7.659289189440934e-06,
+          2.6812736842799057e-06,
+          2.3611852749750997e-08
+        ],
+        [
+          2.6812736842799057e-06,
+          4.959912937016808e-06,
+          2.5466345996181412e-08
+        ],
+        [
+          2.3611852749750997e-08,
+          2.5466345996181412e-08,
+          9.822703516985317e-06
+        ]
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_4",
+      "mass_kg": 0.023000000000000003,
+      "center_m": [
+        -0.008071607569011882,
+        -0.00021233003279394136,
+        -0.01298642522178764
+      ],
+      "inertia_kg_m2": [
+        [
+          1.863524007605885e-06,
+          7.1128816823118106e-09,
+          -2.2503469509575944e-09
+        ],
+        [
+          7.1128816823118106e-09,
+          2.8429612643633346e-06,
+          6.191220422438637e-10
+        ],
+        [
+          -2.2503469509575944e-09,
+          6.191220422438637e-10,
+          3.327812977426702e-06
+        ]
+      ]
+    },
+    {
+      "link": "dip_spacer_4",
+      "mass_kg": 0.026566687523784,
+      "center_m": [
+        0.005998248268058214,
+        -0.032773318530774094,
+        0.014316102050930365
+      ],
+      "inertia_kg_m2": [
+        [
+          4.553866120394337e-06,
+          5.345338249980887e-07,
+          1.165978990063322e-08
+        ],
+        [
+          5.345338249980887e-07,
+          4.178020864201456e-06,
+          -1.6902216661668556e-08
+        ],
+        [
+          1.165978990063322e-08,
+          -1.6902216661668556e-08,
+          5.214623543077675e-06
+        ]
+      ]
+    },
+    {
+      "link": "finger_tip_bone_4",
+      "mass_kg": 0.00513092122338565,
+      "center_m": [
+        1.9794562379240515e-08,
+        -0.019413630639571213,
+        0.014499821902500432
+      ],
+      "inertia_kg_m2": [
+        [
+          1.7281135383765978e-06,
+          3.689308404137629e-12,
+          -2.949490487420363e-12
+        ],
+        [
+          3.689308404137629e-12,
+          7.807371470350871e-07,
+          2.1228297579664628e-11
+        ],
+        [
+          -2.949490487420363e-12,
+          2.1228297579664628e-11,
+          1.2636877326936516e-06
+        ]
+      ]
+    }
+  ],
+  "components": [
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 0,
+      "mesh": "mgn12c__linear_guide_block.stl",
+      "mass_kg": 0.03152935911969532,
+      "category": "guide_block",
+      "assembly": "mgn12c__linear_guide_block:0",
+      "volume_m3": 4.40833366978673e-06,
+      "center_m": [
+        0.004099071006202705,
+        0.017748631863413362,
+        0.08693988039149636
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 1,
+      "mesh": "mgn12c__linear_guide_block__2.stl",
+      "mass_kg": 0.0018081053378273034,
+      "category": "guide_block",
+      "assembly": "mgn12c__linear_guide_block:1",
+      "volume_m3": 2.52803477831751e-07,
+      "center_m": [
+        -0.012500929933789094,
+        0.07275593809645753,
+        0.08662075562449716
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 2,
+      "mesh": "shaft_10409_50mm.stl",
+      "mass_kg": 0.006418715509640868,
+      "category": "actuator",
+      "assembly": "actuonix_50mm",
+      "volume_m3": 1.4092666622063082e-06,
+      "center_m": [
+        0.04758900058285583,
+        0.04524290652294586,
+        0.08595100652294585
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 3,
+      "mesh": "dc15_a01_adaptor_2.stl",
+      "mass_kg": 0.0,
+      "category": "unassigned",
+      "assembly": "",
+      "volume_m3": 1.7521852964856344e-06,
+      "center_m": [
+        0.004099064397557894,
+        -0.0048939893582073055,
+        0.10316049800071614
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 4,
+      "mesh": "mgn12c__linear_guide_block__3.stl",
+      "mass_kg": 0.007016661596122921,
+      "category": "guide_block",
+      "assembly": "mgn12c__linear_guide_block:1",
+      "volume_m3": 9.810470757195358e-07,
+      "center_m": [
+        0.017449070896615456,
+        0.07275604983819915,
+        0.08687948477888313
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 5,
+      "mesh": "mgn12c__linear_guide_block.stl",
+      "mass_kg": 0.03152935911969532,
+      "category": "guide_block",
+      "assembly": "mgn12c__linear_guide_block:1",
+      "volume_m3": 4.40833366978673e-06,
+      "center_m": [
+        0.004099071006202705,
+        0.07274863186341336,
+        0.08693988039149636
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 6,
+      "mesh": "mgn12c__linear_guide_block__2.stl",
+      "mass_kg": 0.0018081053378273034,
+      "category": "guide_block",
+      "assembly": "mgn12c__linear_guide_block:0",
+      "volume_m3": 2.52803477831751e-07,
+      "center_m": [
+        -0.012500929933789094,
+        0.017755938096457525,
+        0.08662075562449716
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 7,
+      "mesh": "dc15_a01_adaptor_2.stl",
+      "mass_kg": 0.0,
+      "category": "unassigned",
+      "assembly": "",
+      "volume_m3": 1.7521852964856344e-06,
+      "center_m": [
+        0.0040990756024468205,
+        0.09510599935824846,
+        0.10316049800071614
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 8,
+      "mesh": "mgn12c__linear_guide_block__4.stl",
+      "mass_kg": 0.0018081053372669344,
+      "category": "guide_block",
+      "assembly": "mgn12c__linear_guide_block:0",
+      "volume_m3": 2.52803477753402e-07,
+      "center_m": [
+        0.020699069547195692,
+        0.017756061905139207,
+        0.08662063366448572
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 9,
+      "mesh": "mgn12c__linear_guide_block__5.stl",
+      "mass_kg": 0.00701666159762052,
+      "category": "guide_block",
+      "assembly": "mgn12c__linear_guide_block:0",
+      "volume_m3": 9.810470759289254e-07,
+      "center_m": [
+        -0.009250929381670102,
+        0.01775595016293165,
+        0.086879582856914
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 10,
+      "mesh": "mgn12c__linear_guide_block__5.stl",
+      "mass_kg": 0.00701666159762052,
+      "category": "guide_block",
+      "assembly": "mgn12c__linear_guide_block:1",
+      "volume_m3": 9.810470759289254e-07,
+      "center_m": [
+        -0.009250929381670102,
+        0.07275595016293165,
+        0.086879582856914
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 11,
+      "mesh": "hex_socket_head_cap_screw_m4x0_70_x_20__832e47d784177ea3f1dabbaab534416e.stl",
+      "mass_kg": 0.0,
+      "category": "unassigned",
+      "assembly": "",
+      "volume_m3": 3.877256638229019e-07,
+      "center_m": [
+        0.014589,
+        0.0452428,
+        0.0958384838934317
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 12,
+      "mesh": "plug_10428.stl",
+      "mass_kg": 0.002236628015486704,
+      "category": "actuator",
+      "assembly": "actuonix_50mm",
+      "volume_m3": 4.910648077871305e-07,
+      "center_m": [
+        0.017207976652293358,
+        0.04524282092318779,
+        0.085950879141278
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 13,
+      "mesh": "mgn12c__linear_guide_block__3.stl",
+      "mass_kg": 0.007016661596122921,
+      "category": "guide_block",
+      "assembly": "mgn12c__linear_guide_block:0",
+      "volume_m3": 9.810470757195358e-07,
+      "center_m": [
+        0.017449070896615456,
+        0.017756049838199152,
+        0.08687948477888313
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 14,
+      "mesh": "movingbaseyuno.stl",
+      "mass_kg": 0.006531730128,
+      "category": "printed_15_percent",
+      "assembly": "mgn12c__linear_guide_block:visual_14",
+      "volume_m3": 3.498328750948741e-05,
+      "center_m": [
+        0.004273399508621822,
+        0.045097177226012745,
+        0.09666901858763371
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 15,
+      "mesh": "mgn12c__linear_guide_block__4.stl",
+      "mass_kg": 0.0018081053372669344,
+      "category": "guide_block",
+      "assembly": "mgn12c__linear_guide_block:1",
+      "volume_m3": 2.52803477753402e-07,
+      "center_m": [
+        0.020699069547195692,
+        0.07275606190513921,
+        0.08662063366448572
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 16,
+      "mesh": "motor_dc15_a01_led_cap2_dummy.stl",
+      "mass_kg": 4.634575760721267e-05,
+      "category": "servo",
+      "assembly": "mgn12c__linear_guide_block:0",
+      "volume_m3": 3.164057350913804e-08,
+      "center_m": [
+        -0.005543359265123531,
+        -0.020687528713394493,
+        0.11461100015585139
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 17,
+      "mesh": "motor_dc15_a01_case_m_dummy.stl",
+      "mass_kg": 0.01398302364671946,
+      "category": "servo",
+      "assembly": "mgn12c__linear_guide_block:0",
+      "volume_m3": 9.54630823653184e-06,
+      "center_m": [
+        0.004878585245940782,
+        -0.005018668543677597,
+        0.11462201686765817
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 18,
+      "mesh": "motor_dc15_a01_case_b_dummy.stl",
+      "mass_kg": 0.0038012117561563477,
+      "category": "servo",
+      "assembly": "mgn12c__linear_guide_block:0",
+      "volume_m3": 2.595113904789139e-06,
+      "center_m": [
+        -0.004937665470365662,
+        -0.004698489300943573,
+        0.11462616937625751
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 19,
+      "mesh": "motor_dc15_a01_idle_cap_dummy.stl",
+      "mass_kg": 9.567493214497719e-05,
+      "category": "servo",
+      "assembly": "mgn12c__linear_guide_block:0",
+      "volume_m3": 6.531794666452552e-08,
+      "center_m": [
+        -0.00795676897815481,
+        -0.012393991756859797,
+        0.11461100824236645
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 20,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "mgn12c__linear_guide_block:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -0.006390776677196229,
+        -0.012393992529072239,
+        0.11461100753676506
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 21,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "mgn12c__linear_guide_block:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        -0.00019493329510535226,
+        -0.0033939830429374307,
+        0.1069159553687762
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 22,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "mgn12c__linear_guide_block:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        -0.000194933281949168,
+        -0.0033939969570625206,
+        0.12230603960531601
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 23,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "mgn12c__linear_guide_block:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        0.014788946677200501,
+        -0.012393992529072239,
+        0.11461100869992788
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 24,
+      "mesh": "motor_dc15_a01_case_f_dummy.stl",
+      "mass_kg": 0.0030347572923982427,
+      "category": "servo",
+      "assembly": "mgn12c__linear_guide_block:0",
+      "volume_m3": 2.0718500710748064e-06,
+      "center_m": [
+        0.013767363414922362,
+        -0.0043107271579288405,
+        0.1146438237484852
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 25,
+      "mesh": "motor_dc15_a01_horn_idle2_dummy.stl",
+      "mass_kg": 0.0006797897518837802,
+      "category": "servo",
+      "assembly": "mgn12c__linear_guide_block:0",
+      "volume_m3": 4.640972275721322e-07,
+      "center_m": [
+        -0.008850668888377523,
+        -0.012393995690492677,
+        0.11461100028810597
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 26,
+      "mesh": "motor_dc15_a01_horn_dummy.stl",
+      "mass_kg": 0.000844496644417089,
+      "category": "servo",
+      "assembly": "mgn12c__linear_guide_block:0",
+      "volume_m3": 5.76543777369191e-07,
+      "center_m": [
+        0.016797293733615853,
+        -0.012390334371472229,
+        0.11461099538550634
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 27,
+      "mesh": "motor_dc15_a01_led_cap2_dummy.stl",
+      "mass_kg": 4.634575760721267e-05,
+      "category": "servo",
+      "assembly": "mgn12c__linear_guide_block:1",
+      "volume_m3": 3.164057350913804e-08,
+      "center_m": [
+        0.013741531370823077,
+        0.11089952860080184,
+        0.11461099984414087
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 28,
+      "mesh": "motor_dc15_a01_case_m_dummy.stl",
+      "mass_kg": 0.01398302364671946,
+      "category": "servo",
+      "assembly": "mgn12c__linear_guide_block:1",
+      "volume_m3": 9.54630823653184e-06,
+      "center_m": [
+        0.0033195651018002475,
+        0.09523064938341942,
+        0.11462206991244928
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 29,
+      "mesh": "motor_dc15_a01_case_b_dummy.stl",
+      "mass_kg": 0.0038012117561563477,
+      "category": "servo",
+      "assembly": "mgn12c__linear_guide_block:1",
+      "volume_m3": 2.595113904789139e-06,
+      "center_m": [
+        0.013135814938271699,
+        0.09491049583746443,
+        0.11462615128003041
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 30,
+      "mesh": "motor_dc15_a01_idle_cap_dummy.stl",
+      "mass_kg": 9.567493214497719e-05,
+      "category": "servo",
+      "assembly": "mgn12c__linear_guide_block:1",
+      "volume_m3": 6.531794666452552e-08,
+      "center_m": [
+        0.016154968978154816,
+        0.10260600824316685,
+        0.1146109917560594
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 31,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "mgn12c__linear_guide_block:1",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        0.014588946677205259,
+        0.10260600876576517,
+        0.11461099130007213
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 32,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "mgn12c__linear_guide_block:1",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        0.008393073268779647,
+        0.09360600695706246,
+        0.10691596542059176
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 33,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "mgn12c__linear_guide_block:1",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        0.008393073281949168,
+        0.09360599304293747,
+        0.12230603960531601
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 34,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "mgn12c__linear_guide_block:1",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -0.006590776677200986,
+        0.10260600876576517,
+        0.11461099246323495
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 35,
+      "mesh": "motor_dc15_a01_case_f_dummy.stl",
+      "mass_kg": 0.0030347572923982427,
+      "category": "servo",
+      "assembly": "mgn12c__linear_guide_block:1",
+      "volume_m3": 2.0718500710748064e-06,
+      "center_m": [
+        -0.005569215105698502,
+        0.0945227315848444,
+        0.11464381149265815
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 36,
+      "mesh": "motor_dc15_a01_horn_idle2_dummy.stl",
+      "mass_kg": 0.0006797897518837802,
+      "category": "servo",
+      "assembly": "mgn12c__linear_guide_block:1",
+      "volume_m3": 4.640972275721322e-07,
+      "center_m": [
+        0.017048838888345668,
+        0.10260599927214602,
+        0.11461101020384151
+      ]
+    },
+    {
+      "link": "mgn12c__linear_guide_block",
+      "visual_index": 37,
+      "mesh": "motor_dc15_a01_horn_dummy.stl",
+      "mass_kg": 0.000844496644417089,
+      "category": "servo",
+      "assembly": "mgn12c__linear_guide_block:1",
+      "volume_m3": 5.76543777369191e-07,
+      "center_m": [
+        -0.008599123706661271,
+        0.10260232630369068,
+        0.1146110034532879
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 0,
+      "mesh": "guide_10429.stl",
+      "mass_kg": 0.0013020210303349333,
+      "category": "actuator",
+      "assembly": "actuonix_50mm",
+      "volume_m3": 2.8586635889790255e-07,
+      "center_m": [
+        9.78916722172664e-09,
+        3.963963618818282e-06,
+        0.05491011128582212
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 1,
+      "mesh": "adapterplate.stl",
+      "mass_kg": 0.022964181941281348,
+      "category": "printed_15_percent",
+      "assembly": "guide_10429:visual_1",
+      "volume_m3": 0.00012248375852295557,
+      "center_m": [
+        0.07251921758418203,
+        -4.3874259134102367e-07,
+        0.07343885721595399
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 2,
+      "mesh": "dc15_a01_adaptor_2.stl",
+      "mass_kg": 0.0,
+      "category": "unassigned",
+      "assembly": "",
+      "volume_m3": 1.7521852964856344e-06,
+      "center_m": [
+        -0.017209498000718606,
+        0.04999980468621923,
+        0.02407290412349042
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 3,
+      "mesh": "6725k41_12_mm_wide_x_150_mm_long_rail_for_ball_bearing_carriage.stl",
+      "mass_kg": 0.064578308590796,
+      "category": "solid",
+      "assembly": "guide_10429:visual_3",
+      "volume_m3": 8.366269715183562e-06,
+      "center_m": [
+        0.0036591625876908284,
+        0.02749531926535983,
+        0.08983538661935721
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 4,
+      "mesh": "baseplate.stl",
+      "mass_kg": 0.022061442406507353,
+      "category": "printed_15_percent",
+      "assembly": "guide_10429:visual_4",
+      "volume_m3": 0.00011766055924192838,
+      "center_m": [
+        0.012669795231855532,
+        -3.8870686015074485e-07,
+        0.05979333034643382
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 5,
+      "mesh": "extension_10404_50mm.stl",
+      "mass_kg": 0.009400618739639797,
+      "category": "actuator",
+      "assembly": "actuonix_50mm",
+      "volume_m3": 2.063961017432206e-06,
+      "center_m": [
+        9.097379983670356e-10,
+        1.1017712831997146e-07,
+        0.02532749508937176
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 6,
+      "mesh": "staticbaseyuno.stl",
+      "mass_kg": 0.00858504072870675,
+      "category": "printed_15_percent",
+      "assembly": "guide_10429:visual_6",
+      "volume_m3": 4.579072531253963e-05,
+      "center_m": [
+        -0.0048858772904270785,
+        -2.528078967001246e-07,
+        0.024249840600984063
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 7,
+      "mesh": "dc15_a01_adaptor_2.stl",
+      "mass_kg": 0.0,
+      "category": "unassigned",
+      "assembly": "",
+      "volume_m3": 1.7521852964856344e-06,
+      "center_m": [
+        -0.01720949800071277,
+        -0.04999980468621923,
+        0.024427099725546884
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 8,
+      "mesh": "bottomspacer.stl",
+      "mass_kg": 0.00939903038036655,
+      "category": "printed_15_percent",
+      "assembly": "guide_10429:visual_8",
+      "volume_m3": 5.013030450063021e-05,
+      "center_m": [
+        0.062499999888241294,
+        -4.3649439791099143e-07,
+        0.0734388499650254
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 9,
+      "mesh": "clamshell_bot_10417.stl",
+      "mass_kg": 0.013110580264378897,
+      "category": "actuator",
+      "assembly": "actuonix_50mm",
+      "volume_m3": 2.8785048443131437e-06,
+      "center_m": [
+        -0.003269940185598518,
+        0.0005571512749406107,
+        -0.020537999588245606
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 10,
+      "mesh": "elexhousingcover.stl",
+      "mass_kg": 0.012042877423500001,
+      "category": "printed_15_percent",
+      "assembly": "guide_10429:visual_10",
+      "volume_m3": 0.00011169064583908512,
+      "center_m": [
+        0.04533228098839457,
+        -0.0029261868975823946,
+        0.07466132600813441
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 11,
+      "mesh": "leaphousinglid.stl",
+      "mass_kg": 0.014751259321075202,
+      "category": "printed_15_percent",
+      "assembly": "guide_10429:visual_11",
+      "volume_m3": 7.867252733808853e-05,
+      "center_m": [
+        0.019749999865889552,
+        -4.386628394137393e-07,
+        0.0734388573509693
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 12,
+      "mesh": "clamshell_top_10416.stl",
+      "mass_kg": 0.007531436440518802,
+      "category": "actuator",
+      "assembly": "actuonix_50mm",
+      "volume_m3": 1.6535710732477598e-06,
+      "center_m": [
+        0.005529896677617389,
+        0.0007897594969832056,
+        -0.019592141062017208
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 13,
+      "mesh": "6725k41_12_mm_wide_x_150_mm_long_rail_for_ball_bearing_carriage.stl",
+      "mass_kg": 0.064578308590796,
+      "category": "solid",
+      "assembly": "guide_10429:visual_13",
+      "volume_m3": 8.366269715183562e-06,
+      "center_m": [
+        0.0036591625876908284,
+        -0.02750468073464017,
+        0.08983538661935721
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 14,
+      "mesh": "motor_dc15_a01_led_cap2_dummy.stl",
+      "mass_kg": 4.634575760721267e-05,
+      "category": "servo",
+      "assembly": "guide_10429:0",
+      "volume_m3": 3.164057350913804e-08,
+      "center_m": [
+        -0.02866,
+        0.06579332860080184,
+        0.03371533137082336
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 15,
+      "mesh": "motor_dc15_a01_case_m_dummy.stl",
+      "mass_kg": 0.01398302364671946,
+      "category": "servo",
+      "assembly": "guide_10429:0",
+      "volume_m3": 9.54630823653184e-06,
+      "center_m": [
+        -0.028671023818883742,
+        0.050124430193934505,
+        0.02329337557123306
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 16,
+      "mesh": "motor_dc15_a01_case_b_dummy.stl",
+      "mass_kg": 0.0038012117561563477,
+      "category": "servo",
+      "assembly": "guide_10429:0",
+      "volume_m3": 2.595113904789139e-06,
+      "center_m": [
+        -0.02867513990748756,
+        0.04980430233383727,
+        0.03310959457323945
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 17,
+      "mesh": "motor_dc15_a01_idle_cap_dummy.stl",
+      "mass_kg": 9.567493214497719e-05,
+      "category": "servo",
+      "assembly": "guide_10429:0",
+      "volume_m3": 6.531794666452552e-08,
+      "center_m": [
+        -0.028659999999191048,
+        0.0574997917568598,
+        0.03612876897813967
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 18,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "guide_10429:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -0.028659999418398772,
+        0.05749979252907378,
+        0.034562746677183454
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 19,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "guide_10429:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        -0.0209649534376214,
+        0.04849979998180501,
+        0.028366903300169714
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 20,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "guide_10429:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        -0.036355046562378604,
+        0.04849979998180501,
+        0.028366903300169714
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 21,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "guide_10429:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -0.028660000581581406,
+        0.057499808765765166,
+        0.013383053322811788
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 22,
+      "mesh": "motor_dc15_a01_case_f_dummy.stl",
+      "mass_kg": 0.0030347572923982427,
+      "category": "servo",
+      "assembly": "guide_10429:0",
+      "volume_m3": 2.0718500710748064e-06,
+      "center_m": [
+        -0.028692796170944355,
+        0.04941653592476081,
+        0.014404593565163406
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 23,
+      "mesh": "motor_dc15_a01_horn_idle2_dummy.stl",
+      "mass_kg": 0.0006797897518837802,
+      "category": "servo",
+      "assembly": "guide_10429:0",
+      "volume_m3": 4.640972275721322e-07,
+      "center_m": [
+        -0.028660005245962305,
+        0.05749979569047875,
+        0.03702263888836736
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 24,
+      "mesh": "motor_dc15_a01_horn_dummy.stl",
+      "mass_kg": 0.000844496644417089,
+      "category": "servo",
+      "assembly": "guide_10429:0",
+      "volume_m3": 5.76543777369191e-07,
+      "center_m": [
+        -0.028659999419397165,
+        0.05749612630369067,
+        0.011374706293333453
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 25,
+      "mesh": "motor_dc15_a01_led_cap2_dummy.stl",
+      "mass_kg": 4.634575760721267e-05,
+      "category": "servo",
+      "assembly": "guide_10429:1",
+      "volume_m3": 3.164057350913804e-08,
+      "center_m": [
+        -0.02866,
+        -0.0657933287133945,
+        0.014784670734876182
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 26,
+      "mesh": "motor_dc15_a01_case_m_dummy.stl",
+      "mass_kg": 0.01398302364671946,
+      "category": "servo",
+      "assembly": "guide_10429:1",
+      "volume_m3": 9.54630823653184e-06,
+      "center_m": [
+        -0.028671062961244824,
+        -0.05012444941275001,
+        0.025206604857586405
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 27,
+      "mesh": "motor_dc15_a01_case_b_dummy.stl",
+      "mass_kg": 0.0038012117561563477,
+      "category": "servo",
+      "assembly": "guide_10429:1",
+      "volume_m3": 2.595113904789139e-06,
+      "center_m": [
+        -0.028675180748892814,
+        -0.04980429587772081,
+        0.015390385006057924
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 28,
+      "mesh": "motor_dc15_a01_idle_cap_dummy.stl",
+      "mass_kg": 9.567493214497719e-05,
+      "category": "servo",
+      "assembly": "guide_10429:1",
+      "volume_m3": 6.531794666452552e-08,
+      "center_m": [
+        -0.028659999999191048,
+        -0.05749980824316683,
+        0.012371231021860326
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 29,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "guide_10429:1",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -0.028659999418395334,
+        -0.05749980876576362,
+        0.01393725332281179
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 30,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "guide_10429:1",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        -0.02096496735174644,
+        -0.048499799981753904,
+        0.02013309673627138
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 31,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "guide_10429:1",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        -0.036355032648253564,
+        -0.048499799981753904,
+        0.02013309673627138
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 32,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "guide_10429:1",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -0.028660000581581406,
+        -0.05749979252907223,
+        0.03511694667718346
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 33,
+      "mesh": "motor_dc15_a01_case_f_dummy.stl",
+      "mass_kg": 0.0030347572923982427,
+      "category": "servo",
+      "assembly": "guide_10429:1",
+      "volume_m3": 2.0718500710748064e-06,
+      "center_m": [
+        -0.028692839070289734,
+        -0.04941653167195735,
+        0.03409538498516391
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 34,
+      "mesh": "motor_dc15_a01_horn_idle2_dummy.stl",
+      "mass_kg": 0.0006797897518837802,
+      "category": "servo",
+      "assembly": "guide_10429:1",
+      "volume_m3": 4.640972275721322e-07,
+      "center_m": [
+        -0.028660005245994682,
+        -0.057499792108853254,
+        0.011477361111648827
+      ]
+    },
+    {
+      "link": "guide_10429",
+      "visual_index": 35,
+      "mesh": "motor_dc15_a01_horn_dummy.stl",
+      "mass_kg": 0.000844496644417089,
+      "category": "servo",
+      "assembly": "guide_10429:1",
+      "volume_m3": 5.76543777369191e-07,
+      "center_m": [
+        -0.028659999419397165,
+        -0.057496134371472225,
+        0.03712529373362539
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1",
+      "visual_index": 0,
+      "mesh": "dc15_a01_adaptor_1.stl",
+      "mass_kg": 0.0,
+      "category": "unassigned",
+      "assembly": "",
+      "volume_m3": 1.2088369088632325e-06,
+      "center_m": [
+        -0.026499996673035906,
+        0.02728458869201716,
+        0.014499997561045226
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1",
+      "visual_index": 1,
+      "mesh": "mcp_bracket.stl",
+      "mass_kg": 0.0011152657038137998,
+      "category": "printed_15_percent",
+      "assembly": "dc15_a01_hinge_1:visual_1",
+      "volume_m3": 5.948987345407768e-06,
+      "center_m": [
+        -0.016719056982160113,
+        0.019704419924641014,
+        0.01449998219438587
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1",
+      "visual_index": 2,
+      "mesh": "cable_spacer.stl",
+      "mass_kg": 0.000544310844,
+      "category": "printed_15_percent",
+      "assembly": "dc15_a01_hinge_1:visual_2",
+      "volume_m3": 3.0028826431723525e-06,
+      "center_m": [
+        -0.027196733342437638,
+        0.030211917415678722,
+        0.023634963797782585
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1",
+      "visual_index": 3,
+      "mesh": "dc15_a01_hinge_1.stl",
+      "mass_kg": 0.0031584543907840004,
+      "category": "solid",
+      "assembly": "dc15_a01_hinge_1:visual_3",
+      "volume_m3": 2.527359241251445e-06,
+      "center_m": [
+        3.3560672508373482e-09,
+        0.010093935662881129,
+        0.014500299648953711
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1",
+      "visual_index": 4,
+      "mesh": "motor_dc15_a01_led_cap2_dummy.stl",
+      "mass_kg": 4.634575760721267e-05,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1:0",
+      "volume_m3": 3.164057350913804e-08,
+      "center_m": [
+        -0.03614243347652232,
+        0.029806471511796412,
+        0.014500000155866864
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1",
+      "visual_index": 5,
+      "mesh": "motor_dc15_a01_case_m_dummy.stl",
+      "mass_kg": 0.01398302364671946,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1:0",
+      "volume_m3": 9.54630823653184e-06,
+      "center_m": [
+        -0.025720514754059218,
+        0.045475331456322404,
+        0.014511016867658174
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1",
+      "visual_index": 6,
+      "mesh": "motor_dc15_a01_case_b_dummy.stl",
+      "mass_kg": 0.0038012117561563477,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1:0",
+      "volume_m3": 2.595113904789139e-06,
+      "center_m": [
+        -0.03553673547036566,
+        0.04579551069905643,
+        0.01451516937625751
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1",
+      "visual_index": 7,
+      "mesh": "motor_dc15_a01_idle_cap_dummy.stl",
+      "mass_kg": 9.567493214497719e-05,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1:0",
+      "volume_m3": 6.531794666452552e-08,
+      "center_m": [
+        -0.038555868978154814,
+        0.03810000824314021,
+        0.014500008242366443
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1",
+      "visual_index": 8,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -0.03698984667719623,
+        0.03810000747092777,
+        0.01450000753676506
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1",
+      "visual_index": 9,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        -0.030794003268779645,
+        0.04710000695706248,
+        0.006804965420591746
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1",
+      "visual_index": 10,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        -0.030794003281949166,
+        0.04709999304293748,
+        0.022195039605316016
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1",
+      "visual_index": 11,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -0.0158101533227995,
+        0.03810000747092777,
+        0.01450000869992787
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1",
+      "visual_index": 12,
+      "mesh": "motor_dc15_a01_case_f_dummy.stl",
+      "mass_kg": 0.0030347572923982427,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1:0",
+      "volume_m3": 2.0718500710748064e-06,
+      "center_m": [
+        -0.01683173658507764,
+        0.04618327284207116,
+        0.014532823748485196
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1",
+      "visual_index": 13,
+      "mesh": "motor_dc15_a01_horn_idle2_dummy.stl",
+      "mass_kg": 0.0006797897518837802,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1:0",
+      "volume_m3": 4.640972275721322e-07,
+      "center_m": [
+        -0.03944973888837752,
+        0.03810000430950733,
+        0.014500000288105967
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1",
+      "visual_index": 14,
+      "mesh": "motor_dc15_a01_horn_dummy.stl",
+      "mass_kg": 0.000844496644417089,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1:0",
+      "volume_m3": 5.76543777369191e-07,
+      "center_m": [
+        -0.013801806266384149,
+        0.03810366562852777,
+        0.014499995385506335
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm",
+      "visual_index": 0,
+      "mesh": "dc15_a01_adaptor_2.stl",
+      "mass_kg": 0.0,
+      "category": "unassigned",
+      "assembly": "",
+      "volume_m3": 1.7521852964856344e-06,
+      "center_m": [
+        -0.007500000641772115,
+        -5.053538229034744e-09,
+        -0.0015494980007141207
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm",
+      "visual_index": 1,
+      "mesh": "motor_dc15_a01_led_cap2_dummy.stl",
+      "mass_kg": 4.634575760721267e-05,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm:0",
+      "volume_m3": 3.164057350913804e-08,
+      "center_m": [
+        -0.023293528756650254,
+        0.00964242845602977,
+        -0.012999997085206121
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm",
+      "visual_index": 2,
+      "mesh": "motor_dc15_a01_case_m_dummy.stl",
+      "mass_kg": 0.01398302364671946,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm:0",
+      "volume_m3": 9.54630823653184e-06,
+      "center_m": [
+        -0.007624675946443171,
+        -0.0007794777664595926,
+        -0.01298892951883223
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm",
+      "visual_index": 3,
+      "mesh": "motor_dc15_a01_case_b_dummy.stl",
+      "mass_kg": 0.0038012117561563477,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm:0",
+      "volume_m3": 2.595113904789139e-06,
+      "center_m": [
+        -0.0073044868451042,
+        0.009036743261123857,
+        -0.01298481140462014
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm",
+      "visual_index": 4,
+      "mesh": "motor_dc15_a01_idle_cap_dummy.stl",
+      "mass_kg": 9.567493214497719e-05,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm:0",
+      "volume_m3": 6.531794666452552e-08,
+      "center_m": [
+        -0.015000000000013315,
+        0.012055868978124534,
+        -0.013000000000787078
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm",
+      "visual_index": 5,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -0.015000000647416566,
+        0.010489846677170922,
+        -0.013000000581583782
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm",
+      "visual_index": 6,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        -0.005999994974092188,
+        0.0042940032951114615,
+        -0.02069504463122381
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm",
+      "visual_index": 7,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        -0.006,
+        0.004294003281961945,
+        -0.005304960394683986
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm",
+      "visual_index": 8,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -0.014999994782576267,
+        -0.010689846677176986,
+        -0.012999999418437758
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm",
+      "visual_index": 9,
+      "mesh": "motor_dc15_a01_case_f_dummy.stl",
+      "mass_kg": 0.0030347572923982427,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm:0",
+      "volume_m3": 2.0718500710748064e-06,
+      "center_m": [
+        -0.0069167255775463826,
+        -0.009668255293649855,
+        -0.012967152687863633
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm",
+      "visual_index": 10,
+      "mesh": "motor_dc15_a01_horn_idle2_dummy.stl",
+      "mass_kg": 0.0006797897518837802,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm:0",
+      "volume_m3": 4.640972275721322e-07,
+      "center_m": [
+        -0.014999990732644172,
+        0.012949738888342423,
+        -0.01299999475399222
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm",
+      "visual_index": 11,
+      "mesh": "motor_dc15_a01_horn_dummy.stl",
+      "mass_kg": 0.000844496644417089,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm:0",
+      "volume_m3": 5.76543777369191e-07,
+      "center_m": [
+        -0.014996333251739243,
+        -0.01269819372988729,
+        -0.013000000594071555
+      ]
+    },
+    {
+      "link": "dip_spacer",
+      "visual_index": 0,
+      "mesh": "dip_spacer.stl",
+      "mass_kg": 0.000408233133,
+      "category": "printed_15_percent",
+      "assembly": "dip_spacer:visual_0",
+      "volume_m3": 2.1711869320291224e-06,
+      "center_m": [
+        -2.141051693577145e-10,
+        -0.02005004372536037,
+        0.014499991568766803
+      ]
+    },
+    {
+      "link": "dip_spacer",
+      "visual_index": 1,
+      "mesh": "dc15_a01_hinge_1.stl",
+      "mass_kg": 0.0031584543907840004,
+      "category": "solid",
+      "assembly": "dip_spacer:visual_1",
+      "volume_m3": 2.527359241251445e-06,
+      "center_m": [
+        3.3560672508373482e-09,
+        -0.010093935662099736,
+        0.014499710716138748
+      ]
+    },
+    {
+      "link": "dip_spacer",
+      "visual_index": 2,
+      "mesh": "dc15_a01_adaptor_2.stl",
+      "mass_kg": 0.0,
+      "category": "unassigned",
+      "assembly": "",
+      "volume_m3": 1.7521852964856344e-06,
+      "center_m": [
+        0.0074999967927348145,
+        -0.024649498000713126,
+        0.014499996425415817
+      ]
+    },
+    {
+      "link": "dip_spacer",
+      "visual_index": 3,
+      "mesh": "motor_dc15_a01_led_cap2_dummy.stl",
+      "mass_kg": 4.634575760721267e-05,
+      "category": "servo",
+      "assembly": "dip_spacer:0",
+      "volume_m3": 3.164057350913804e-08,
+      "center_m": [
+        -0.00829352860079648,
+        -0.03610000291479331,
+        0.024142431370823364
+      ]
+    },
+    {
+      "link": "dip_spacer",
+      "visual_index": 4,
+      "mesh": "motor_dc15_a01_case_m_dummy.stl",
+      "mass_kg": 0.01398302364671946,
+      "category": "servo",
+      "assembly": "dip_spacer:0",
+      "volume_m3": 9.54630823653184e-06,
+      "center_m": [
+        0.007375369736172435,
+        -0.03611107048133557,
+        0.013720475571233055
+      ]
+    },
+    {
+      "link": "dip_spacer",
+      "visual_index": 5,
+      "mesh": "motor_dc15_a01_case_b_dummy.stl",
+      "mass_kg": 0.0038012117561563477,
+      "category": "servo",
+      "assembly": "dip_spacer:0",
+      "volume_m3": 2.595113904789139e-06,
+      "center_m": [
+        0.0076954975702216155,
+        -0.03611518859532262,
+        0.02353669457323945
+      ]
+    },
+    {
+      "link": "dip_spacer",
+      "visual_index": 6,
+      "mesh": "motor_dc15_a01_idle_cap_dummy.stl",
+      "mass_kg": 9.567493214497719e-05,
+      "category": "servo",
+      "assembly": "dip_spacer:0",
+      "volume_m3": 6.531794666452552e-08,
+      "center_m": [
+        8.243140206383966e-09,
+        -0.0360999999992432,
+        0.026555868978139673
+      ]
+    },
+    {
+      "link": "dip_spacer",
+      "visual_index": 7,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dip_spacer:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        7.470929898177174e-09,
+        -0.036099999418446035,
+        0.02498984667718345
+      ]
+    },
+    {
+      "link": "dip_spacer",
+      "visual_index": 8,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dip_spacer:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        0.009000000013144391,
+        -0.028404953437621415,
+        0.018794003300169712
+      ]
+    },
+    {
+      "link": "dip_spacer",
+      "visual_index": 9,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dip_spacer:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        0.009,
+        -0.043795046562378565,
+        0.018794003300169712
+      ]
+    },
+    {
+      "link": "dip_spacer",
+      "visual_index": 10,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dip_spacer:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -8.765763030582187e-09,
+        -0.036100000581613605,
+        0.0038101533228117887
+      ]
+    },
+    {
+      "link": "dip_spacer",
+      "visual_index": 11,
+      "mesh": "motor_dc15_a01_case_f_dummy.stl",
+      "mass_kg": 0.0030347572923982427,
+      "category": "servo",
+      "assembly": "dip_spacer:0",
+      "volume_m3": 2.0718500710748064e-06,
+      "center_m": [
+        0.008083263867582758,
+        -0.036132847312097593,
+        0.004831693565163405
+      ]
+    },
+    {
+      "link": "dip_spacer",
+      "visual_index": 12,
+      "mesh": "motor_dc15_a01_horn_idle2_dummy.stl",
+      "mass_kg": 0.0006797897518837802,
+      "category": "servo",
+      "assembly": "dip_spacer:0",
+      "volume_m3": 4.640972275721322e-07,
+      "center_m": [
+        4.309488054476843e-09,
+        -0.036100005245989567,
+        0.02744973888836736
+      ]
+    },
+    {
+      "link": "dip_spacer",
+      "visual_index": 13,
+      "mesh": "motor_dc15_a01_horn_dummy.stl",
+      "mass_kg": 0.000844496644417089,
+      "category": "servo",
+      "assembly": "dip_spacer:0",
+      "volume_m3": 5.76543777369191e-07,
+      "center_m": [
+        3.673696307168671e-06,
+        -0.03609999940590292,
+        0.0018018062933334526
+      ]
+    },
+    {
+      "link": "finger_tip_bone",
+      "visual_index": 0,
+      "mesh": "dc15_a01_hinge_1.stl",
+      "mass_kg": 0.0031584543907840004,
+      "category": "solid",
+      "assembly": "finger_tip_bone:visual_0",
+      "volume_m3": 2.527359241251445e-06,
+      "center_m": [
+        3.3560672508373482e-09,
+        -0.010093935662099736,
+        0.014499710716138748
+      ]
+    },
+    {
+      "link": "finger_tip_bone",
+      "visual_index": 1,
+      "mesh": "finger_tip_bone.stl",
+      "mass_kg": 0.00197246683260165,
+      "category": "printed_15_percent",
+      "assembly": "finger_tip_bone:visual_1",
+      "volume_m3": 1.1938811617675765e-05,
+      "center_m": [
+        4.6117051689595345e-08,
+        -0.03433699007752791,
+        0.014499999942022546
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_2",
+      "visual_index": 0,
+      "mesh": "dc15_a01_hinge_1.stl",
+      "mass_kg": 0.0031584543907840004,
+      "category": "solid",
+      "assembly": "dc15_a01_hinge_1_2:visual_0",
+      "volume_m3": 2.527359241251445e-06,
+      "center_m": [
+        3.3560672508373482e-09,
+        0.010093935662881129,
+        0.014500299648953711
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_2",
+      "visual_index": 1,
+      "mesh": "cable_spacer.stl",
+      "mass_kg": 0.000544310844,
+      "category": "printed_15_percent",
+      "assembly": "dc15_a01_hinge_1_2:visual_1",
+      "volume_m3": 3.0028826431723525e-06,
+      "center_m": [
+        -0.027196733342437638,
+        0.030211917415678722,
+        0.023634963797782585
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_2",
+      "visual_index": 2,
+      "mesh": "mcp_bracket.stl",
+      "mass_kg": 0.0011152657038137998,
+      "category": "printed_15_percent",
+      "assembly": "dc15_a01_hinge_1_2:visual_2",
+      "volume_m3": 5.948987345407768e-06,
+      "center_m": [
+        -0.016719056982160113,
+        0.019704419924641014,
+        0.01449998219438587
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_2",
+      "visual_index": 3,
+      "mesh": "dc15_a01_adaptor_1.stl",
+      "mass_kg": 0.0,
+      "category": "unassigned",
+      "assembly": "",
+      "volume_m3": 1.2088369088632325e-06,
+      "center_m": [
+        -0.026499996673035906,
+        0.02728458869201716,
+        0.014499997561045226
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_2",
+      "visual_index": 4,
+      "mesh": "motor_dc15_a01_led_cap2_dummy.stl",
+      "mass_kg": 4.634575760721267e-05,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_2:0",
+      "volume_m3": 3.164057350913804e-08,
+      "center_m": [
+        -0.03614243347652232,
+        0.029806471511796412,
+        0.014500000155866864
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_2",
+      "visual_index": 5,
+      "mesh": "motor_dc15_a01_case_m_dummy.stl",
+      "mass_kg": 0.01398302364671946,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_2:0",
+      "volume_m3": 9.54630823653184e-06,
+      "center_m": [
+        -0.02572047561174898,
+        0.04547536977678683,
+        0.014511016867801952
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_2",
+      "visual_index": 6,
+      "mesh": "motor_dc15_a01_case_b_dummy.stl",
+      "mass_kg": 0.0038012117561563477,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_2:0",
+      "volume_m3": 2.595113904789139e-06,
+      "center_m": [
+        -0.03553669462894306,
+        0.04579549762596053,
+        0.014515169376407528
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_2",
+      "visual_index": 7,
+      "mesh": "motor_dc15_a01_idle_cap_dummy.stl",
+      "mass_kg": 9.567493214497719e-05,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_2:0",
+      "volume_m3": 6.531794666452552e-08,
+      "center_m": [
+        -0.038555868978154814,
+        0.03810000824314021,
+        0.014500008242366443
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_2",
+      "visual_index": 8,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_2:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -0.03698984667719623,
+        0.03810000747092777,
+        0.01450000753676506
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_2",
+      "visual_index": 9,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_2:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        -0.03079400329510535,
+        0.047100006957062575,
+        0.006804955368776191
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_2",
+      "visual_index": 10,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_2:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        -0.030794003281949166,
+        0.04709999304293748,
+        0.022195039605316016
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_2",
+      "visual_index": 11,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_2:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -0.0158101533227995,
+        0.03810000747092777,
+        0.01450000869992787
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_2",
+      "visual_index": 12,
+      "mesh": "motor_dc15_a01_case_f_dummy.stl",
+      "mass_kg": 0.0030347572923982427,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_2:0",
+      "volume_m3": 2.0718500710748064e-06,
+      "center_m": [
+        -0.01683169368572051,
+        0.04618326398818314,
+        0.014532823748642775
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_2",
+      "visual_index": 13,
+      "mesh": "motor_dc15_a01_horn_idle2_dummy.stl",
+      "mass_kg": 0.0006797897518837802,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_2:0",
+      "volume_m3": 4.640972275721322e-07,
+      "center_m": [
+        -0.03944973888837752,
+        0.03810000430950733,
+        0.014500000288105967
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_2",
+      "visual_index": 14,
+      "mesh": "motor_dc15_a01_horn_dummy.stl",
+      "mass_kg": 0.000844496644417089,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_2:0",
+      "volume_m3": 5.76543777369191e-07,
+      "center_m": [
+        -0.013801806266384149,
+        0.03810366562852777,
+        0.014499995385506335
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_2",
+      "visual_index": 0,
+      "mesh": "dc15_a01_adaptor_2.stl",
+      "mass_kg": 0.0,
+      "category": "unassigned",
+      "assembly": "",
+      "volume_m3": 1.7521852964856344e-06,
+      "center_m": [
+        -0.007500000641772115,
+        -5.053538229034744e-09,
+        -0.0015494980007141207
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_2",
+      "visual_index": 1,
+      "mesh": "motor_dc15_a01_led_cap2_dummy.stl",
+      "mass_kg": 4.634575760721267e-05,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_2:0",
+      "volume_m3": 3.164057350913804e-08,
+      "center_m": [
+        -0.023293528756650254,
+        0.00964242845602977,
+        -0.012999997085206121
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_2",
+      "visual_index": 2,
+      "mesh": "motor_dc15_a01_case_m_dummy.stl",
+      "mass_kg": 0.01398302364671946,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_2:0",
+      "volume_m3": 9.54630823653184e-06,
+      "center_m": [
+        -0.007624675946443171,
+        -0.0007794777664595926,
+        -0.01298892951883223
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_2",
+      "visual_index": 3,
+      "mesh": "motor_dc15_a01_case_b_dummy.stl",
+      "mass_kg": 0.0038012117561563477,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_2:0",
+      "volume_m3": 2.595113904789139e-06,
+      "center_m": [
+        -0.0073044868451042,
+        0.009036743261123857,
+        -0.01298481140462014
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_2",
+      "visual_index": 4,
+      "mesh": "motor_dc15_a01_idle_cap_dummy.stl",
+      "mass_kg": 9.567493214497719e-05,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_2:0",
+      "volume_m3": 6.531794666452552e-08,
+      "center_m": [
+        -0.015000000000013315,
+        0.012055868978124534,
+        -0.013000000000787078
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_2",
+      "visual_index": 5,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_2:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -0.015000000647416566,
+        0.010489846677170922,
+        -0.013000000581583782
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_2",
+      "visual_index": 6,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_2:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        -0.005999994974092188,
+        0.0042940032951114615,
+        -0.02069504463122381
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_2",
+      "visual_index": 7,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_2:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        -0.006,
+        0.004294003281961945,
+        -0.005304960394683986
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_2",
+      "visual_index": 8,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_2:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -0.014999994782576267,
+        -0.010689846677176986,
+        -0.012999999418437758
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_2",
+      "visual_index": 9,
+      "mesh": "motor_dc15_a01_case_f_dummy.stl",
+      "mass_kg": 0.0030347572923982427,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_2:0",
+      "volume_m3": 2.0718500710748064e-06,
+      "center_m": [
+        -0.0069167255775463826,
+        -0.009668255293649855,
+        -0.012967152687863633
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_2",
+      "visual_index": 10,
+      "mesh": "motor_dc15_a01_horn_idle2_dummy.stl",
+      "mass_kg": 0.0006797897518837802,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_2:0",
+      "volume_m3": 4.640972275721322e-07,
+      "center_m": [
+        -0.014999990732644172,
+        0.012949738888342423,
+        -0.01299999475399222
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_2",
+      "visual_index": 11,
+      "mesh": "motor_dc15_a01_horn_dummy.stl",
+      "mass_kg": 0.000844496644417089,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_2:0",
+      "volume_m3": 5.76543777369191e-07,
+      "center_m": [
+        -0.014996333251739243,
+        -0.01269819372988729,
+        -0.013000000594071555
+      ]
+    },
+    {
+      "link": "dip_spacer_2",
+      "visual_index": 0,
+      "mesh": "dc15_a01_adaptor_2.stl",
+      "mass_kg": 0.0,
+      "category": "unassigned",
+      "assembly": "",
+      "volume_m3": 1.7521852964856344e-06,
+      "center_m": [
+        0.0074999967927348145,
+        -0.024649498000713126,
+        0.014499996425415817
+      ]
+    },
+    {
+      "link": "dip_spacer_2",
+      "visual_index": 1,
+      "mesh": "dc15_a01_hinge_1.stl",
+      "mass_kg": 0.0031584543907840004,
+      "category": "solid",
+      "assembly": "dip_spacer_2:visual_1",
+      "volume_m3": 2.527359241251445e-06,
+      "center_m": [
+        3.3560672508373482e-09,
+        -0.010093935663690027,
+        0.014499689985953834
+      ]
+    },
+    {
+      "link": "dip_spacer_2",
+      "visual_index": 2,
+      "mesh": "dip_spacer.stl",
+      "mass_kg": 0.000408233133,
+      "category": "printed_15_percent",
+      "assembly": "dip_spacer_2:visual_2",
+      "volume_m3": 2.1711869320291224e-06,
+      "center_m": [
+        -2.141051693577145e-10,
+        -0.02004995615689898,
+        0.01450000775566423
+      ]
+    },
+    {
+      "link": "dip_spacer_2",
+      "visual_index": 3,
+      "mesh": "motor_dc15_a01_led_cap2_dummy.stl",
+      "mass_kg": 4.634575760721267e-05,
+      "category": "servo",
+      "assembly": "dip_spacer_2:0",
+      "volume_m3": 3.164057350913804e-08,
+      "center_m": [
+        -0.00829352860079648,
+        -0.03610000291479331,
+        0.024142431370823364
+      ]
+    },
+    {
+      "link": "dip_spacer_2",
+      "visual_index": 4,
+      "mesh": "motor_dc15_a01_case_m_dummy.stl",
+      "mass_kg": 0.01398302364671946,
+      "category": "servo",
+      "assembly": "dip_spacer_2:0",
+      "volume_m3": 9.54630823653184e-06,
+      "center_m": [
+        0.007375369736172435,
+        -0.03611107048133557,
+        0.013720475571233055
+      ]
+    },
+    {
+      "link": "dip_spacer_2",
+      "visual_index": 5,
+      "mesh": "motor_dc15_a01_case_b_dummy.stl",
+      "mass_kg": 0.0038012117561563477,
+      "category": "servo",
+      "assembly": "dip_spacer_2:0",
+      "volume_m3": 2.595113904789139e-06,
+      "center_m": [
+        0.0076954975702216155,
+        -0.03611518859532262,
+        0.02353669457323945
+      ]
+    },
+    {
+      "link": "dip_spacer_2",
+      "visual_index": 6,
+      "mesh": "motor_dc15_a01_idle_cap_dummy.stl",
+      "mass_kg": 9.567493214497719e-05,
+      "category": "servo",
+      "assembly": "dip_spacer_2:0",
+      "volume_m3": 6.531794666452552e-08,
+      "center_m": [
+        8.243140206383966e-09,
+        -0.0360999999992432,
+        0.026555868978139673
+      ]
+    },
+    {
+      "link": "dip_spacer_2",
+      "visual_index": 7,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dip_spacer_2:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        7.470929898177174e-09,
+        -0.036099999418446035,
+        0.02498984667718345
+      ]
+    },
+    {
+      "link": "dip_spacer_2",
+      "visual_index": 8,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dip_spacer_2:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        0.009000000013144391,
+        -0.028404953437621415,
+        0.018794003300169712
+      ]
+    },
+    {
+      "link": "dip_spacer_2",
+      "visual_index": 9,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dip_spacer_2:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        0.009,
+        -0.043795046562378565,
+        0.018794003300169712
+      ]
+    },
+    {
+      "link": "dip_spacer_2",
+      "visual_index": 10,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dip_spacer_2:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -8.765763030582187e-09,
+        -0.036100000581613605,
+        0.0038101533228117887
+      ]
+    },
+    {
+      "link": "dip_spacer_2",
+      "visual_index": 11,
+      "mesh": "motor_dc15_a01_case_f_dummy.stl",
+      "mass_kg": 0.0030347572923982427,
+      "category": "servo",
+      "assembly": "dip_spacer_2:0",
+      "volume_m3": 2.0718500710748064e-06,
+      "center_m": [
+        0.008083263867582758,
+        -0.036132847312097593,
+        0.004831693565163405
+      ]
+    },
+    {
+      "link": "dip_spacer_2",
+      "visual_index": 12,
+      "mesh": "motor_dc15_a01_horn_idle2_dummy.stl",
+      "mass_kg": 0.0006797897518837802,
+      "category": "servo",
+      "assembly": "dip_spacer_2:0",
+      "volume_m3": 4.640972275721322e-07,
+      "center_m": [
+        4.309488054476843e-09,
+        -0.036100005245989567,
+        0.02744973888836736
+      ]
+    },
+    {
+      "link": "dip_spacer_2",
+      "visual_index": 13,
+      "mesh": "motor_dc15_a01_horn_dummy.stl",
+      "mass_kg": 0.000844496644417089,
+      "category": "servo",
+      "assembly": "dip_spacer_2:0",
+      "volume_m3": 5.76543777369191e-07,
+      "center_m": [
+        3.673696307168671e-06,
+        -0.03609999940590292,
+        0.0018018062933334526
+      ]
+    },
+    {
+      "link": "finger_tip_bone_2",
+      "visual_index": 0,
+      "mesh": "dc15_a01_hinge_1.stl",
+      "mass_kg": 0.0031584543907840004,
+      "category": "solid",
+      "assembly": "finger_tip_bone_2:visual_0",
+      "volume_m3": 2.527359241251445e-06,
+      "center_m": [
+        3.3560672508373482e-09,
+        -0.010093935663690027,
+        0.014499689985953834
+      ]
+    },
+    {
+      "link": "finger_tip_bone_2",
+      "visual_index": 1,
+      "mesh": "finger_tip_bone.stl",
+      "mass_kg": 0.00197246683260165,
+      "category": "printed_15_percent",
+      "assembly": "finger_tip_bone_2:visual_1",
+      "volume_m3": 1.1938811617675765e-05,
+      "center_m": [
+        4.6117051689595345e-08,
+        -0.03433699007752791,
+        0.014499999942022546
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_3",
+      "visual_index": 0,
+      "mesh": "cable_spacer.stl",
+      "mass_kg": 0.000544310844,
+      "category": "printed_15_percent",
+      "assembly": "dc15_a01_hinge_1_3:visual_0",
+      "volume_m3": 3.0028826431723525e-06,
+      "center_m": [
+        -0.027196733342437638,
+        0.030211917415678722,
+        0.023634963797782585
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_3",
+      "visual_index": 1,
+      "mesh": "dc15_a01_adaptor_1.stl",
+      "mass_kg": 0.0,
+      "category": "unassigned",
+      "assembly": "",
+      "volume_m3": 1.2088369088632325e-06,
+      "center_m": [
+        -0.026500003654159946,
+        0.027284588692018028,
+        0.014499997561019584
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_3",
+      "visual_index": 2,
+      "mesh": "mcp_bracket.stl",
+      "mass_kg": 0.0011152657038137998,
+      "category": "printed_15_percent",
+      "assembly": "dc15_a01_hinge_1_3:visual_2",
+      "volume_m3": 5.948987345407768e-06,
+      "center_m": [
+        -0.016719056982160113,
+        0.019704419924641014,
+        0.01449998219438587
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_3",
+      "visual_index": 3,
+      "mesh": "dc15_a01_hinge_1.stl",
+      "mass_kg": 0.0031584543907840004,
+      "category": "solid",
+      "assembly": "dc15_a01_hinge_1_3:visual_3",
+      "volume_m3": 2.527359241251445e-06,
+      "center_m": [
+        3.3560672508373482e-09,
+        0.010093935662881129,
+        0.014500299648953711
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_3",
+      "visual_index": 4,
+      "mesh": "motor_dc15_a01_led_cap2_dummy.stl",
+      "mass_kg": 4.634575760721267e-05,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_3:0",
+      "volume_m3": 3.164057350913804e-08,
+      "center_m": [
+        -0.03614243347652232,
+        0.029806471511796412,
+        0.014500000155866864
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_3",
+      "visual_index": 5,
+      "mesh": "motor_dc15_a01_case_m_dummy.stl",
+      "mass_kg": 0.01398302364671946,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_3:0",
+      "volume_m3": 9.54630823653184e-06,
+      "center_m": [
+        -0.02572047561174898,
+        0.04547536977678683,
+        0.014511016867801952
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_3",
+      "visual_index": 6,
+      "mesh": "motor_dc15_a01_case_b_dummy.stl",
+      "mass_kg": 0.0038012117561563477,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_3:0",
+      "volume_m3": 2.595113904789139e-06,
+      "center_m": [
+        -0.03553669462894306,
+        0.04579549762596053,
+        0.014515169376407528
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_3",
+      "visual_index": 7,
+      "mesh": "motor_dc15_a01_idle_cap_dummy.stl",
+      "mass_kg": 9.567493214497719e-05,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_3:0",
+      "volume_m3": 6.531794666452552e-08,
+      "center_m": [
+        -0.038555868978154814,
+        0.03810000824314021,
+        0.014500008242366443
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_3",
+      "visual_index": 8,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_3:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -0.03698984667719623,
+        0.03810000747092777,
+        0.01450000753676506
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_3",
+      "visual_index": 9,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_3:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        -0.03079400329510535,
+        0.047100006957062575,
+        0.006804955368776191
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_3",
+      "visual_index": 10,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_3:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        -0.030794003281949166,
+        0.04709999304293748,
+        0.022195039605316016
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_3",
+      "visual_index": 11,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_3:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -0.0158101533227995,
+        0.03810000747092777,
+        0.01450000869992787
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_3",
+      "visual_index": 12,
+      "mesh": "motor_dc15_a01_case_f_dummy.stl",
+      "mass_kg": 0.0030347572923982427,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_3:0",
+      "volume_m3": 2.0718500710748064e-06,
+      "center_m": [
+        -0.01683169368572051,
+        0.04618326398818314,
+        0.014532823748642775
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_3",
+      "visual_index": 13,
+      "mesh": "motor_dc15_a01_horn_idle2_dummy.stl",
+      "mass_kg": 0.0006797897518837802,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_3:0",
+      "volume_m3": 4.640972275721322e-07,
+      "center_m": [
+        -0.03944973888837752,
+        0.03810000430950733,
+        0.014500000288105967
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_3",
+      "visual_index": 14,
+      "mesh": "motor_dc15_a01_horn_dummy.stl",
+      "mass_kg": 0.000844496644417089,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_3:0",
+      "volume_m3": 5.76543777369191e-07,
+      "center_m": [
+        -0.013801806266384149,
+        0.03810366562852777,
+        0.014499995385506335
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_3",
+      "visual_index": 0,
+      "mesh": "dc15_a01_adaptor_2.stl",
+      "mass_kg": 0.0,
+      "category": "unassigned",
+      "assembly": "",
+      "volume_m3": 1.7521852964856344e-06,
+      "center_m": [
+        -0.007500000641772115,
+        -5.053538229034744e-09,
+        -0.0015494980007141207
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_3",
+      "visual_index": 1,
+      "mesh": "motor_dc15_a01_led_cap2_dummy.stl",
+      "mass_kg": 4.634575760721267e-05,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_3:0",
+      "volume_m3": 3.164057350913804e-08,
+      "center_m": [
+        -0.023293528756650254,
+        0.00964242845602977,
+        -0.012999997085206121
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_3",
+      "visual_index": 2,
+      "mesh": "motor_dc15_a01_case_m_dummy.stl",
+      "mass_kg": 0.01398302364671946,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_3:0",
+      "volume_m3": 9.54630823653184e-06,
+      "center_m": [
+        -0.007624675946443171,
+        -0.0007794777664595926,
+        -0.01298892951883223
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_3",
+      "visual_index": 3,
+      "mesh": "motor_dc15_a01_case_b_dummy.stl",
+      "mass_kg": 0.0038012117561563477,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_3:0",
+      "volume_m3": 2.595113904789139e-06,
+      "center_m": [
+        -0.0073044868451042,
+        0.009036743261123857,
+        -0.01298481140462014
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_3",
+      "visual_index": 4,
+      "mesh": "motor_dc15_a01_idle_cap_dummy.stl",
+      "mass_kg": 9.567493214497719e-05,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_3:0",
+      "volume_m3": 6.531794666452552e-08,
+      "center_m": [
+        -0.015000000000013315,
+        0.012055868978124534,
+        -0.013000000000787078
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_3",
+      "visual_index": 5,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_3:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -0.015000000647416566,
+        0.010489846677170922,
+        -0.013000000581583782
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_3",
+      "visual_index": 6,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_3:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        -0.0060000050259078124,
+        0.0042940032951114615,
+        -0.02069504463122381
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_3",
+      "visual_index": 7,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_3:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        -0.006,
+        0.004294003281961945,
+        -0.005304960394683986
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_3",
+      "visual_index": 8,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_3:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -0.014999994782576267,
+        -0.010689846677176986,
+        -0.012999999418437758
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_3",
+      "visual_index": 9,
+      "mesh": "motor_dc15_a01_case_f_dummy.stl",
+      "mass_kg": 0.0030347572923982427,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_3:0",
+      "volume_m3": 2.0718500710748064e-06,
+      "center_m": [
+        -0.0069167255775463826,
+        -0.009668255293649855,
+        -0.012967152687863633
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_3",
+      "visual_index": 10,
+      "mesh": "motor_dc15_a01_horn_idle2_dummy.stl",
+      "mass_kg": 0.0006797897518837802,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_3:0",
+      "volume_m3": 4.640972275721322e-07,
+      "center_m": [
+        -0.014999990732644172,
+        0.012949738888342423,
+        -0.01299999475399222
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_3",
+      "visual_index": 11,
+      "mesh": "motor_dc15_a01_horn_dummy.stl",
+      "mass_kg": 0.000844496644417089,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_3:0",
+      "volume_m3": 5.76543777369191e-07,
+      "center_m": [
+        -0.014996333251739243,
+        -0.01269819372988729,
+        -0.013000000594071555
+      ]
+    },
+    {
+      "link": "dip_spacer_3",
+      "visual_index": 0,
+      "mesh": "dc15_a01_hinge_1.stl",
+      "mass_kg": 0.0031584543907840004,
+      "category": "solid",
+      "assembly": "dip_spacer_3:visual_0",
+      "volume_m3": 2.527359241251445e-06,
+      "center_m": [
+        3.3560672508373482e-09,
+        -0.010093935662099736,
+        0.014499710716138748
+      ]
+    },
+    {
+      "link": "dip_spacer_3",
+      "visual_index": 1,
+      "mesh": "dip_spacer.stl",
+      "mass_kg": 0.000408233133,
+      "category": "printed_15_percent",
+      "assembly": "dip_spacer_3:visual_1",
+      "volume_m3": 2.1711869320291224e-06,
+      "center_m": [
+        -2.141051693577145e-10,
+        -0.02004995615689898,
+        0.01450000775566423
+      ]
+    },
+    {
+      "link": "dip_spacer_3",
+      "visual_index": 2,
+      "mesh": "dc15_a01_adaptor_2.stl",
+      "mass_kg": 0.0,
+      "category": "unassigned",
+      "assembly": "",
+      "volume_m3": 1.7521852964856344e-06,
+      "center_m": [
+        0.0074999967927348145,
+        -0.024649498000713126,
+        0.014499996425415817
+      ]
+    },
+    {
+      "link": "dip_spacer_3",
+      "visual_index": 3,
+      "mesh": "motor_dc15_a01_led_cap2_dummy.stl",
+      "mass_kg": 4.634575760721267e-05,
+      "category": "servo",
+      "assembly": "dip_spacer_3:0",
+      "volume_m3": 3.164057350913804e-08,
+      "center_m": [
+        -0.00829352860079648,
+        -0.03610000291479331,
+        0.024142431370823364
+      ]
+    },
+    {
+      "link": "dip_spacer_3",
+      "visual_index": 4,
+      "mesh": "motor_dc15_a01_case_m_dummy.stl",
+      "mass_kg": 0.01398302364671946,
+      "category": "servo",
+      "assembly": "dip_spacer_3:0",
+      "volume_m3": 9.54630823653184e-06,
+      "center_m": [
+        0.007375369736172435,
+        -0.03611107048133557,
+        0.013720475571233055
+      ]
+    },
+    {
+      "link": "dip_spacer_3",
+      "visual_index": 5,
+      "mesh": "motor_dc15_a01_case_b_dummy.stl",
+      "mass_kg": 0.0038012117561563477,
+      "category": "servo",
+      "assembly": "dip_spacer_3:0",
+      "volume_m3": 2.595113904789139e-06,
+      "center_m": [
+        0.0076954975702216155,
+        -0.03611518859532262,
+        0.02353669457323945
+      ]
+    },
+    {
+      "link": "dip_spacer_3",
+      "visual_index": 6,
+      "mesh": "motor_dc15_a01_idle_cap_dummy.stl",
+      "mass_kg": 9.567493214497719e-05,
+      "category": "servo",
+      "assembly": "dip_spacer_3:0",
+      "volume_m3": 6.531794666452552e-08,
+      "center_m": [
+        8.243140206383966e-09,
+        -0.0360999999992432,
+        0.026555868978139673
+      ]
+    },
+    {
+      "link": "dip_spacer_3",
+      "visual_index": 7,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dip_spacer_3:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        7.470929898177174e-09,
+        -0.036099999418446035,
+        0.02498984667718345
+      ]
+    },
+    {
+      "link": "dip_spacer_3",
+      "visual_index": 8,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dip_spacer_3:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        0.009000000013144391,
+        -0.028404953437621415,
+        0.018794003300169712
+      ]
+    },
+    {
+      "link": "dip_spacer_3",
+      "visual_index": 9,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dip_spacer_3:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        0.009,
+        -0.043795046562378565,
+        0.018794003300169712
+      ]
+    },
+    {
+      "link": "dip_spacer_3",
+      "visual_index": 10,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dip_spacer_3:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -8.765763030582187e-09,
+        -0.036100000581613605,
+        0.0038101533228117887
+      ]
+    },
+    {
+      "link": "dip_spacer_3",
+      "visual_index": 11,
+      "mesh": "motor_dc15_a01_case_f_dummy.stl",
+      "mass_kg": 0.0030347572923982427,
+      "category": "servo",
+      "assembly": "dip_spacer_3:0",
+      "volume_m3": 2.0718500710748064e-06,
+      "center_m": [
+        0.008083263867582758,
+        -0.036132847312097593,
+        0.004831693565163405
+      ]
+    },
+    {
+      "link": "dip_spacer_3",
+      "visual_index": 12,
+      "mesh": "motor_dc15_a01_horn_idle2_dummy.stl",
+      "mass_kg": 0.0006797897518837802,
+      "category": "servo",
+      "assembly": "dip_spacer_3:0",
+      "volume_m3": 4.640972275721322e-07,
+      "center_m": [
+        4.309488054476843e-09,
+        -0.036100005245989567,
+        0.02744973888836736
+      ]
+    },
+    {
+      "link": "dip_spacer_3",
+      "visual_index": 13,
+      "mesh": "motor_dc15_a01_horn_dummy.stl",
+      "mass_kg": 0.000844496644417089,
+      "category": "servo",
+      "assembly": "dip_spacer_3:0",
+      "volume_m3": 5.76543777369191e-07,
+      "center_m": [
+        3.673696307168671e-06,
+        -0.03609999940590292,
+        0.0018018062933334526
+      ]
+    },
+    {
+      "link": "finger_tip_bone_3",
+      "visual_index": 0,
+      "mesh": "dc15_a01_hinge_1.stl",
+      "mass_kg": 0.0031584543907840004,
+      "category": "solid",
+      "assembly": "finger_tip_bone_3:visual_0",
+      "volume_m3": 2.527359241251445e-06,
+      "center_m": [
+        3.3560672508373482e-09,
+        -0.010093935662099736,
+        0.014499710716138748
+      ]
+    },
+    {
+      "link": "finger_tip_bone_3",
+      "visual_index": 1,
+      "mesh": "finger_tip_bone.stl",
+      "mass_kg": 0.00197246683260165,
+      "category": "printed_15_percent",
+      "assembly": "finger_tip_bone_3:visual_1",
+      "volume_m3": 1.1938811617675765e-05,
+      "center_m": [
+        4.6117051689595345e-08,
+        -0.03433699007752791,
+        0.014499999942022546
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_4",
+      "visual_index": 0,
+      "mesh": "dc15_a01_hinge_1.stl",
+      "mass_kg": 0.0031584543907840004,
+      "category": "solid",
+      "assembly": "dc15_a01_hinge_1_4:visual_0",
+      "volume_m3": 2.527359241251445e-06,
+      "center_m": [
+        3.3560672508373482e-09,
+        0.010093935662881129,
+        0.014500299648953711
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_4",
+      "visual_index": 1,
+      "mesh": "mcp_bracket.stl",
+      "mass_kg": 0.0011152657038137998,
+      "category": "printed_15_percent",
+      "assembly": "dc15_a01_hinge_1_4:visual_1",
+      "volume_m3": 5.948987345407768e-06,
+      "center_m": [
+        -0.016719056982160113,
+        0.019704419924641014,
+        0.01449998219438587
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_4",
+      "visual_index": 2,
+      "mesh": "dc15_a01_adaptor_1.stl",
+      "mass_kg": 0.0,
+      "category": "unassigned",
+      "assembly": "",
+      "volume_m3": 1.2088369088632325e-06,
+      "center_m": [
+        -0.026500003654159946,
+        0.027284588692018028,
+        0.014499997561019584
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_4",
+      "visual_index": 3,
+      "mesh": "cable_spacer.stl",
+      "mass_kg": 0.000544310844,
+      "category": "printed_15_percent",
+      "assembly": "dc15_a01_hinge_1_4:visual_3",
+      "volume_m3": 3.0028826431723525e-06,
+      "center_m": [
+        -0.027196733342437638,
+        0.030211917415678722,
+        0.023634963797782585
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_4",
+      "visual_index": 4,
+      "mesh": "motor_dc15_a01_led_cap2_dummy.stl",
+      "mass_kg": 4.634575760721267e-05,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_4:0",
+      "volume_m3": 3.164057350913804e-08,
+      "center_m": [
+        -0.03614243347652232,
+        0.029806471511796412,
+        0.014500000155866864
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_4",
+      "visual_index": 5,
+      "mesh": "motor_dc15_a01_case_m_dummy.stl",
+      "mass_kg": 0.01398302364671946,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_4:0",
+      "volume_m3": 9.54630823653184e-06,
+      "center_m": [
+        -0.02572047561174898,
+        0.04547536977678683,
+        0.014511016867801952
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_4",
+      "visual_index": 6,
+      "mesh": "motor_dc15_a01_case_b_dummy.stl",
+      "mass_kg": 0.0038012117561563477,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_4:0",
+      "volume_m3": 2.595113904789139e-06,
+      "center_m": [
+        -0.03553669462894306,
+        0.04579549762596053,
+        0.014515169376407528
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_4",
+      "visual_index": 7,
+      "mesh": "motor_dc15_a01_idle_cap_dummy.stl",
+      "mass_kg": 9.567493214497719e-05,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_4:0",
+      "volume_m3": 6.531794666452552e-08,
+      "center_m": [
+        -0.038555868978154814,
+        0.03810000824314021,
+        0.014500008242366443
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_4",
+      "visual_index": 8,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_4:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -0.03698984667719623,
+        0.03810000747092777,
+        0.01450000753676506
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_4",
+      "visual_index": 9,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_4:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        -0.030794003268779645,
+        0.04710000695706248,
+        0.006804965420591746
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_4",
+      "visual_index": 10,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_4:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        -0.030794003281949166,
+        0.04709999304293748,
+        0.022195039605316016
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_4",
+      "visual_index": 11,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_4:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -0.0158101533227995,
+        0.03810000747092777,
+        0.01450000869992787
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_4",
+      "visual_index": 12,
+      "mesh": "motor_dc15_a01_case_f_dummy.stl",
+      "mass_kg": 0.0030347572923982427,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_4:0",
+      "volume_m3": 2.0718500710748064e-06,
+      "center_m": [
+        -0.01683169368572051,
+        0.04618326398818314,
+        0.014532823748642775
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_4",
+      "visual_index": 13,
+      "mesh": "motor_dc15_a01_horn_idle2_dummy.stl",
+      "mass_kg": 0.0006797897518837802,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_4:0",
+      "volume_m3": 4.640972275721322e-07,
+      "center_m": [
+        -0.03944973888837752,
+        0.03810000430950733,
+        0.014500000288105967
+      ]
+    },
+    {
+      "link": "dc15_a01_hinge_1_4",
+      "visual_index": 14,
+      "mesh": "motor_dc15_a01_horn_dummy.stl",
+      "mass_kg": 0.000844496644417089,
+      "category": "servo",
+      "assembly": "dc15_a01_hinge_1_4:0",
+      "volume_m3": 5.76543777369191e-07,
+      "center_m": [
+        -0.013801806266384149,
+        0.03810366562852777,
+        0.014499995385506335
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_4",
+      "visual_index": 0,
+      "mesh": "dc15_a01_adaptor_2.stl",
+      "mass_kg": 0.0,
+      "category": "unassigned",
+      "assembly": "",
+      "volume_m3": 1.7521852964856344e-06,
+      "center_m": [
+        -0.007500000641772115,
+        -5.053538229034744e-09,
+        -0.0015494980007141207
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_4",
+      "visual_index": 1,
+      "mesh": "motor_dc15_a01_led_cap2_dummy.stl",
+      "mass_kg": 4.634575760721267e-05,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_4:0",
+      "volume_m3": 3.164057350913804e-08,
+      "center_m": [
+        -0.023293528756650254,
+        0.00964242845602977,
+        -0.012999997085206121
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_4",
+      "visual_index": 2,
+      "mesh": "motor_dc15_a01_case_m_dummy.stl",
+      "mass_kg": 0.01398302364671946,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_4:0",
+      "volume_m3": 9.54630823653184e-06,
+      "center_m": [
+        -0.007624675946443171,
+        -0.0007794777664595926,
+        -0.01298892951883223
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_4",
+      "visual_index": 3,
+      "mesh": "motor_dc15_a01_case_b_dummy.stl",
+      "mass_kg": 0.0038012117561563477,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_4:0",
+      "volume_m3": 2.595113904789139e-06,
+      "center_m": [
+        -0.0073044868451042,
+        0.009036743261123857,
+        -0.01298481140462014
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_4",
+      "visual_index": 4,
+      "mesh": "motor_dc15_a01_idle_cap_dummy.stl",
+      "mass_kg": 9.567493214497719e-05,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_4:0",
+      "volume_m3": 6.531794666452552e-08,
+      "center_m": [
+        -0.015000000000013315,
+        0.012055868978124534,
+        -0.013000000000787078
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_4",
+      "visual_index": 5,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_4:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -0.015000000647416566,
+        0.010489846677170922,
+        -0.013000000581583782
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_4",
+      "visual_index": 6,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_4:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        -0.0060000050259078124,
+        0.0042940032951114615,
+        -0.02069504463122381
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_4",
+      "visual_index": 7,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_4:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        -0.006,
+        0.004294003281961945,
+        -0.005304960394683986
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_4",
+      "visual_index": 8,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_4:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -0.014999994782576267,
+        -0.010689846677176986,
+        -0.012999999418437758
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_4",
+      "visual_index": 9,
+      "mesh": "motor_dc15_a01_case_f_dummy.stl",
+      "mass_kg": 0.0030347572923982427,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_4:0",
+      "volume_m3": 2.0718500710748064e-06,
+      "center_m": [
+        -0.0069167255775463826,
+        -0.009668255293649855,
+        -0.012967152687863633
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_4",
+      "visual_index": 10,
+      "mesh": "motor_dc15_a01_horn_idle2_dummy.stl",
+      "mass_kg": 0.0006797897518837802,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_4:0",
+      "volume_m3": 4.640972275721322e-07,
+      "center_m": [
+        -0.014999990732644172,
+        0.012949738888342423,
+        -0.01299999475399222
+      ]
+    },
+    {
+      "link": "dc15_a01_dummy_assy_idle_asm_4",
+      "visual_index": 11,
+      "mesh": "motor_dc15_a01_horn_dummy.stl",
+      "mass_kg": 0.000844496644417089,
+      "category": "servo",
+      "assembly": "dc15_a01_dummy_assy_idle_asm_4:0",
+      "volume_m3": 5.76543777369191e-07,
+      "center_m": [
+        -0.014996333251739243,
+        -0.01269819372988729,
+        -0.013000000594071555
+      ]
+    },
+    {
+      "link": "dip_spacer_4",
+      "visual_index": 0,
+      "mesh": "dc15_a01_hinge_1.stl",
+      "mass_kg": 0.0031584543907840004,
+      "category": "solid",
+      "assembly": "dip_spacer_4:visual_0",
+      "volume_m3": 2.527359241251445e-06,
+      "center_m": [
+        3.3560672508373482e-09,
+        -0.010093935663690027,
+        0.014499689985953834
+      ]
+    },
+    {
+      "link": "dip_spacer_4",
+      "visual_index": 1,
+      "mesh": "dip_spacer.stl",
+      "mass_kg": 0.000408233133,
+      "category": "printed_15_percent",
+      "assembly": "dip_spacer_4:visual_1",
+      "volume_m3": 2.1711869320291224e-06,
+      "center_m": [
+        -2.141051693577145e-10,
+        -0.02004995615689898,
+        0.01450000775566423
+      ]
+    },
+    {
+      "link": "dip_spacer_4",
+      "visual_index": 2,
+      "mesh": "dc15_a01_adaptor_2.stl",
+      "mass_kg": 0.0,
+      "category": "unassigned",
+      "assembly": "",
+      "volume_m3": 1.7521852964856344e-06,
+      "center_m": [
+        0.007500004490809416,
+        -0.024649498000716533,
+        0.014499996425415817
+      ]
+    },
+    {
+      "link": "dip_spacer_4",
+      "visual_index": 3,
+      "mesh": "motor_dc15_a01_led_cap2_dummy.stl",
+      "mass_kg": 4.634575760721267e-05,
+      "category": "servo",
+      "assembly": "dip_spacer_4:0",
+      "volume_m3": 3.164057350913804e-08,
+      "center_m": [
+        -0.00829352860079648,
+        -0.03610000291479331,
+        0.024142431370823364
+      ]
+    },
+    {
+      "link": "dip_spacer_4",
+      "visual_index": 4,
+      "mesh": "motor_dc15_a01_case_m_dummy.stl",
+      "mass_kg": 0.01398302364671946,
+      "category": "servo",
+      "assembly": "dip_spacer_4:0",
+      "volume_m3": 9.54630823653184e-06,
+      "center_m": [
+        0.007375369736172435,
+        -0.03611107048133557,
+        0.013720475571233055
+      ]
+    },
+    {
+      "link": "dip_spacer_4",
+      "visual_index": 5,
+      "mesh": "motor_dc15_a01_case_b_dummy.stl",
+      "mass_kg": 0.0038012117561563477,
+      "category": "servo",
+      "assembly": "dip_spacer_4:0",
+      "volume_m3": 2.595113904789139e-06,
+      "center_m": [
+        0.0076954975702216155,
+        -0.03611518859532262,
+        0.02353669457323945
+      ]
+    },
+    {
+      "link": "dip_spacer_4",
+      "visual_index": 6,
+      "mesh": "motor_dc15_a01_idle_cap_dummy.stl",
+      "mass_kg": 9.567493214497719e-05,
+      "category": "servo",
+      "assembly": "dip_spacer_4:0",
+      "volume_m3": 6.531794666452552e-08,
+      "center_m": [
+        8.243140206383966e-09,
+        -0.0360999999992432,
+        0.026555868978139673
+      ]
+    },
+    {
+      "link": "dip_spacer_4",
+      "visual_index": 7,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dip_spacer_4:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        7.470929898177174e-09,
+        -0.036099999418446035,
+        0.02498984667718345
+      ]
+    },
+    {
+      "link": "dip_spacer_4",
+      "visual_index": 8,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dip_spacer_4:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        0.009000000013144391,
+        -0.028404953437621415,
+        0.018794003300169712
+      ]
+    },
+    {
+      "link": "dip_spacer_4",
+      "visual_index": 9,
+      "mesh": "motor_b3b_eh.stl",
+      "mass_kg": 0.00015677286338204103,
+      "category": "servo",
+      "assembly": "dip_spacer_4:0",
+      "volume_m3": 1.0702993249387625e-07,
+      "center_m": [
+        0.009,
+        -0.043795046562378565,
+        0.018794003300169712
+      ]
+    },
+    {
+      "link": "dip_spacer_4",
+      "visual_index": 10,
+      "mesh": "motor_bts2_m2_6x8.stl",
+      "mass_kg": 0.00010057724595440506,
+      "category": "servo",
+      "assembly": "dip_spacer_4:0",
+      "volume_m3": 6.86647906575974e-08,
+      "center_m": [
+        -8.765763030582187e-09,
+        -0.036100000581613605,
+        0.0038101533228117887
+      ]
+    },
+    {
+      "link": "dip_spacer_4",
+      "visual_index": 11,
+      "mesh": "motor_dc15_a01_case_f_dummy.stl",
+      "mass_kg": 0.0030347572923982427,
+      "category": "servo",
+      "assembly": "dip_spacer_4:0",
+      "volume_m3": 2.0718500710748064e-06,
+      "center_m": [
+        0.008083263867582758,
+        -0.036132847312097593,
+        0.004831693565163405
+      ]
+    },
+    {
+      "link": "dip_spacer_4",
+      "visual_index": 12,
+      "mesh": "motor_dc15_a01_horn_idle2_dummy.stl",
+      "mass_kg": 0.0006797897518837802,
+      "category": "servo",
+      "assembly": "dip_spacer_4:0",
+      "volume_m3": 4.640972275721322e-07,
+      "center_m": [
+        4.309488054476843e-09,
+        -0.036100005245989567,
+        0.02744973888836736
+      ]
+    },
+    {
+      "link": "dip_spacer_4",
+      "visual_index": 13,
+      "mesh": "motor_dc15_a01_horn_dummy.stl",
+      "mass_kg": 0.000844496644417089,
+      "category": "servo",
+      "assembly": "dip_spacer_4:0",
+      "volume_m3": 5.76543777369191e-07,
+      "center_m": [
+        3.673696307168671e-06,
+        -0.03609999940590292,
+        0.0018018062933334526
+      ]
+    },
+    {
+      "link": "finger_tip_bone_4",
+      "visual_index": 0,
+      "mesh": "finger_tip_bone.stl",
+      "mass_kg": 0.00197246683260165,
+      "category": "printed_15_percent",
+      "assembly": "finger_tip_bone_4:visual_0",
+      "volume_m3": 1.1938811617675765e-05,
+      "center_m": [
+        4.6117051689595345e-08,
+        -0.03433699007752791,
+        0.014499999942022546
+      ]
+    },
+    {
+      "link": "finger_tip_bone_4",
+      "visual_index": 1,
+      "mesh": "dc15_a01_hinge_1.stl",
+      "mass_kg": 0.0031584543907840004,
+      "category": "solid",
+      "assembly": "finger_tip_bone_4:visual_1",
+      "volume_m3": 2.527359241251445e-06,
+      "center_m": [
+        3.3560672508373482e-09,
+        -0.010093935662099736,
+        0.014499710716138748
+      ]
+    }
+  ]
+}

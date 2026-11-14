@@ -1,0 +1,4221 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="robot">
+  <!-- Link mgn12c__linear_guide_block -->
+  <link name="mgn12c__linear_guide_block">
+    <inertial>
+      <origin xyz="0.00603964183665823 0.0452026246748193 0.0952415038898925" rpy="0 0 0" />
+      <mass value="0.159544859630194" />
+      <inertia ixx="0.000242816312794791" ixy="4.67336127259123e-07" ixz="2.8691693563551e-06" iyy="5.31142041902543e-05" iyz="1.29626652277025e-07" izz="0.000241689399867493" />
+    </inertial>
+    <!-- Part mgn12c__linear_guide_block -->
+    <visual>
+      <origin xyz="0.00409906 0.017756 0.0839509" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/mgn12c__linear_guide_block.stl" />
+      </geometry>
+      <material name="mgn12c__linear_guide_block_material">
+        <color rgba="0.776471 0.756863 0.737255 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00409906 0.017756 0.0839509" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/mgn12c__linear_guide_block.stl" />
+      </geometry>
+    </collision>
+    <!-- Part mgn12c__linear_guide_block_2 -->
+    <visual>
+      <origin xyz="0.00409906 0.072756 0.0839509" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/mgn12c__linear_guide_block__2.stl" />
+      </geometry>
+      <material name="mgn12c__linear_guide_block_2_material">
+        <color rgba="0.776471 0.756863 0.737255 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00409906 0.072756 0.0839509" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/mgn12c__linear_guide_block__2.stl" />
+      </geometry>
+    </collision>
+    <!-- Part shaft_10409_50mm -->
+    <visual>
+      <origin xyz="0.076589 0.0452428 0.0859509" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/shaft_10409_50mm.stl" />
+      </geometry>
+      <material name="shaft_10409_50mm_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.076589 0.0452428 0.0859509" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/shaft_10409_50mm.stl" />
+      </geometry>
+    </collision>
+    <!-- Part dc15_a01_adaptor_2 -->
+    <visual>
+      <origin xyz="0.00409907 -0.00489399 0.104611" rpy="-1.5708 -0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+      <material name="dc15_a01_adaptor_2_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00409907 -0.00489399 0.104611" rpy="-1.5708 -0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+    </collision>
+    <!-- Part mgn12c__linear_guide_block_3 -->
+    <visual>
+      <origin xyz="0.00409906 0.072756 0.0839509" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/mgn12c__linear_guide_block__3.stl" />
+      </geometry>
+      <material name="mgn12c__linear_guide_block_3_material">
+        <color rgba="0.776471 0.756863 0.737255 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00409906 0.072756 0.0839509" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/mgn12c__linear_guide_block__3.stl" />
+      </geometry>
+    </collision>
+    <!-- Part mgn12c__linear_guide_block_4 -->
+    <visual>
+      <origin xyz="0.00409906 0.072756 0.0839509" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/mgn12c__linear_guide_block.stl" />
+      </geometry>
+      <material name="mgn12c__linear_guide_block_4_material">
+        <color rgba="0.776471 0.756863 0.737255 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00409906 0.072756 0.0839509" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/mgn12c__linear_guide_block.stl" />
+      </geometry>
+    </collision>
+    <!-- Part mgn12c__linear_guide_block_5 -->
+    <visual>
+      <origin xyz="0.00409906 0.017756 0.0839509" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/mgn12c__linear_guide_block__2.stl" />
+      </geometry>
+      <material name="mgn12c__linear_guide_block_5_material">
+        <color rgba="0.776471 0.756863 0.737255 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00409906 0.017756 0.0839509" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/mgn12c__linear_guide_block__2.stl" />
+      </geometry>
+    </collision>
+    <!-- Part dc15_a01_adaptor_2_2 -->
+    <visual>
+      <origin xyz="0.00409907 0.095106 0.104611" rpy="-1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+      <material name="dc15_a01_adaptor_2_2_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00409907 0.095106 0.104611" rpy="-1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+    </collision>
+    <!-- Part mgn12c__linear_guide_block_6 -->
+    <visual>
+      <origin xyz="0.00409906 0.017756 0.0839509" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/mgn12c__linear_guide_block__4.stl" />
+      </geometry>
+      <material name="mgn12c__linear_guide_block_6_material">
+        <color rgba="0.776471 0.756863 0.737255 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00409906 0.017756 0.0839509" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/mgn12c__linear_guide_block__4.stl" />
+      </geometry>
+    </collision>
+    <!-- Part mgn12c__linear_guide_block_7 -->
+    <visual>
+      <origin xyz="0.00409906 0.017756 0.0839509" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/mgn12c__linear_guide_block__5.stl" />
+      </geometry>
+      <material name="mgn12c__linear_guide_block_7_material">
+        <color rgba="0.776471 0.756863 0.737255 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00409906 0.017756 0.0839509" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/mgn12c__linear_guide_block__5.stl" />
+      </geometry>
+    </collision>
+    <!-- Part mgn12c__linear_guide_block_8 -->
+    <visual>
+      <origin xyz="0.00409906 0.072756 0.0839509" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/mgn12c__linear_guide_block__5.stl" />
+      </geometry>
+      <material name="mgn12c__linear_guide_block_8_material">
+        <color rgba="0.776471 0.756863 0.737255 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00409906 0.072756 0.0839509" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/mgn12c__linear_guide_block__5.stl" />
+      </geometry>
+    </collision>
+    <!-- Part hex_socket_head_cap_screw_m4x0_70_x_20__832e47d784177ea3f1dabbaab534416e -->
+    <visual>
+      <origin xyz="0.014589 0.0452428 0.105611" rpy="0 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/hex_socket_head_cap_screw_m4x0_70_x_20__832e47d784177ea3f1dabbaab534416e.stl" />
+      </geometry>
+      <material name="hex_socket_head_cap_screw_m4x0_70_x_20__832e47d784177ea3f1dabbaab534416e_material">
+        <color rgba="0.603922 0.647059 0.686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.014589 0.0452428 0.105611" rpy="0 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/hex_socket_head_cap_screw_m4x0_70_x_20__832e47d784177ea3f1dabbaab534416e.stl" />
+      </geometry>
+    </collision>
+    <!-- Part plug_10428 -->
+    <visual>
+      <origin xyz="0.011589 0.0452428 0.0859509" rpy="-1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/plug_10428.stl" />
+      </geometry>
+      <material name="plug_10428_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.011589 0.0452428 0.0859509" rpy="-1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/plug_10428.stl" />
+      </geometry>
+    </collision>
+    <!-- Part mgn12c__linear_guide_block_9 -->
+    <visual>
+      <origin xyz="0.00409906 0.017756 0.0839509" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/mgn12c__linear_guide_block__3.stl" />
+      </geometry>
+      <material name="mgn12c__linear_guide_block_9_material">
+        <color rgba="0.776471 0.756863 0.737255 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00409906 0.017756 0.0839509" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/mgn12c__linear_guide_block__3.stl" />
+      </geometry>
+    </collision>
+    <!-- Part movingbaseyuno -->
+    <visual>
+      <origin xyz="0.172404 0.00274277 0.0784509" rpy="-1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/movingbaseyuno.stl" />
+      </geometry>
+      <material name="movingbaseyuno_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.172404 0.00274277 0.0784509" rpy="-1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/movingbaseyuno.stl" />
+      </geometry>
+    </collision>
+    <!-- Part mgn12c__linear_guide_block_10 -->
+    <visual>
+      <origin xyz="0.00409906 0.072756 0.0839509" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/mgn12c__linear_guide_block__4.stl" />
+      </geometry>
+      <material name="mgn12c__linear_guide_block_10_material">
+        <color rgba="0.776471 0.756863 0.737255 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00409906 0.072756 0.0839509" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/mgn12c__linear_guide_block__4.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_led_cap2_dummy -->
+    <visual>
+      <origin xyz="-0.00550093 -0.019894 0.114611" rpy="3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_led_cap2_dummy_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00550093 -0.019894 0.114611" rpy="3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_m_dummy -->
+    <visual>
+      <origin xyz="0.0120991 -0.012394 0.114611" rpy="-3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_m_dummy_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0120991 -0.012394 0.114611" rpy="-3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_b_dummy -->
+    <visual>
+      <origin xyz="-0.00740093 -0.012394 0.114611" rpy="-3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_b_dummy_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00740093 -0.012394 0.114611" rpy="-3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_idle_cap_dummy -->
+    <visual>
+      <origin xyz="-0.0102009 -0.012394 0.114611" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_idle_cap_dummy_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0102009 -0.012394 0.114611" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8 -->
+    <visual>
+      <origin xyz="-0.00860093 -0.012394 0.114611" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00860093 -0.012394 0.114611" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh -->
+    <visual>
+      <origin xyz="0.00169907 -0.00339399 0.106911" rpy="-3.14159 -0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00169907 -0.00339399 0.106911" rpy="-3.14159 -0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_2 -->
+    <visual>
+      <origin xyz="0.00169907 -0.00339399 0.122311" rpy="-0 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_2_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00169907 -0.00339399 0.122311" rpy="-0 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_2 -->
+    <visual>
+      <origin xyz="0.0169991 -0.012394 0.114611" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_2_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0169991 -0.012394 0.114611" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_f_dummy -->
+    <visual>
+      <origin xyz="0.0120991 -0.012394 0.114611" rpy="-3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_f_dummy_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0120991 -0.012394 0.114611" rpy="-3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_idle2_dummy -->
+    <visual>
+      <origin xyz="-0.00750093 -0.012394 0.114611" rpy="0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_idle2_dummy_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00750093 -0.012394 0.114611" rpy="0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_dummy -->
+    <visual>
+      <origin xyz="0.0156991 -0.012394 0.114611" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_dummy_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0156991 -0.012394 0.114611" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_led_cap2_dummy_2 -->
+    <visual>
+      <origin xyz="0.0136991 0.110106 0.114611" rpy="-0 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_led_cap2_dummy_2_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0136991 0.110106 0.114611" rpy="-0 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_m_dummy_2 -->
+    <visual>
+      <origin xyz="-0.00390093 0.102606 0.114611" rpy="0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_m_dummy_2_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00390093 0.102606 0.114611" rpy="0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_b_dummy_2 -->
+    <visual>
+      <origin xyz="0.0155991 0.102606 0.114611" rpy="0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_b_dummy_2_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0155991 0.102606 0.114611" rpy="0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_idle_cap_dummy_2 -->
+    <visual>
+      <origin xyz="0.0183991 0.102606 0.114611" rpy="-1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_idle_cap_dummy_2_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0183991 0.102606 0.114611" rpy="-1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_3 -->
+    <visual>
+      <origin xyz="0.0167991 0.102606 0.114611" rpy="-1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_3_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0167991 0.102606 0.114611" rpy="-1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_3 -->
+    <visual>
+      <origin xyz="0.00649907 0.093606 0.106911" rpy="3.14159 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_3_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00649907 0.093606 0.106911" rpy="3.14159 0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_4 -->
+    <visual>
+      <origin xyz="0.00649907 0.093606 0.122311" rpy="0 -0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_4_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00649907 0.093606 0.122311" rpy="0 -0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_4 -->
+    <visual>
+      <origin xyz="-0.00880093 0.102606 0.114611" rpy="-1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_4_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00880093 0.102606 0.114611" rpy="-1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_f_dummy_2 -->
+    <visual>
+      <origin xyz="-0.00390093 0.102606 0.114611" rpy="0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_f_dummy_2_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00390093 0.102606 0.114611" rpy="0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_idle2_dummy_2 -->
+    <visual>
+      <origin xyz="0.0156991 0.102606 0.114611" rpy="-3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_idle2_dummy_2_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0156991 0.102606 0.114611" rpy="-3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_dummy_2 -->
+    <visual>
+      <origin xyz="-0.00750093 0.102606 0.114611" rpy="-1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_dummy_2_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00750093 0.102606 0.114611" rpy="-1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link guide_10429 -->
+  <link name="guide_10429">
+    <inertial>
+      <origin xyz="0.00836981839745923 -7.63304193491393e-05 0.0624274881343519" rpy="0 0 0" />
+      <mass value="0.296305105857902" />
+      <inertia ixx="0.00100566199090936" ixy="7.50856522988637e-07" ixz="-9.96361758030478e-05" iyy="0.000894669600587172" iyz="2.13854664130726e-06" izz="0.000542429703389086" />
+    </inertial>
+    <!-- Part guide_10429 -->
+    <visual>
+      <origin xyz="-0 0 0.0575" rpy="1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/guide_10429.stl" />
+      </geometry>
+      <material name="guide_10429_material">
+        <color rgba="0.498039 0.498039 0.498039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0.0575" rpy="1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/guide_10429.stl" />
+      </geometry>
+    </collision>
+    <!-- Part adapterplate -->
+    <visual>
+      <origin xyz="0.0575 0.0425 -0.046" rpy="1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/adapterplate.stl" />
+      </geometry>
+      <material name="adapterplate_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0575 0.0425 -0.046" rpy="1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/adapterplate.stl" />
+      </geometry>
+    </collision>
+    <!-- Part dc15_a01_adaptor_2_3 -->
+    <visual>
+      <origin xyz="-0.01866 0.0499998 0.0240729" rpy="3.14159 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+      <material name="dc15_a01_adaptor_2_3_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.01866 0.0499998 0.0240729" rpy="3.14159 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+    </collision>
+    <!-- Part 6725k41_12_mm_wide_x_150_mm_long_rail_for_ball_bearing_carriage -->
+    <visual>
+      <origin xyz="0.0075 0.0275 0.0398354" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/6725k41_12_mm_wide_x_150_mm_long_rail_for_ball_bearing_carriage.stl" />
+      </geometry>
+      <material name="6725k41_12_mm_wide_x_150_mm_long_rail_for_ball_bearing_carriage_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0075 0.0275 0.0398354" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/6725k41_12_mm_wide_x_150_mm_long_rail_for_ball_bearing_carriage.stl" />
+      </geometry>
+    </collision>
+    <!-- Part cameramount -->
+    <!-- Part baseplate -->
+    <visual>
+      <origin xyz="0.0075 0.0425 -0.046" rpy="1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/baseplate.stl" />
+      </geometry>
+      <material name="baseplate_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0075 0.0425 -0.046" rpy="1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/baseplate.stl" />
+      </geometry>
+    </collision>
+    <!-- Part extension_10404_50mm -->
+    <visual>
+      <origin xyz="0 0 -0.0045" rpy="-1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/extension_10404_50mm.stl" />
+      </geometry>
+      <material name="extension_10404_50mm_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.0045" rpy="-1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/extension_10404_50mm.stl" />
+      </geometry>
+    </collision>
+    <!-- Part staticbaseyuno -->
+    <visual>
+      <origin xyz="0.0075 0.0425 -0.046" rpy="1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/staticbaseyuno.stl" />
+      </geometry>
+      <material name="staticbaseyuno_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0075 0.0425 -0.046" rpy="1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/staticbaseyuno.stl" />
+      </geometry>
+    </collision>
+    <!-- Part твердое_тело1 -->
+    <!-- Part dc15_a01_adaptor_2_4 -->
+    <visual>
+      <origin xyz="-0.01866 -0.0499998 0.0244271" rpy="0 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+      <material name="dc15_a01_adaptor_2_4_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.01866 -0.0499998 0.0244271" rpy="0 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+    </collision>
+    <!-- Part bottomspacer -->
+    <visual>
+      <origin xyz="0.0575 0.0425 -0.046" rpy="1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/bottomspacer.stl" />
+      </geometry>
+      <material name="bottomspacer_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0575 0.0425 -0.046" rpy="1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/bottomspacer.stl" />
+      </geometry>
+    </collision>
+    <!-- Part clamshell_bot_10417 -->
+    <visual>
+      <origin xyz="-0 -0.0075 -0.0355" rpy="0 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/clamshell_bot_10417.stl" />
+      </geometry>
+      <material name="clamshell_bot_10417_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.0075 -0.0355" rpy="0 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/clamshell_bot_10417.stl" />
+      </geometry>
+    </collision>
+    <!-- Part elexhousingcover -->
+    <visual>
+      <origin xyz="0.0575 0.0425 -0.046" rpy="1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/elexhousingcover.stl" />
+      </geometry>
+      <material name="elexhousingcover_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0575 0.0425 -0.046" rpy="1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/elexhousingcover.stl" />
+      </geometry>
+    </collision>
+    <!-- Part leaphousinglid -->
+    <visual>
+      <origin xyz="0.0575 0.0425 -0.046" rpy="1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/leaphousinglid.stl" />
+      </geometry>
+      <material name="leaphousinglid_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0575 0.0425 -0.046" rpy="1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/leaphousinglid.stl" />
+      </geometry>
+    </collision>
+    <!-- Part clamshell_top_10416 -->
+    <visual>
+      <origin xyz="0 -0.0075 -0.0355" rpy="0 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/clamshell_top_10416.stl" />
+      </geometry>
+      <material name="clamshell_top_10416_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0075 -0.0355" rpy="0 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/clamshell_top_10416.stl" />
+      </geometry>
+    </collision>
+    <!-- Part 6725k41_12_mm_wide_x_150_mm_long_rail_for_ball_bearing_carriage_2 -->
+    <visual>
+      <origin xyz="0.0075 -0.0275 0.0398354" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/6725k41_12_mm_wide_x_150_mm_long_rail_for_ball_bearing_carriage.stl" />
+      </geometry>
+      <material name="6725k41_12_mm_wide_x_150_mm_long_rail_for_ball_bearing_carriage_2_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0075 -0.0275 0.0398354" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/6725k41_12_mm_wide_x_150_mm_long_rail_for_ball_bearing_carriage.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_led_cap2_dummy_3 -->
+    <visual>
+      <origin xyz="-0.02866 0.0649998 0.0336729" rpy="-0 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_led_cap2_dummy_3_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.02866 0.0649998 0.0336729" rpy="-0 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_m_dummy_3 -->
+    <visual>
+      <origin xyz="-0.02866 0.0574998 0.0160729" rpy="3.14159 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_m_dummy_3_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.02866 0.0574998 0.0160729" rpy="3.14159 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_b_dummy_3 -->
+    <visual>
+      <origin xyz="-0.02866 0.0574998 0.0355729" rpy="3.14159 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_b_dummy_3_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.02866 0.0574998 0.0355729" rpy="3.14159 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_idle_cap_dummy_3 -->
+    <visual>
+      <origin xyz="-0.02866 0.0574998 0.0383729" rpy="1.5708 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_idle_cap_dummy_3_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.02866 0.0574998 0.0383729" rpy="1.5708 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_5 -->
+    <visual>
+      <origin xyz="-0.02866 0.0574998 0.0367729" rpy="1.5708 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_5_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.02866 0.0574998 0.0367729" rpy="1.5708 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_5 -->
+    <visual>
+      <origin xyz="-0.02096 0.0484998 0.0264729" rpy="1.5708 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_5_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.02096 0.0484998 0.0264729" rpy="1.5708 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_6 -->
+    <visual>
+      <origin xyz="-0.03636 0.0484998 0.0264729" rpy="1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_6_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.03636 0.0484998 0.0264729" rpy="1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_6 -->
+    <visual>
+      <origin xyz="-0.02866 0.0574998 0.0111729" rpy="-1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_6_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.02866 0.0574998 0.0111729" rpy="-1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_f_dummy_3 -->
+    <visual>
+      <origin xyz="-0.02866 0.0574998 0.0160729" rpy="3.14159 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_f_dummy_3_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.02866 0.0574998 0.0160729" rpy="3.14159 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_idle2_dummy_3 -->
+    <visual>
+      <origin xyz="-0.02866 0.0574998 0.0356729" rpy="-0 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_idle2_dummy_3_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.02866 0.0574998 0.0356729" rpy="-0 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_dummy_3 -->
+    <visual>
+      <origin xyz="-0.02866 0.0574998 0.0124729" rpy="-1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_dummy_3_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.02866 0.0574998 0.0124729" rpy="-1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_led_cap2_dummy_4 -->
+    <visual>
+      <origin xyz="-0.02866 -0.0649998 0.0148271" rpy="3.14159 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_led_cap2_dummy_4_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.02866 -0.0649998 0.0148271" rpy="3.14159 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_m_dummy_4 -->
+    <visual>
+      <origin xyz="-0.02866 -0.0574998 0.0324271" rpy="-0 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_m_dummy_4_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.02866 -0.0574998 0.0324271" rpy="-0 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_b_dummy_4 -->
+    <visual>
+      <origin xyz="-0.02866 -0.0574998 0.0129271" rpy="-0 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_b_dummy_4_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.02866 -0.0574998 0.0129271" rpy="-0 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_idle_cap_dummy_4 -->
+    <visual>
+      <origin xyz="-0.02866 -0.0574998 0.0101271" rpy="-1.5708 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_idle_cap_dummy_4_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.02866 -0.0574998 0.0101271" rpy="-1.5708 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_7 -->
+    <visual>
+      <origin xyz="-0.02866 -0.0574998 0.0117271" rpy="-1.5708 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_7_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.02866 -0.0574998 0.0117271" rpy="-1.5708 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_7 -->
+    <visual>
+      <origin xyz="-0.02096 -0.0484998 0.0220271" rpy="-1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_7_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.02096 -0.0484998 0.0220271" rpy="-1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_8 -->
+    <visual>
+      <origin xyz="-0.03636 -0.0484998 0.0220271" rpy="-1.5708 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_8_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.03636 -0.0484998 0.0220271" rpy="-1.5708 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_8 -->
+    <visual>
+      <origin xyz="-0.02866 -0.0574998 0.0373271" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_8_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.02866 -0.0574998 0.0373271" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_f_dummy_4 -->
+    <visual>
+      <origin xyz="-0.02866 -0.0574998 0.0324271" rpy="-0 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_f_dummy_4_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.02866 -0.0574998 0.0324271" rpy="-0 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_idle2_dummy_4 -->
+    <visual>
+      <origin xyz="-0.02866 -0.0574998 0.0128271" rpy="3.14159 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_idle2_dummy_4_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.02866 -0.0574998 0.0128271" rpy="3.14159 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_dummy_4 -->
+    <visual>
+      <origin xyz="-0.02866 -0.0574998 0.0360271" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_dummy_4_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.02866 -0.0574998 0.0360271" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link dc15_a01_hinge_1 -->
+  <link name="dc15_a01_hinge_1">
+    <inertial>
+      <origin xyz="-0.0229371341618454 0.0397567566694272 0.0146899670466984" rpy="0 0 0" />
+      <mass value="0.0278180309385978" />
+      <inertia ixx="7.65928396518214e-06" ixy="2.68128681677078e-06" ixz="2.36117179033564e-08" iyy="4.95991834757611e-06" iyz="2.54662624172283e-08" izz="9.82270370328385e-06" />
+    </inertial>
+    <!-- Part dc15_a01_adaptor_1 -->
+    <visual>
+      <origin xyz="-0.0265 0.0286 0.0145" rpy="-3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_1.stl" />
+      </geometry>
+      <material name="dc15_a01_adaptor_1_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0265 0.0286 0.0145" rpy="-3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_1.stl" />
+      </geometry>
+    </collision>
+    <!-- Part mcp_bracket -->
+    <visual>
+      <origin xyz="0.000346084 0.017 0.0143151" rpy="0 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/mcp_bracket.stl" />
+      </geometry>
+      <material name="mcp_bracket_material">
+        <color rgba="0.701961 0.701961 0.701961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.000346084 0.017 0.0143151" rpy="0 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/mcp_bracket.stl" />
+      </geometry>
+    </collision>
+    <!-- Part cable_spacer -->
+    <visual>
+      <origin xyz="-0.043 0.0235 0.0055" rpy="0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/cable_spacer.stl" />
+      </geometry>
+      <material name="cable_spacer_material">
+        <color rgba="0.498039 0.498039 0.498039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.043 0.0235 0.0055" rpy="0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/cable_spacer.stl" />
+      </geometry>
+    </collision>
+    <!-- Part dc15_a01_hinge_1 -->
+    <visual>
+      <origin xyz="0 0.014 0.0145" rpy="-0 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+      <material name="dc15_a01_hinge_1_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0.014 0.0145" rpy="-0 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_led_cap2_dummy_5 -->
+    <visual>
+      <origin xyz="-0.0361 0.0306 0.0145" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_led_cap2_dummy_5_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0361 0.0306 0.0145" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_m_dummy_5 -->
+    <visual>
+      <origin xyz="-0.0185 0.0381 0.0145" rpy="-3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_m_dummy_5_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0185 0.0381 0.0145" rpy="-3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_b_dummy_5 -->
+    <visual>
+      <origin xyz="-0.038 0.0381 0.0145" rpy="-3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_b_dummy_5_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.038 0.0381 0.0145" rpy="-3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_idle_cap_dummy_5 -->
+    <visual>
+      <origin xyz="-0.0408 0.0381 0.0145" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_idle_cap_dummy_5_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0408 0.0381 0.0145" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_9 -->
+    <visual>
+      <origin xyz="-0.0392 0.0381 0.0145" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_9_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0392 0.0381 0.0145" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_9 -->
+    <visual>
+      <origin xyz="-0.0289 0.0471 0.0068" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_9_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0289 0.0471 0.0068" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_10 -->
+    <visual>
+      <origin xyz="-0.0289 0.0471 0.0222" rpy="0 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_10_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0289 0.0471 0.0222" rpy="0 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_10 -->
+    <visual>
+      <origin xyz="-0.0136 0.0381 0.0145" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_10_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0136 0.0381 0.0145" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_f_dummy_5 -->
+    <visual>
+      <origin xyz="-0.0185 0.0381 0.0145" rpy="-3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_f_dummy_5_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0185 0.0381 0.0145" rpy="-3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_idle2_dummy_5 -->
+    <visual>
+      <origin xyz="-0.0381 0.0381 0.0145" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_idle2_dummy_5_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0381 0.0381 0.0145" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_dummy_5 -->
+    <visual>
+      <origin xyz="-0.0149 0.0381 0.0145" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_dummy_5_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0149 0.0381 0.0145" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link dc15_a01_dummy_assy_idle_asm -->
+  <link name="dc15_a01_dummy_assy_idle_asm">
+    <inertial>
+      <origin xyz="-0.00807160750049658 -0.000212330032793941 -0.0129864252217876" rpy="0 0 0" />
+      <mass value="0.023" />
+      <inertia ixx="1.86352400760588e-06" ixy="7.11288034063366e-09" ixz="-2.2503352584011e-09" iyy="2.84296127089243e-06" iyz="6.19122042243864e-10" izz="3.3278129839558e-06" />
+    </inertial>
+    <!-- Part dc15_a01_adaptor_2_5 -->
+    <visual>
+      <origin xyz="-0.0075 0 -0.003" rpy="1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+      <material name="dc15_a01_adaptor_2_5_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0075 0 -0.003" rpy="1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_led_cap2_dummy_6 -->
+    <visual>
+      <origin xyz="-0.0225 0.0096 -0.013" rpy="-1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_led_cap2_dummy_6_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0225 0.0096 -0.013" rpy="-1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_m_dummy_6 -->
+    <visual>
+      <origin xyz="-0.015 -0.008 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_m_dummy_6_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 -0.008 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_b_dummy_6 -->
+    <visual>
+      <origin xyz="-0.015 0.0115 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_b_dummy_6_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 0.0115 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_idle_cap_dummy_6 -->
+    <visual>
+      <origin xyz="-0.015 0.0143 -0.013" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_idle_cap_dummy_6_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 0.0143 -0.013" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_11 -->
+    <visual>
+      <origin xyz="-0.015 0.0127 -0.013" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_11_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 0.0127 -0.013" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_11 -->
+    <visual>
+      <origin xyz="-0.006 0.0024 -0.0207" rpy="-3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_11_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.006 0.0024 -0.0207" rpy="-3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_12 -->
+    <visual>
+      <origin xyz="-0.006 0.0024 -0.0053" rpy="-0 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_12_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.006 0.0024 -0.0053" rpy="-0 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_12 -->
+    <visual>
+      <origin xyz="-0.015 -0.0129 -0.013" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_12_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 -0.0129 -0.013" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_f_dummy_6 -->
+    <visual>
+      <origin xyz="-0.015 -0.008 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_f_dummy_6_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 -0.008 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_idle2_dummy_6 -->
+    <visual>
+      <origin xyz="-0.015 0.0116 -0.013" rpy="-1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_idle2_dummy_6_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 0.0116 -0.013" rpy="-1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_dummy_6 -->
+    <visual>
+      <origin xyz="-0.015 -0.0116 -0.013" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_dummy_6_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 -0.0116 -0.013" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link dip_spacer -->
+  <link name="dip_spacer">
+    <inertial>
+      <origin xyz="0.00599824826805821 -0.032773319876193 0.0143161042667623" rpy="0 0 0" />
+      <mass value="0.026566687523784" />
+      <inertia ixx="4.55386523255869e-06" ixy="5.34533610616402e-07" ixz="1.16601430114933e-08" iyy="4.17802088568971e-06" iyz="-1.69013518139068e-08" izz="5.21462263375377e-06" />
+    </inertial>
+    <!-- Part dip_spacer -->
+    <visual>
+      <origin xyz="-0.007 -0.017 -0.002" rpy="-3.14159 0 0" />
+      <geometry>
+        <mesh filename="package://assets/dip_spacer.stl" />
+      </geometry>
+      <material name="dip_spacer_material">
+        <color rgba="0.921569 0.921569 0.921569 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.007 -0.017 -0.002" rpy="-3.14159 0 0" />
+      <geometry>
+        <mesh filename="package://assets/dip_spacer.stl" />
+      </geometry>
+    </collision>
+    <!-- Part dc15_a01_hinge_1_2 -->
+    <visual>
+      <origin xyz="0 -0.014 0.0145" rpy="-3.14159 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+      <material name="dc15_a01_hinge_1_2_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.014 0.0145" rpy="-3.14159 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+    </collision>
+    <!-- Part dc15_a01_adaptor_2_6 -->
+    <visual>
+      <origin xyz="0.0075 -0.0261 0.0145" rpy="-3.14159 -0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+      <material name="dc15_a01_adaptor_2_6_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0075 -0.0261 0.0145" rpy="-3.14159 -0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_led_cap2_dummy_7 -->
+    <visual>
+      <origin xyz="-0.0075 -0.0361 0.0241" rpy="0 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_led_cap2_dummy_7_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0075 -0.0361 0.0241" rpy="0 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_m_dummy_7 -->
+    <visual>
+      <origin xyz="0 -0.0361 0.0065" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_m_dummy_7_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0361 0.0065" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_b_dummy_7 -->
+    <visual>
+      <origin xyz="0 -0.0361 0.026" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_b_dummy_7_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0361 0.026" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_idle_cap_dummy_7 -->
+    <visual>
+      <origin xyz="0 -0.0361 0.0288" rpy="1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_idle_cap_dummy_7_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0361 0.0288" rpy="1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_13 -->
+    <visual>
+      <origin xyz="0 -0.0361 0.0272" rpy="1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_13_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0361 0.0272" rpy="1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_13 -->
+    <visual>
+      <origin xyz="0.009 -0.0284 0.0169" rpy="1.5708 -0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_13_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.009 -0.0284 0.0169" rpy="1.5708 -0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_14 -->
+    <visual>
+      <origin xyz="0.009 -0.0438 0.0169" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_14_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.009 -0.0438 0.0169" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_14 -->
+    <visual>
+      <origin xyz="0 -0.0361 0.0016" rpy="-1.5708 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_14_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0361 0.0016" rpy="-1.5708 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_f_dummy_7 -->
+    <visual>
+      <origin xyz="0 -0.0361 0.0065" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_f_dummy_7_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0361 0.0065" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_idle2_dummy_7 -->
+    <visual>
+      <origin xyz="0 -0.0361 0.0261" rpy="-0 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_idle2_dummy_7_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0361 0.0261" rpy="-0 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_dummy_7 -->
+    <visual>
+      <origin xyz="0 -0.0361 0.0029" rpy="-1.5708 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_dummy_7_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0361 0.0029" rpy="-1.5708 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link finger_tip_bone -->
+  <link name="finger_tip_bone">
+    <inertial>
+      <origin xyz="1.97945623792405e-08 -0.0194136306395712 0.0144998219025004" rpy="0 0 0" />
+      <mass value="0.00513092122338565" />
+      <inertia ixx="1.7281135383766e-06" ixy="3.68930840413763e-12" ixz="-2.94949048742036e-12" iyy="7.80737147035087e-07" iyz="2.12282975796646e-11" izz="1.26368773269365e-06" />
+    </inertial>
+    <!-- Part dc15_a01_hinge_1_3 -->
+    <visual>
+      <origin xyz="0 -0.014 0.0145" rpy="-3.14159 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+      <material name="dc15_a01_hinge_1_3_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.014 0.0145" rpy="-3.14159 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+    </collision>
+    <!-- Part finger_tip_bone -->
+    <visual>
+      <origin xyz="0.0095 -0.017 0.031" rpy="0 -0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/finger_tip_bone.stl" />
+      </geometry>
+      <material name="finger_tip_bone_material">
+        <color rgba="0.921569 0.921569 0.921569 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0095 -0.017 0.031" rpy="0 -0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/finger_tip_bone.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from dip_spacer to finger_tip_bone -->
+  <joint name="unitC-DIP" type="revolute">
+    <origin xyz="0 -0.0361 0" rpy="-0 0 0.00790228" />
+    <parent link="dip_spacer" />
+    <child link="finger_tip_bone" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-0.357902" upper="1.9501" />
+  </joint>
+  <!-- Joint from dc15_a01_dummy_assy_idle_asm to dip_spacer -->
+  <joint name="unitC-PIP" type="revolute">
+    <origin xyz="-0.015 -0.0145 -0.013" rpy="-1.5708 -1.56968 -1.405e-09" />
+    <parent link="dc15_a01_dummy_assy_idle_asm" />
+    <child link="dip_spacer" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-0.491114" upper="1.88689" />
+  </joint>
+  <!-- Joint from dc15_a01_hinge_1 to dc15_a01_dummy_assy_idle_asm -->
+  <joint name="unitC-MCP-ABD" type="revolute">
+    <origin xyz="-0.012 0.0381 0.0145" rpy="1.5708 0.0294682 -1.5708" />
+    <parent link="dc15_a01_hinge_1" />
+    <child link="dc15_a01_dummy_assy_idle_asm" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-1.42853" upper="1.48747" />
+  </joint>
+  <!-- Joint from guide_10429 to dc15_a01_hinge_1 -->
+  <joint name="unitC-MCP-FLX" type="revolute">
+    <origin xyz="-0.02866 -0.0574998 0.00992714" rpy="-0 -0 1.5507" />
+    <parent link="guide_10429" />
+    <child link="dc15_a01_hinge_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-0.205903" upper="1.5941" />
+  </joint>
+  <!-- Link dc15_a01_hinge_1_2 -->
+  <link name="dc15_a01_hinge_1_2">
+    <inertial>
+      <origin xyz="-0.0229371042258748 0.0397567731793288 0.0146899669901598" rpy="0 0 0" />
+      <mass value="0.0278180309385978" />
+      <inertia ixx="7.65928921338196e-06" ixy="2.68127368431022e-06" ixz="2.36118387913999e-08" iyy="4.95991296193287e-06" iyz="2.54663575680362e-08" izz="9.82270351796035e-06" />
+    </inertial>
+    <!-- Part dc15_a01_hinge_1_4 -->
+    <visual>
+      <origin xyz="-0 0.014 0.0145" rpy="-0 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+      <material name="dc15_a01_hinge_1_4_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0.014 0.0145" rpy="-0 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+    </collision>
+    <!-- Part cable_spacer_2 -->
+    <visual>
+      <origin xyz="-0.043 0.0235 0.0055" rpy="0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/cable_spacer.stl" />
+      </geometry>
+      <material name="cable_spacer_2_material">
+        <color rgba="0.498039 0.498039 0.498039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.043 0.0235 0.0055" rpy="0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/cable_spacer.stl" />
+      </geometry>
+    </collision>
+    <!-- Part mcp_bracket_2 -->
+    <visual>
+      <origin xyz="0.000346084 0.017 0.0143151" rpy="-0 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/mcp_bracket.stl" />
+      </geometry>
+      <material name="mcp_bracket_2_material">
+        <color rgba="0.701961 0.701961 0.701961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.000346084 0.017 0.0143151" rpy="-0 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/mcp_bracket.stl" />
+      </geometry>
+    </collision>
+    <!-- Part dc15_a01_adaptor_1_2 -->
+    <visual>
+      <origin xyz="-0.0265 0.0286 0.0145" rpy="-3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_1.stl" />
+      </geometry>
+      <material name="dc15_a01_adaptor_1_2_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0265 0.0286 0.0145" rpy="-3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_1.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_led_cap2_dummy_8 -->
+    <visual>
+      <origin xyz="-0.0361 0.0306 0.0145" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_led_cap2_dummy_8_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0361 0.0306 0.0145" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_m_dummy_8 -->
+    <visual>
+      <origin xyz="-0.0185 0.0381 0.0145" rpy="3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_m_dummy_8_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0185 0.0381 0.0145" rpy="3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_b_dummy_8 -->
+    <visual>
+      <origin xyz="-0.038 0.0381 0.0145" rpy="3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_b_dummy_8_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.038 0.0381 0.0145" rpy="3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_idle_cap_dummy_8 -->
+    <visual>
+      <origin xyz="-0.0408 0.0381 0.0145" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_idle_cap_dummy_8_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0408 0.0381 0.0145" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_15 -->
+    <visual>
+      <origin xyz="-0.0392 0.0381 0.0145" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_15_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0392 0.0381 0.0145" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_15 -->
+    <visual>
+      <origin xyz="-0.0289 0.0471 0.0068" rpy="-3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_15_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0289 0.0471 0.0068" rpy="-3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_16 -->
+    <visual>
+      <origin xyz="-0.0289 0.0471 0.0222" rpy="-0 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_16_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0289 0.0471 0.0222" rpy="-0 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_16 -->
+    <visual>
+      <origin xyz="-0.0136 0.0381 0.0145" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_16_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0136 0.0381 0.0145" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_f_dummy_8 -->
+    <visual>
+      <origin xyz="-0.0185 0.0381 0.0145" rpy="3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_f_dummy_8_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0185 0.0381 0.0145" rpy="3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_idle2_dummy_8 -->
+    <visual>
+      <origin xyz="-0.0381 0.0381 0.0145" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_idle2_dummy_8_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0381 0.0381 0.0145" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_dummy_8 -->
+    <visual>
+      <origin xyz="-0.0149 0.0381 0.0145" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_dummy_8_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0149 0.0381 0.0145" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link dc15_a01_dummy_assy_idle_asm_2 -->
+  <link name="dc15_a01_dummy_assy_idle_asm_2">
+    <inertial>
+      <origin xyz="-0.00807160750049658 -0.000212330032793941 -0.0129864252217876" rpy="0 0 0" />
+      <mass value="0.023" />
+      <inertia ixx="1.86352400760588e-06" ixy="7.11288034063366e-09" ixz="-2.2503352584011e-09" iyy="2.84296127089243e-06" iyz="6.19122042243864e-10" izz="3.3278129839558e-06" />
+    </inertial>
+    <!-- Part dc15_a01_adaptor_2_7 -->
+    <visual>
+      <origin xyz="-0.0075 -0 -0.003" rpy="1.5708 0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+      <material name="dc15_a01_adaptor_2_7_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0075 -0 -0.003" rpy="1.5708 0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_led_cap2_dummy_9 -->
+    <visual>
+      <origin xyz="-0.0225 0.0096 -0.013" rpy="-1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_led_cap2_dummy_9_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0225 0.0096 -0.013" rpy="-1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_m_dummy_9 -->
+    <visual>
+      <origin xyz="-0.015 -0.008 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_m_dummy_9_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 -0.008 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_b_dummy_9 -->
+    <visual>
+      <origin xyz="-0.015 0.0115 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_b_dummy_9_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 0.0115 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_idle_cap_dummy_9 -->
+    <visual>
+      <origin xyz="-0.015 0.0143 -0.013" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_idle_cap_dummy_9_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 0.0143 -0.013" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_17 -->
+    <visual>
+      <origin xyz="-0.015 0.0127 -0.013" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_17_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 0.0127 -0.013" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_17 -->
+    <visual>
+      <origin xyz="-0.006 0.0024 -0.0207" rpy="-3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_17_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.006 0.0024 -0.0207" rpy="-3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_18 -->
+    <visual>
+      <origin xyz="-0.006 0.0024 -0.0053" rpy="-0 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_18_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.006 0.0024 -0.0053" rpy="-0 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_18 -->
+    <visual>
+      <origin xyz="-0.015 -0.0129 -0.013" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_18_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 -0.0129 -0.013" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_f_dummy_9 -->
+    <visual>
+      <origin xyz="-0.015 -0.008 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_f_dummy_9_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 -0.008 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_idle2_dummy_9 -->
+    <visual>
+      <origin xyz="-0.015 0.0116 -0.013" rpy="-1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_idle2_dummy_9_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 0.0116 -0.013" rpy="-1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_dummy_9 -->
+    <visual>
+      <origin xyz="-0.015 -0.0116 -0.013" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_dummy_9_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 -0.0116 -0.013" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link dip_spacer_2 -->
+  <link name="dip_spacer_2">
+    <inertial>
+      <origin xyz="0.00599824826805821 -0.0327733185307741 0.0143161020509304" rpy="0 0 0" />
+      <mass value="0.026566687523784" />
+      <inertia ixx="4.55386612039434e-06" ixy="5.34533824998089e-07" ixz="1.16597899006332e-08" iyy="4.17802086420146e-06" iyz="-1.69022166616686e-08" izz="5.21462354307768e-06" />
+    </inertial>
+    <!-- Part dc15_a01_adaptor_2_8 -->
+    <visual>
+      <origin xyz="0.0075 -0.0261 0.0145" rpy="-3.14159 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+      <material name="dc15_a01_adaptor_2_8_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0075 -0.0261 0.0145" rpy="-3.14159 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+    </collision>
+    <!-- Part dc15_a01_hinge_1_5 -->
+    <visual>
+      <origin xyz="0 -0.014 0.0145" rpy="3.14159 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+      <material name="dc15_a01_hinge_1_5_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.014 0.0145" rpy="3.14159 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+    </collision>
+    <!-- Part dip_spacer_2 -->
+    <visual>
+      <origin xyz="-0.007 -0.017 -0.002" rpy="3.14159 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/dip_spacer.stl" />
+      </geometry>
+      <material name="dip_spacer_2_material">
+        <color rgba="0.921569 0.921569 0.921569 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.007 -0.017 -0.002" rpy="3.14159 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/dip_spacer.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_led_cap2_dummy_10 -->
+    <visual>
+      <origin xyz="-0.0075 -0.0361 0.0241" rpy="0 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_led_cap2_dummy_10_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0075 -0.0361 0.0241" rpy="0 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_m_dummy_10 -->
+    <visual>
+      <origin xyz="-0 -0.0361 0.0065" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_m_dummy_10_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.0361 0.0065" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_b_dummy_10 -->
+    <visual>
+      <origin xyz="-0 -0.0361 0.026" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_b_dummy_10_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.0361 0.026" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_idle_cap_dummy_10 -->
+    <visual>
+      <origin xyz="-0 -0.0361 0.0288" rpy="1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_idle_cap_dummy_10_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.0361 0.0288" rpy="1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_19 -->
+    <visual>
+      <origin xyz="-0 -0.0361 0.0272" rpy="1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_19_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.0361 0.0272" rpy="1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_19 -->
+    <visual>
+      <origin xyz="0.009 -0.0284 0.0169" rpy="1.5708 -0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_19_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.009 -0.0284 0.0169" rpy="1.5708 -0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_20 -->
+    <visual>
+      <origin xyz="0.009 -0.0438 0.0169" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_20_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.009 -0.0438 0.0169" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_20 -->
+    <visual>
+      <origin xyz="-0 -0.0361 0.0016" rpy="-1.5708 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_20_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.0361 0.0016" rpy="-1.5708 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_f_dummy_10 -->
+    <visual>
+      <origin xyz="-0 -0.0361 0.0065" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_f_dummy_10_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.0361 0.0065" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_idle2_dummy_10 -->
+    <visual>
+      <origin xyz="-0 -0.0361 0.0261" rpy="-0 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_idle2_dummy_10_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.0361 0.0261" rpy="-0 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_dummy_10 -->
+    <visual>
+      <origin xyz="-0 -0.0361 0.0029" rpy="-1.5708 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_dummy_10_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.0361 0.0029" rpy="-1.5708 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link finger_tip_bone_2 -->
+  <link name="finger_tip_bone_2">
+    <inertial>
+      <origin xyz="1.97945623792405e-08 -0.0194136306405502 0.0144998091415671" rpy="0 0 0" />
+      <mass value="0.00513092122338565" />
+      <inertia ixx="1.72811353829806e-06" ixy="3.6892927488477e-12" ixz="-2.94950187047206e-12" iyy="7.80737147173706e-07" iyz="1.96860679490748e-11" izz="1.26368773247649e-06" />
+    </inertial>
+    <!-- Part dc15_a01_hinge_1_6 -->
+    <visual>
+      <origin xyz="0 -0.014 0.0145" rpy="3.14159 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+      <material name="dc15_a01_hinge_1_6_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.014 0.0145" rpy="3.14159 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+    </collision>
+    <!-- Part finger_tip_bone_2 -->
+    <visual>
+      <origin xyz="0.0095 -0.017 0.031" rpy="-0 -0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/finger_tip_bone.stl" />
+      </geometry>
+      <material name="finger_tip_bone_2_material">
+        <color rgba="0.921569 0.921569 0.921569 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0095 -0.017 0.031" rpy="-0 -0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/finger_tip_bone.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from dip_spacer_2 to finger_tip_bone_2 -->
+  <joint name="unitA-DIP" type="revolute">
+    <origin xyz="-0 -0.0361 0" rpy="0 -0 0" />
+    <parent link="dip_spacer_2" />
+    <child link="finger_tip_bone_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-0.35" upper="1.958" />
+  </joint>
+  <!-- Joint from dc15_a01_dummy_assy_idle_asm_2 to dip_spacer_2 -->
+  <joint name="unitA-PIP" type="revolute">
+    <origin xyz="-0.015 -0.0145 -0.013" rpy="1.5708 -1.57002 -3.14159" />
+    <parent link="dc15_a01_dummy_assy_idle_asm_2" />
+    <child link="dip_spacer_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-0.489227" upper="1.88877" />
+  </joint>
+  <!-- Joint from dc15_a01_hinge_1_2 to dc15_a01_dummy_assy_idle_asm_2 -->
+  <joint name="unitA-MCP-ABD" type="revolute">
+    <origin xyz="-0.012 0.0381 0.0145" rpy="1.5708 0 -1.5708" />
+    <parent link="dc15_a01_hinge_1_2" />
+    <child link="dc15_a01_dummy_assy_idle_asm_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-1.458" upper="1.458" />
+  </joint>
+  <!-- Joint from guide_10429 to dc15_a01_hinge_1_2 -->
+  <joint name="unitA-MCP-FLX" type="revolute">
+    <origin xyz="-0.02866 0.0574998 0.0385729" rpy="-3.14159 0 -1.57157" />
+    <parent link="guide_10429" />
+    <child link="dc15_a01_hinge_1_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-0.226773" upper="1.57323" />
+  </joint>
+  <!-- Joint from mgn12c__linear_guide_block to guide_10429 -->
+  <joint name="linearActuator" type="prismatic">
+    <origin xyz="0.076589 0.0452428 0.0859509" rpy="3.14159 1.5708 0" />
+    <parent link="mgn12c__linear_guide_block" />
+    <child link="guide_10429" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-0.05" upper="0" />
+  </joint>
+  <!-- Link dc15_a01_hinge_1_3 -->
+  <link name="dc15_a01_hinge_1_3">
+    <inertial>
+      <origin xyz="-0.0229371042258748 0.0397567731793288 0.0146899669901598" rpy="0 0 0" />
+      <mass value="0.0278180309385978" />
+      <inertia ixx="7.65928921338196e-06" ixy="2.68127368431022e-06" ixz="2.36118387913999e-08" iyy="4.95991296193287e-06" iyz="2.54663575680362e-08" izz="9.82270351796035e-06" />
+    </inertial>
+    <!-- Part cable_spacer_3 -->
+    <visual>
+      <origin xyz="-0.043 0.0235 0.0055" rpy="0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/cable_spacer.stl" />
+      </geometry>
+      <material name="cable_spacer_3_material">
+        <color rgba="0.498039 0.498039 0.498039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.043 0.0235 0.0055" rpy="0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/cable_spacer.stl" />
+      </geometry>
+    </collision>
+    <!-- Part dc15_a01_adaptor_1_3 -->
+    <visual>
+      <origin xyz="-0.0265 0.0286 0.0145" rpy="3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_1.stl" />
+      </geometry>
+      <material name="dc15_a01_adaptor_1_3_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0265 0.0286 0.0145" rpy="3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_1.stl" />
+      </geometry>
+    </collision>
+    <!-- Part mcp_bracket_3 -->
+    <visual>
+      <origin xyz="0.000346084 0.017 0.0143151" rpy="-0 0 -0" />
+      <geometry>
+        <mesh filename="package://assets/mcp_bracket.stl" />
+      </geometry>
+      <material name="mcp_bracket_3_material">
+        <color rgba="0.701961 0.701961 0.701961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.000346084 0.017 0.0143151" rpy="-0 0 -0" />
+      <geometry>
+        <mesh filename="package://assets/mcp_bracket.stl" />
+      </geometry>
+    </collision>
+    <!-- Part dc15_a01_hinge_1_7 -->
+    <visual>
+      <origin xyz="0 0.014 0.0145" rpy="0 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+      <material name="dc15_a01_hinge_1_7_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0.014 0.0145" rpy="0 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_led_cap2_dummy_11 -->
+    <visual>
+      <origin xyz="-0.0361 0.0306 0.0145" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_led_cap2_dummy_11_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0361 0.0306 0.0145" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_m_dummy_11 -->
+    <visual>
+      <origin xyz="-0.0185 0.0381 0.0145" rpy="3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_m_dummy_11_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0185 0.0381 0.0145" rpy="3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_b_dummy_11 -->
+    <visual>
+      <origin xyz="-0.038 0.0381 0.0145" rpy="3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_b_dummy_11_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.038 0.0381 0.0145" rpy="3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_idle_cap_dummy_11 -->
+    <visual>
+      <origin xyz="-0.0408 0.0381 0.0145" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_idle_cap_dummy_11_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0408 0.0381 0.0145" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_21 -->
+    <visual>
+      <origin xyz="-0.0392 0.0381 0.0145" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_21_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0392 0.0381 0.0145" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_21 -->
+    <visual>
+      <origin xyz="-0.0289 0.0471 0.0068" rpy="-3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_21_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0289 0.0471 0.0068" rpy="-3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_22 -->
+    <visual>
+      <origin xyz="-0.0289 0.0471 0.0222" rpy="-0 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_22_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0289 0.0471 0.0222" rpy="-0 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_22 -->
+    <visual>
+      <origin xyz="-0.0136 0.0381 0.0145" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_22_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0136 0.0381 0.0145" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_f_dummy_11 -->
+    <visual>
+      <origin xyz="-0.0185 0.0381 0.0145" rpy="3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_f_dummy_11_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0185 0.0381 0.0145" rpy="3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_idle2_dummy_11 -->
+    <visual>
+      <origin xyz="-0.0381 0.0381 0.0145" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_idle2_dummy_11_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0381 0.0381 0.0145" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_dummy_11 -->
+    <visual>
+      <origin xyz="-0.0149 0.0381 0.0145" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_dummy_11_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0149 0.0381 0.0145" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link dc15_a01_dummy_assy_idle_asm_3 -->
+  <link name="dc15_a01_dummy_assy_idle_asm_3">
+    <inertial>
+      <origin xyz="-0.00807160756901188 -0.000212330032793941 -0.0129864252217876" rpy="0 0 0" />
+      <mass value="0.023" />
+      <inertia ixx="1.86352400760588e-06" ixy="7.11288168231181e-09" ixz="-2.25034695095759e-09" iyy="2.84296126436333e-06" iyz="6.19122042243864e-10" izz="3.3278129774267e-06" />
+    </inertial>
+    <!-- Part dc15_a01_adaptor_2_9 -->
+    <visual>
+      <origin xyz="-0.0075 -0 -0.003" rpy="1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+      <material name="dc15_a01_adaptor_2_9_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0075 -0 -0.003" rpy="1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_led_cap2_dummy_12 -->
+    <visual>
+      <origin xyz="-0.0225 0.0096 -0.013" rpy="-1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_led_cap2_dummy_12_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0225 0.0096 -0.013" rpy="-1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_m_dummy_12 -->
+    <visual>
+      <origin xyz="-0.015 -0.008 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_m_dummy_12_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 -0.008 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_b_dummy_12 -->
+    <visual>
+      <origin xyz="-0.015 0.0115 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_b_dummy_12_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 0.0115 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_idle_cap_dummy_12 -->
+    <visual>
+      <origin xyz="-0.015 0.0143 -0.013" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_idle_cap_dummy_12_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 0.0143 -0.013" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_23 -->
+    <visual>
+      <origin xyz="-0.015 0.0127 -0.013" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_23_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 0.0127 -0.013" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_23 -->
+    <visual>
+      <origin xyz="-0.006 0.0024 -0.0207" rpy="-3.14159 -0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_23_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.006 0.0024 -0.0207" rpy="-3.14159 -0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_24 -->
+    <visual>
+      <origin xyz="-0.006 0.0024 -0.0053" rpy="-0 0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_24_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.006 0.0024 -0.0053" rpy="-0 0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_24 -->
+    <visual>
+      <origin xyz="-0.015 -0.0129 -0.013" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_24_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 -0.0129 -0.013" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_f_dummy_12 -->
+    <visual>
+      <origin xyz="-0.015 -0.008 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_f_dummy_12_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 -0.008 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_idle2_dummy_12 -->
+    <visual>
+      <origin xyz="-0.015 0.0116 -0.013" rpy="-1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_idle2_dummy_12_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 0.0116 -0.013" rpy="-1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_dummy_12 -->
+    <visual>
+      <origin xyz="-0.015 -0.0116 -0.013" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_dummy_12_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 -0.0116 -0.013" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link dip_spacer_3 -->
+  <link name="dip_spacer_3">
+    <inertial>
+      <origin xyz="0.00599824826805821 -0.032773318530585 0.0143161045154959" rpy="0 0 0" />
+      <mass value="0.026566687523784" />
+      <inertia ixx="4.55386614466433e-06" ixy="5.34533825043872e-07" ixz="1.16601826480863e-08" iyy="4.17802088812008e-06" iyz="-1.69015491631153e-08" izz="5.21462354342904e-06" />
+    </inertial>
+    <!-- Part dc15_a01_hinge_1_8 -->
+    <visual>
+      <origin xyz="0 -0.014 0.0145" rpy="-3.14159 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+      <material name="dc15_a01_hinge_1_8_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.014 0.0145" rpy="-3.14159 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+    </collision>
+    <!-- Part dip_spacer_3 -->
+    <visual>
+      <origin xyz="-0.007 -0.017 -0.002" rpy="3.14159 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/dip_spacer.stl" />
+      </geometry>
+      <material name="dip_spacer_3_material">
+        <color rgba="0.921569 0.921569 0.921569 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.007 -0.017 -0.002" rpy="3.14159 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/dip_spacer.stl" />
+      </geometry>
+    </collision>
+    <!-- Part dc15_a01_adaptor_2_10 -->
+    <visual>
+      <origin xyz="0.0075 -0.0261 0.0145" rpy="-3.14159 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+      <material name="dc15_a01_adaptor_2_10_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0075 -0.0261 0.0145" rpy="-3.14159 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_led_cap2_dummy_13 -->
+    <visual>
+      <origin xyz="-0.0075 -0.0361 0.0241" rpy="0 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_led_cap2_dummy_13_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0075 -0.0361 0.0241" rpy="0 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_m_dummy_13 -->
+    <visual>
+      <origin xyz="-0 -0.0361 0.0065" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_m_dummy_13_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.0361 0.0065" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_b_dummy_13 -->
+    <visual>
+      <origin xyz="-0 -0.0361 0.026" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_b_dummy_13_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.0361 0.026" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_idle_cap_dummy_13 -->
+    <visual>
+      <origin xyz="-0 -0.0361 0.0288" rpy="1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_idle_cap_dummy_13_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.0361 0.0288" rpy="1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_25 -->
+    <visual>
+      <origin xyz="-0 -0.0361 0.0272" rpy="1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_25_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.0361 0.0272" rpy="1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_25 -->
+    <visual>
+      <origin xyz="0.009 -0.0284 0.0169" rpy="1.5708 -0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_25_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.009 -0.0284 0.0169" rpy="1.5708 -0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_26 -->
+    <visual>
+      <origin xyz="0.009 -0.0438 0.0169" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_26_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.009 -0.0438 0.0169" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_26 -->
+    <visual>
+      <origin xyz="-0 -0.0361 0.0016" rpy="-1.5708 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_26_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.0361 0.0016" rpy="-1.5708 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_f_dummy_13 -->
+    <visual>
+      <origin xyz="-0 -0.0361 0.0065" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_f_dummy_13_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.0361 0.0065" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_idle2_dummy_13 -->
+    <visual>
+      <origin xyz="-0 -0.0361 0.0261" rpy="-0 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_idle2_dummy_13_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.0361 0.0261" rpy="-0 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_dummy_13 -->
+    <visual>
+      <origin xyz="-0 -0.0361 0.0029" rpy="-1.5708 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_dummy_13_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.0361 0.0029" rpy="-1.5708 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link finger_tip_bone_3 -->
+  <link name="finger_tip_bone_3">
+    <inertial>
+      <origin xyz="1.97945623792405e-08 -0.0194136306395712 0.0144998219025004" rpy="0 0 0" />
+      <mass value="0.00513092122338565" />
+      <inertia ixx="1.7281135383766e-06" ixy="3.68930840413763e-12" ixz="-2.94949048742036e-12" iyy="7.80737147035087e-07" iyz="2.12282975796646e-11" izz="1.26368773269365e-06" />
+    </inertial>
+    <!-- Part dc15_a01_hinge_1_9 -->
+    <visual>
+      <origin xyz="-0 -0.014 0.0145" rpy="-3.14159 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+      <material name="dc15_a01_hinge_1_9_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.014 0.0145" rpy="-3.14159 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+    </collision>
+    <!-- Part finger_tip_bone_3 -->
+    <visual>
+      <origin xyz="0.0095 -0.017 0.031" rpy="0 -0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/finger_tip_bone.stl" />
+      </geometry>
+      <material name="finger_tip_bone_3_material">
+        <color rgba="0.921569 0.921569 0.921569 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0095 -0.017 0.031" rpy="0 -0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/finger_tip_bone.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from dip_spacer_3 to finger_tip_bone_3 -->
+  <joint name="unitB-DIP" type="revolute">
+    <origin xyz="-0 -0.0361 0" rpy="0 0 -2e-12" />
+    <parent link="dip_spacer_3" />
+    <child link="finger_tip_bone_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-0.35" upper="1.958" />
+  </joint>
+  <!-- Joint from dc15_a01_dummy_assy_idle_asm_3 to dip_spacer_3 -->
+  <joint name="unitB-PIP" type="revolute">
+    <origin xyz="-0.015 -0.0145 -0.013" rpy="-1.5708 -1.5708 0" />
+    <parent link="dc15_a01_dummy_assy_idle_asm_3" />
+    <child link="dip_spacer_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-0.49" upper="1.888" />
+  </joint>
+  <!-- Joint from dc15_a01_hinge_1_3 to dc15_a01_dummy_assy_idle_asm_3 -->
+  <joint name="unitB-MCP-ABD" type="revolute">
+    <origin xyz="-0.012 0.0381 0.0145" rpy="1.5708 0 -1.5708" />
+    <parent link="dc15_a01_hinge_1_3" />
+    <child link="dc15_a01_dummy_assy_idle_asm_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-1.458" upper="1.458" />
+  </joint>
+  <!-- Joint from mgn12c__linear_guide_block to dc15_a01_hinge_1_3 -->
+  <joint name="unitB-MCP-FLX" type="revolute">
+    <origin xyz="-0.0104009 -0.012394 0.114611" rpy="1.5708 0 1.5708" />
+    <parent link="mgn12c__linear_guide_block" />
+    <child link="dc15_a01_hinge_1_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-0.226" upper="1.574" />
+  </joint>
+  <!-- Link dc15_a01_hinge_1_4 -->
+  <link name="dc15_a01_hinge_1_4">
+    <inertial>
+      <origin xyz="-0.0229371042257264 0.0397567731793288 0.0146899670468083" rpy="0 0 0" />
+      <mass value="0.0278180309385978" />
+      <inertia ixx="7.65928918944093e-06" ixy="2.68127368427991e-06" ixz="2.3611852749751e-08" iyy="4.95991293701681e-06" iyz="2.54663459961814e-08" izz="9.82270351698532e-06" />
+    </inertial>
+    <!-- Part dc15_a01_hinge_1_10 -->
+    <visual>
+      <origin xyz="0 0.014 0.0145" rpy="-0 0 0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+      <material name="dc15_a01_hinge_1_10_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0.014 0.0145" rpy="-0 0 0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+    </collision>
+    <!-- Part mcp_bracket_4 -->
+    <visual>
+      <origin xyz="0.000346084 0.017 0.0143151" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://assets/mcp_bracket.stl" />
+      </geometry>
+      <material name="mcp_bracket_4_material">
+        <color rgba="0.701961 0.701961 0.701961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.000346084 0.017 0.0143151" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://assets/mcp_bracket.stl" />
+      </geometry>
+    </collision>
+    <!-- Part dc15_a01_adaptor_1_4 -->
+    <visual>
+      <origin xyz="-0.0265 0.0286 0.0145" rpy="3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_1.stl" />
+      </geometry>
+      <material name="dc15_a01_adaptor_1_4_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0265 0.0286 0.0145" rpy="3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_1.stl" />
+      </geometry>
+    </collision>
+    <!-- Part cable_spacer_4 -->
+    <visual>
+      <origin xyz="-0.043 0.0235 0.0055" rpy="0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/cable_spacer.stl" />
+      </geometry>
+      <material name="cable_spacer_4_material">
+        <color rgba="0.498039 0.498039 0.498039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.043 0.0235 0.0055" rpy="0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/cable_spacer.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_led_cap2_dummy_14 -->
+    <visual>
+      <origin xyz="-0.0361 0.0306 0.0145" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_led_cap2_dummy_14_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0361 0.0306 0.0145" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_m_dummy_14 -->
+    <visual>
+      <origin xyz="-0.0185 0.0381 0.0145" rpy="3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_m_dummy_14_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0185 0.0381 0.0145" rpy="3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_b_dummy_14 -->
+    <visual>
+      <origin xyz="-0.038 0.0381 0.0145" rpy="3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_b_dummy_14_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.038 0.0381 0.0145" rpy="3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_idle_cap_dummy_14 -->
+    <visual>
+      <origin xyz="-0.0408 0.0381 0.0145" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_idle_cap_dummy_14_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0408 0.0381 0.0145" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_27 -->
+    <visual>
+      <origin xyz="-0.0392 0.0381 0.0145" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_27_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0392 0.0381 0.0145" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_27 -->
+    <visual>
+      <origin xyz="-0.0289 0.0471 0.0068" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_27_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0289 0.0471 0.0068" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_28 -->
+    <visual>
+      <origin xyz="-0.0289 0.0471 0.0222" rpy="0 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_28_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0289 0.0471 0.0222" rpy="0 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_28 -->
+    <visual>
+      <origin xyz="-0.0136 0.0381 0.0145" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_28_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0136 0.0381 0.0145" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_f_dummy_14 -->
+    <visual>
+      <origin xyz="-0.0185 0.0381 0.0145" rpy="3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_f_dummy_14_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0185 0.0381 0.0145" rpy="3.14159 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_idle2_dummy_14 -->
+    <visual>
+      <origin xyz="-0.0381 0.0381 0.0145" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_idle2_dummy_14_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0381 0.0381 0.0145" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_dummy_14 -->
+    <visual>
+      <origin xyz="-0.0149 0.0381 0.0145" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_dummy_14_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0149 0.0381 0.0145" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link dc15_a01_dummy_assy_idle_asm_4 -->
+  <link name="dc15_a01_dummy_assy_idle_asm_4">
+    <inertial>
+      <origin xyz="-0.00807160756901188 -0.000212330032793941 -0.0129864252217876" rpy="0 0 0" />
+      <mass value="0.023" />
+      <inertia ixx="1.86352400760588e-06" ixy="7.11288168231181e-09" ixz="-2.25034695095759e-09" iyy="2.84296126436333e-06" iyz="6.19122042243864e-10" izz="3.3278129774267e-06" />
+    </inertial>
+    <!-- Part dc15_a01_adaptor_2_11 -->
+    <visual>
+      <origin xyz="-0.0075 0 -0.003" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+      <material name="dc15_a01_adaptor_2_11_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0075 0 -0.003" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_led_cap2_dummy_15 -->
+    <visual>
+      <origin xyz="-0.0225 0.0096 -0.013" rpy="-1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_led_cap2_dummy_15_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0225 0.0096 -0.013" rpy="-1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_m_dummy_15 -->
+    <visual>
+      <origin xyz="-0.015 -0.008 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_m_dummy_15_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 -0.008 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_b_dummy_15 -->
+    <visual>
+      <origin xyz="-0.015 0.0115 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_b_dummy_15_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 0.0115 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_idle_cap_dummy_15 -->
+    <visual>
+      <origin xyz="-0.015 0.0143 -0.013" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_idle_cap_dummy_15_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 0.0143 -0.013" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_29 -->
+    <visual>
+      <origin xyz="-0.015 0.0127 -0.013" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_29_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 0.0127 -0.013" rpy="-0 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_29 -->
+    <visual>
+      <origin xyz="-0.006 0.0024 -0.0207" rpy="-3.14159 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_29_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.006 0.0024 -0.0207" rpy="-3.14159 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_30 -->
+    <visual>
+      <origin xyz="-0.006 0.0024 -0.0053" rpy="-0 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_30_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.006 0.0024 -0.0053" rpy="-0 -0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_30 -->
+    <visual>
+      <origin xyz="-0.015 -0.0129 -0.013" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_30_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 -0.0129 -0.013" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_f_dummy_15 -->
+    <visual>
+      <origin xyz="-0.015 -0.008 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_f_dummy_15_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 -0.008 -0.013" rpy="1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_idle2_dummy_15 -->
+    <visual>
+      <origin xyz="-0.015 0.0116 -0.013" rpy="-1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_idle2_dummy_15_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 0.0116 -0.013" rpy="-1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_dummy_15 -->
+    <visual>
+      <origin xyz="-0.015 -0.0116 -0.013" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_dummy_15_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.015 -0.0116 -0.013" rpy="-3.14159 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link dip_spacer_4 -->
+  <link name="dip_spacer_4">
+    <inertial>
+      <origin xyz="0.00599824826805821 -0.0327733185307741 0.0143161020509304" rpy="0 0 0" />
+      <mass value="0.026566687523784" />
+      <inertia ixx="4.55386612039434e-06" ixy="5.34533824998089e-07" ixz="1.16597899006332e-08" iyy="4.17802086420146e-06" iyz="-1.69022166616686e-08" izz="5.21462354307768e-06" />
+    </inertial>
+    <!-- Part dc15_a01_hinge_1_11 -->
+    <visual>
+      <origin xyz="0 -0.014 0.0145" rpy="3.14159 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+      <material name="dc15_a01_hinge_1_11_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.014 0.0145" rpy="3.14159 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+    </collision>
+    <!-- Part dip_spacer_4 -->
+    <visual>
+      <origin xyz="-0.007 -0.017 -0.002" rpy="3.14159 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dip_spacer.stl" />
+      </geometry>
+      <material name="dip_spacer_4_material">
+        <color rgba="0.921569 0.921569 0.921569 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.007 -0.017 -0.002" rpy="3.14159 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dip_spacer.stl" />
+      </geometry>
+    </collision>
+    <!-- Part dc15_a01_adaptor_2_12 -->
+    <visual>
+      <origin xyz="0.0075 -0.0261 0.0145" rpy="-3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+      <material name="dc15_a01_adaptor_2_12_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0075 -0.0261 0.0145" rpy="-3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_adaptor_2.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_led_cap2_dummy_16 -->
+    <visual>
+      <origin xyz="-0.0075 -0.0361 0.0241" rpy="0 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_led_cap2_dummy_16_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0075 -0.0361 0.0241" rpy="0 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_led_cap2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_m_dummy_16 -->
+    <visual>
+      <origin xyz="0 -0.0361 0.0065" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_m_dummy_16_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0361 0.0065" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_m_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_b_dummy_16 -->
+    <visual>
+      <origin xyz="0 -0.0361 0.026" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_b_dummy_16_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0361 0.026" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_b_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_idle_cap_dummy_16 -->
+    <visual>
+      <origin xyz="0 -0.0361 0.0288" rpy="1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_idle_cap_dummy_16_material">
+        <color rgba="0.917647 0.917647 0.917647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0361 0.0288" rpy="1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_idle_cap_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_31 -->
+    <visual>
+      <origin xyz="0 -0.0361 0.0272" rpy="1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_31_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0361 0.0272" rpy="1.5708 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_31 -->
+    <visual>
+      <origin xyz="0.009 -0.0284 0.0169" rpy="1.5708 -0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_31_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.009 -0.0284 0.0169" rpy="1.5708 -0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_b3b_eh_32 -->
+    <visual>
+      <origin xyz="0.009 -0.0438 0.0169" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+      <material name="motor_b3b_eh_32_material">
+        <color rgba="0.901961 0.901961 0.901961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.009 -0.0438 0.0169" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="package://assets/motor_b3b_eh.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_bts2_m2_6x8_32 -->
+    <visual>
+      <origin xyz="0 -0.0361 0.0016" rpy="-1.5708 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+      <material name="motor_bts2_m2_6x8_32_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0361 0.0016" rpy="-1.5708 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_bts2_m2_6x8.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_case_f_dummy_16 -->
+    <visual>
+      <origin xyz="0 -0.0361 0.0065" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_case_f_dummy_16_material">
+        <color rgba="0.647059 0.647059 0.647059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0361 0.0065" rpy="3.14159 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_case_f_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_idle2_dummy_16 -->
+    <visual>
+      <origin xyz="0 -0.0361 0.0261" rpy="-0 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_idle2_dummy_16_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0361 0.0261" rpy="-0 0 -1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_idle2_dummy.stl" />
+      </geometry>
+    </collision>
+    <!-- Part motor_dc15_a01_horn_dummy_16 -->
+    <visual>
+      <origin xyz="0 -0.0361 0.0029" rpy="-1.5708 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+      <material name="motor_dc15_a01_horn_dummy_16_material">
+        <color rgba="0.301961 0.301961 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0361 0.0029" rpy="-1.5708 -0 1.5708" />
+      <geometry>
+        <mesh filename="package://assets/motor_dc15_a01_horn_dummy.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link finger_tip_bone_4 -->
+  <link name="finger_tip_bone_4">
+    <inertial>
+      <origin xyz="1.97945623792405e-08 -0.0194136306395712 0.0144998219025004" rpy="0 0 0" />
+      <mass value="0.00513092122338565" />
+      <inertia ixx="1.7281135383766e-06" ixy="3.68930840413763e-12" ixz="-2.94949048742036e-12" iyy="7.80737147035087e-07" iyz="2.12282975796646e-11" izz="1.26368773269365e-06" />
+    </inertial>
+    <!-- Part finger_tip_bone_4 -->
+    <visual>
+      <origin xyz="0.0095 -0.017 0.031" rpy="-0 -0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/finger_tip_bone.stl" />
+      </geometry>
+      <material name="finger_tip_bone_4_material">
+        <color rgba="0.921569 0.921569 0.921569 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0095 -0.017 0.031" rpy="-0 -0 -3.14159" />
+      <geometry>
+        <mesh filename="package://assets/finger_tip_bone.stl" />
+      </geometry>
+    </collision>
+    <!-- Part dc15_a01_hinge_1_12 -->
+    <visual>
+      <origin xyz="0 -0.014 0.0145" rpy="-3.14159 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+      <material name="dc15_a01_hinge_1_12_material">
+        <color rgba="0.262745 0.282353 0.301961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.014 0.0145" rpy="-3.14159 -0 -0" />
+      <geometry>
+        <mesh filename="package://assets/dc15_a01_hinge_1.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from dip_spacer_4 to finger_tip_bone_4 -->
+  <joint name="unitD-DIP" type="revolute">
+    <origin xyz="0 -0.0361 0" rpy="-0 0 0.00777115" />
+    <parent link="dip_spacer_4" />
+    <child link="finger_tip_bone_4" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-0.357771" upper="1.95023" />
+  </joint>
+  <!-- Joint from dc15_a01_dummy_assy_idle_asm_4 to dip_spacer_4 -->
+  <joint name="unitD-PIP" type="revolute">
+    <origin xyz="-0.015 -0.0145 -0.013" rpy="1.5708 -1.55218 -3.14159" />
+    <parent link="dc15_a01_dummy_assy_idle_asm_4" />
+    <child link="dip_spacer_4" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-0.471385" upper="1.90661" />
+  </joint>
+  <!-- Joint from dc15_a01_hinge_1_4 to dc15_a01_dummy_assy_idle_asm_4 -->
+  <joint name="unitD-MCP-ABD" type="revolute">
+    <origin xyz="-0.012 0.0381 0.0145" rpy="1.5708 -0.000591663 -1.5708" />
+    <parent link="dc15_a01_hinge_1_4" />
+    <child link="dc15_a01_dummy_assy_idle_asm_4" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-1.45859" upper="1.45741" />
+  </joint>
+  <!-- Joint from mgn12c__linear_guide_block to dc15_a01_hinge_1_4 -->
+  <joint name="unitD-MCP-FLX" type="revolute">
+    <origin xyz="0.0185991 0.102606 0.114611" rpy="1.5708 0 -1.5708" />
+    <parent link="mgn12c__linear_guide_block" />
+    <child link="dc15_a01_hinge_1_4" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-0.226" upper="1.574" />
+  </joint>
+</robot>

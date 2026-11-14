@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# generated / debug models
+model/_check_all.xml
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
+
+# temp renders
+*.tmp

@@ -1,0 +1,637 @@
+<mujoco model="robot">
+  <compiler meshdir="full_hand_final"/>
+  <visual><global offwidth="1280" offheight="960"/></visual>
+  <option timestep="0.002" integrator="implicitfast"/>
+  <compiler angle="radian" boundmass="1e-09" boundinertia="1e-12"/>
+
+  <asset>
+    <mesh name="mgn12c__linear_guide_block" content_type="model/stl" file="assets/mgn12c__linear_guide_block.stl"/>
+    <mesh name="mgn12c__linear_guide_block__2" content_type="model/stl" file="assets/mgn12c__linear_guide_block__2.stl"/>
+    <mesh name="shaft_10409_50mm" content_type="model/stl" file="assets/shaft_10409_50mm.stl"/>
+    <mesh name="dc15_a01_adaptor_2" content_type="model/stl" file="assets/dc15_a01_adaptor_2.stl"/>
+    <mesh name="mgn12c__linear_guide_block__3" content_type="model/stl" file="assets/mgn12c__linear_guide_block__3.stl"/>
+    <mesh name="mgn12c__linear_guide_block__4" content_type="model/stl" file="assets/mgn12c__linear_guide_block__4.stl"/>
+    <mesh name="mgn12c__linear_guide_block__5" content_type="model/stl" file="assets/mgn12c__linear_guide_block__5.stl"/>
+    <mesh name="hex_socket_head_cap_screw_m4x0_70_x_20__832e47d784177ea3f1dabbaab534416e" content_type="model/stl" file="assets/hex_socket_head_cap_screw_m4x0_70_x_20__832e47d784177ea3f1dabbaab534416e.stl"/>
+    <mesh name="plug_10428" content_type="model/stl" file="assets/plug_10428.stl"/>
+    <mesh name="movingbaseyuno" content_type="model/stl" file="assets/movingbaseyuno.stl"/>
+    <mesh name="motor_dc15_a01_led_cap2_dummy" content_type="model/stl" file="assets/motor_dc15_a01_led_cap2_dummy.stl"/>
+    <mesh name="motor_dc15_a01_case_m_dummy" content_type="model/stl" file="assets/motor_dc15_a01_case_m_dummy.stl"/>
+    <mesh name="motor_dc15_a01_case_b_dummy" content_type="model/stl" file="assets/motor_dc15_a01_case_b_dummy.stl"/>
+    <mesh name="motor_dc15_a01_idle_cap_dummy" content_type="model/stl" file="assets/motor_dc15_a01_idle_cap_dummy.stl"/>
+    <mesh name="motor_bts2_m2_6x8" content_type="model/stl" file="assets/motor_bts2_m2_6x8.stl"/>
+    <mesh name="motor_b3b_eh" content_type="model/stl" file="assets/motor_b3b_eh.stl"/>
+    <mesh name="motor_dc15_a01_case_f_dummy" content_type="model/stl" file="assets/motor_dc15_a01_case_f_dummy.stl"/>
+    <mesh name="motor_dc15_a01_horn_idle2_dummy" content_type="model/stl" file="assets/motor_dc15_a01_horn_idle2_dummy.stl"/>
+    <mesh name="motor_dc15_a01_horn_dummy" content_type="model/stl" file="assets/motor_dc15_a01_horn_dummy.stl"/>
+    <mesh name="guide_10429" content_type="model/stl" file="assets/guide_10429.stl"/>
+    <mesh name="adapterplate" content_type="model/stl" file="assets/adapterplate.stl"/>
+    <mesh name="6725k41_12_mm_wide_x_150_mm_long_rail_for_ball_bearing_carriage" content_type="model/stl" file="assets/6725k41_12_mm_wide_x_150_mm_long_rail_for_ball_bearing_carriage.stl"/>
+    <mesh name="baseplate" content_type="model/stl" file="assets/baseplate.stl"/>
+    <mesh name="extension_10404_50mm" content_type="model/stl" file="assets/extension_10404_50mm.stl"/>
+    <mesh name="staticbaseyuno" content_type="model/stl" file="assets/staticbaseyuno.stl"/>
+    <mesh name="bottomspacer" content_type="model/stl" file="assets/bottomspacer.stl"/>
+    <mesh name="clamshell_bot_10417" content_type="model/stl" file="assets/clamshell_bot_10417.stl"/>
+    <mesh name="elexhousingcover" content_type="model/stl" file="assets/elexhousingcover.stl"/>
+    <mesh name="leaphousinglid" content_type="model/stl" file="assets/leaphousinglid.stl"/>
+    <mesh name="clamshell_top_10416" content_type="model/stl" file="assets/clamshell_top_10416.stl"/>
+    <mesh name="dc15_a01_adaptor_1" content_type="model/stl" file="assets/dc15_a01_adaptor_1.stl"/>
+    <mesh name="mcp_bracket" content_type="model/stl" file="assets/mcp_bracket.stl"/>
+    <mesh name="cable_spacer" content_type="model/stl" file="assets/cable_spacer.stl"/>
+    <mesh name="dc15_a01_hinge_1" content_type="model/stl" file="assets/dc15_a01_hinge_1.stl"/>
+    <mesh name="dip_spacer" content_type="model/stl" file="assets/dip_spacer.stl"/>
+    <mesh name="finger_tip_bone" content_type="model/stl" file="assets/finger_tip_bone.stl"/>
+  </asset>
+
+  <worldbody>
+    <light name="top" pos="0.3 -0.3 1.2" diffuse="1 1 1"/>
+    <geom name="floor" type="plane" size="3 3 0.02" solref="0.008 1" friction="1.8 0.05 0.01" rgba="0.85 0.85 0.85 1"/>
+    <body name="platform_mount" pos="0 0 0.210416" quat="0 1 0 0">
+      <freejoint/>
+      <inertial pos="0.00603964183665823 0.0452026246748193 0.0952415038898925" mass="0.159544859630194" fullinertia="0.000242816313 5.31142042e-05 0.0002416894 4.67336127e-07 2.86916936e-06 1.29626652e-07"/>
+
+    <geom pos="0.00409906 0.017756 0.0839509" quat="0.499998 0.5 0.500002 0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.776471 0.756863 0.737255 1" density="0" mesh="mgn12c__linear_guide_block"/>
+    <geom contype="0" conaffinity="0" pos="0.00409906 0.017756 0.0839509" quat="0.499998 0.5 0.500002 0.5" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="mgn12c__linear_guide_block"/>
+    <geom pos="0.00409906 0.072756 0.0839509" quat="0.499998 0.5 0.500002 0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.776471 0.756863 0.737255 1" density="0" mesh="mgn12c__linear_guide_block__2"/>
+    <geom contype="0" conaffinity="0" pos="0.00409906 0.072756 0.0839509" quat="0.499998 0.5 0.500002 0.5" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="mgn12c__linear_guide_block__2"/>
+    <geom pos="0.076589 0.0452428 0.0859509" quat="0.499998 0.5 0.5 -0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="shaft_10409_50mm"/>
+    <geom contype="0" conaffinity="0" pos="0.076589 0.0452428 0.0859509" quat="0.499998 0.5 0.5 -0.500002" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="shaft_10409_50mm"/>
+    <geom pos="0.00409907 -0.00489399 0.104611" quat="0.499998 -0.5 0.500002 -0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_adaptor_2"/>
+    <geom contype="0" conaffinity="0" pos="0.00409907 -0.00489399 0.104611" quat="0.499998 -0.5 0.500002 -0.5" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_adaptor_2"/>
+    <geom pos="0.00409906 0.072756 0.0839509" quat="0.499998 0.5 0.500002 0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.776471 0.756863 0.737255 1" density="0" mesh="mgn12c__linear_guide_block__3"/>
+    <geom contype="0" conaffinity="0" pos="0.00409906 0.072756 0.0839509" quat="0.499998 0.5 0.500002 0.5" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="mgn12c__linear_guide_block__3"/>
+    <geom pos="0.00409906 0.072756 0.0839509" quat="0.499998 0.5 0.500002 0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.776471 0.756863 0.737255 1" density="0" mesh="mgn12c__linear_guide_block"/>
+    <geom contype="0" conaffinity="0" pos="0.00409906 0.072756 0.0839509" quat="0.499998 0.5 0.500002 0.5" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="mgn12c__linear_guide_block"/>
+    <geom pos="0.00409906 0.017756 0.0839509" quat="0.499998 0.5 0.500002 0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.776471 0.756863 0.737255 1" density="0" mesh="mgn12c__linear_guide_block__2"/>
+    <geom contype="0" conaffinity="0" pos="0.00409906 0.017756 0.0839509" quat="0.499998 0.5 0.500002 0.5" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="mgn12c__linear_guide_block__2"/>
+    <geom pos="0.00409907 0.095106 0.104611" quat="0.499998 -0.5 -0.500002 0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_adaptor_2"/>
+    <geom contype="0" conaffinity="0" pos="0.00409907 0.095106 0.104611" quat="0.499998 -0.5 -0.500002 0.5" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_adaptor_2"/>
+    <geom pos="0.00409906 0.017756 0.0839509" quat="0.499998 0.5 0.500002 0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.776471 0.756863 0.737255 1" density="0" mesh="mgn12c__linear_guide_block__4"/>
+    <geom contype="0" conaffinity="0" pos="0.00409906 0.017756 0.0839509" quat="0.499998 0.5 0.500002 0.5" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="mgn12c__linear_guide_block__4"/>
+    <geom pos="0.00409906 0.017756 0.0839509" quat="0.499998 0.5 0.500002 0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.776471 0.756863 0.737255 1" density="0" mesh="mgn12c__linear_guide_block__5"/>
+    <geom contype="0" conaffinity="0" pos="0.00409906 0.017756 0.0839509" quat="0.499998 0.5 0.500002 0.5" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="mgn12c__linear_guide_block__5"/>
+    <geom pos="0.00409906 0.072756 0.0839509" quat="0.499998 0.5 0.500002 0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.776471 0.756863 0.737255 1" density="0" mesh="mgn12c__linear_guide_block__5"/>
+    <geom contype="0" conaffinity="0" pos="0.00409906 0.072756 0.0839509" quat="0.499998 0.5 0.500002 0.5" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="mgn12c__linear_guide_block__5"/>
+    <geom pos="0.014589 0.0452428 0.105611" quat="1.32679e-06 0 0 -1" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.603922 0.647059 0.686275 1" density="0" mesh="hex_socket_head_cap_screw_m4x0_70_x_20__832e47d784177ea3f1dabbaab534416e"/>
+    <geom contype="0" conaffinity="0" pos="0.014589 0.0452428 0.105611" quat="1.32679e-06 0 0 -1" type="mesh" rgba="0.603922 0.647059 0.686275 1" mesh="hex_socket_head_cap_screw_m4x0_70_x_20__832e47d784177ea3f1dabbaab534416e"/>
+    <geom pos="0.011589 0.0452428 0.0859509" quat="0.499998 -0.5 0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="plug_10428"/>
+    <geom contype="0" conaffinity="0" pos="0.011589 0.0452428 0.0859509" quat="0.499998 -0.5 0.5 0.500002" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="plug_10428"/>
+    <geom pos="0.00409906 0.017756 0.0839509" quat="0.499998 0.5 0.500002 0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.776471 0.756863 0.737255 1" density="0" mesh="mgn12c__linear_guide_block__3"/>
+    <geom contype="0" conaffinity="0" pos="0.00409906 0.017756 0.0839509" quat="0.499998 0.5 0.500002 0.5" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="mgn12c__linear_guide_block__3"/>
+    <geom pos="0.172404 0.00274277 0.0784509" quat="0.499998 -0.5 0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="movingbaseyuno"/>
+    <geom contype="0" conaffinity="0" pos="0.172404 0.00274277 0.0784509" quat="0.499998 -0.5 0.5 0.500002" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="movingbaseyuno"/>
+    <geom pos="0.00409906 0.072756 0.0839509" quat="0.499998 0.5 0.500002 0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.776471 0.756863 0.737255 1" density="0" mesh="mgn12c__linear_guide_block__4"/>
+    <geom contype="0" conaffinity="0" pos="0.00409906 0.072756 0.0839509" quat="0.499998 0.5 0.500002 0.5" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="mgn12c__linear_guide_block__4"/>
+    <geom pos="-0.00550093 -0.019894 0.114611" quat="9.38184e-07 0.707105 9.38187e-07 -0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_dc15_a01_led_cap2_dummy"/>
+    <geom contype="0" conaffinity="0" pos="-0.00550093 -0.019894 0.114611" quat="9.38184e-07 0.707105 9.38187e-07 -0.707108" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_dc15_a01_led_cap2_dummy"/>
+    <geom pos="0.0120991 -0.012394 0.114611" quat="9.38184e-07 -0.707105 -9.38187e-07 -0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_case_m_dummy"/>
+    <geom contype="0" conaffinity="0" pos="0.0120991 -0.012394 0.114611" quat="9.38184e-07 -0.707105 -9.38187e-07 -0.707108" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_case_m_dummy"/>
+    <geom pos="-0.00740093 -0.012394 0.114611" quat="9.38184e-07 -0.707105 -9.38187e-07 -0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_b_dummy"/>
+    <geom contype="0" conaffinity="0" pos="-0.00740093 -0.012394 0.114611" quat="9.38184e-07 -0.707105 -9.38187e-07 -0.707108" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_b_dummy"/>
+    <geom pos="-0.0102009 -0.012394 0.114611" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_idle_cap_dummy"/>
+    <geom contype="0" conaffinity="0" pos="-0.0102009 -0.012394 0.114611" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_idle_cap_dummy"/>
+    <geom pos="-0.00860093 -0.012394 0.114611" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+    <geom contype="0" conaffinity="0" pos="-0.00860093 -0.012394 0.114611" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+    <geom pos="0.00169907 -0.00339399 0.106911" quat="9.38184e-07 -0.707105 0.707108 -9.38187e-07" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+    <geom contype="0" conaffinity="0" pos="0.00169907 -0.00339399 0.106911" quat="9.38184e-07 -0.707105 0.707108 -9.38187e-07" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+    <geom pos="0.00169907 -0.00339399 0.122311" quat="0.707105 0 0 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+    <geom contype="0" conaffinity="0" pos="0.00169907 -0.00339399 0.122311" quat="0.707105 0 0 0.707108" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+    <geom pos="0.0169991 -0.012394 0.114611" quat="0.499998 0.5 0.5 -0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+    <geom contype="0" conaffinity="0" pos="0.0169991 -0.012394 0.114611" quat="0.499998 0.5 0.5 -0.500002" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+    <geom pos="0.0120991 -0.012394 0.114611" quat="9.38184e-07 -0.707105 -9.38187e-07 -0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_f_dummy"/>
+    <geom contype="0" conaffinity="0" pos="0.0120991 -0.012394 0.114611" quat="9.38184e-07 -0.707105 -9.38187e-07 -0.707108" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_f_dummy"/>
+    <geom pos="-0.00750093 -0.012394 0.114611" quat="0.707105 0 -0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+    <geom contype="0" conaffinity="0" pos="-0.00750093 -0.012394 0.114611" quat="0.707105 0 -0.707108 0" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+    <geom pos="0.0156991 -0.012394 0.114611" quat="0.499998 0.5 0.5 -0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_dc15_a01_horn_dummy"/>
+    <geom contype="0" conaffinity="0" pos="0.0156991 -0.012394 0.114611" quat="0.499998 0.5 0.5 -0.500002" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_dc15_a01_horn_dummy"/>
+    <geom pos="0.0136991 0.110106 0.114611" quat="0.707105 0 0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_dc15_a01_led_cap2_dummy"/>
+    <geom contype="0" conaffinity="0" pos="0.0136991 0.110106 0.114611" quat="0.707105 0 0.707108 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_dc15_a01_led_cap2_dummy"/>
+    <geom pos="-0.00390093 0.102606 0.114611" quat="0.707105 0 -0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_case_m_dummy"/>
+    <geom contype="0" conaffinity="0" pos="-0.00390093 0.102606 0.114611" quat="0.707105 0 -0.707108 0" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_case_m_dummy"/>
+    <geom pos="0.0155991 0.102606 0.114611" quat="0.707105 0 -0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_b_dummy"/>
+    <geom contype="0" conaffinity="0" pos="0.0155991 0.102606 0.114611" quat="0.707105 0 -0.707108 0" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_b_dummy"/>
+    <geom pos="0.0183991 0.102606 0.114611" quat="0.499998 -0.5 -0.5 -0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_idle_cap_dummy"/>
+    <geom contype="0" conaffinity="0" pos="0.0183991 0.102606 0.114611" quat="0.499998 -0.5 -0.5 -0.500002" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_idle_cap_dummy"/>
+    <geom pos="0.0167991 0.102606 0.114611" quat="0.499998 -0.5 -0.5 -0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+    <geom contype="0" conaffinity="0" pos="0.0167991 0.102606 0.114611" quat="0.499998 -0.5 -0.5 -0.500002" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+    <geom pos="0.00649907 0.093606 0.106911" quat="9.38184e-07 0.707105 0.707108 9.38187e-07" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+    <geom contype="0" conaffinity="0" pos="0.00649907 0.093606 0.106911" quat="9.38184e-07 0.707105 0.707108 9.38187e-07" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+    <geom pos="0.00649907 0.093606 0.122311" quat="0.707105 0 0 -0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+    <geom contype="0" conaffinity="0" pos="0.00649907 0.093606 0.122311" quat="0.707105 0 0 -0.707108" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+    <geom pos="-0.00880093 0.102606 0.114611" quat="0.499998 -0.5 0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+    <geom contype="0" conaffinity="0" pos="-0.00880093 0.102606 0.114611" quat="0.499998 -0.5 0.5 0.500002" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+    <geom pos="-0.00390093 0.102606 0.114611" quat="0.707105 0 -0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_f_dummy"/>
+    <geom contype="0" conaffinity="0" pos="-0.00390093 0.102606 0.114611" quat="0.707105 0 -0.707108 0" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_f_dummy"/>
+    <geom pos="0.0156991 0.102606 0.114611" quat="9.38184e-07 -0.707105 -9.38187e-07 -0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+    <geom contype="0" conaffinity="0" pos="0.0156991 0.102606 0.114611" quat="9.38184e-07 -0.707105 -9.38187e-07 -0.707108" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+    <geom pos="-0.00750093 0.102606 0.114611" quat="0.499998 -0.5 0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_dc15_a01_horn_dummy"/>
+    <geom contype="0" conaffinity="0" pos="-0.00750093 0.102606 0.114611" quat="0.499998 -0.5 0.5 0.500002" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_dc15_a01_horn_dummy"/>
+    <body name="guide_10429" pos="0.12658896 0.0452429327 0.0859506481" quat="9.38184e-07 0.707105 9.38187e-07 -0.707108">
+      <inertial pos="0.00836982 -7.63304e-05 0.0624275" quat="0.994842 0.00311424 0.101385 0.000844506" mass="0.296305" diaginertia="0.00102618 0.000894682 0.000521895"/>
+      <!-- linearActuator welded at -0.050 m -->
+      <geom pos="0 0 0.0575" quat="0.499998 0.5 -0.500002 -0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.498039 0.498039 0.498039 1" density="0" mesh="guide_10429"/>
+      <geom contype="0" conaffinity="0" pos="0 0 0.0575" quat="0.499998 0.5 -0.500002 -0.5" type="mesh" rgba="0.498039 0.498039 0.498039 1" mesh="guide_10429"/>
+      <geom pos="0.0575 0.0425 -0.046" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="adapterplate"/>
+      <geom contype="0" conaffinity="0" pos="0.0575 0.0425 -0.046" quat="0.707105 0.707108 0 0" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="adapterplate"/>
+      <geom pos="-0.01866 0.0499998 0.0240729" quat="9.38184e-07 0.707105 0.707108 9.38187e-07" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_adaptor_2"/>
+      <geom contype="0" conaffinity="0" pos="-0.01866 0.0499998 0.0240729" quat="9.38184e-07 0.707105 0.707108 9.38187e-07" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_adaptor_2"/>
+      <geom pos="0.0075 0.0275 0.0398354" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="6725k41_12_mm_wide_x_150_mm_long_rail_for_ball_bearing_carriage"/>
+      <geom contype="0" conaffinity="0" pos="0.0075 0.0275 0.0398354" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="6725k41_12_mm_wide_x_150_mm_long_rail_for_ball_bearing_carriage"/>
+      <geom pos="0.0075 0.0425 -0.046" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="baseplate"/>
+      <geom contype="0" conaffinity="0" pos="0.0075 0.0425 -0.046" quat="0.707105 0.707108 0 0" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="baseplate"/>
+      <geom pos="0 0 -0.0045" quat="0.707105 -0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="extension_10404_50mm"/>
+      <geom contype="0" conaffinity="0" pos="0 0 -0.0045" quat="0.707105 -0.707108 0 0" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="extension_10404_50mm"/>
+      <geom pos="0.0075 0.0425 -0.046" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="staticbaseyuno"/>
+      <geom contype="0" conaffinity="0" pos="0.0075 0.0425 -0.046" quat="0.707105 0.707108 0 0" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="staticbaseyuno"/>
+      <geom pos="-0.01866 -0.0499998 0.0244271" quat="0.707105 0 0 -0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_adaptor_2"/>
+      <geom contype="0" conaffinity="0" pos="-0.01866 -0.0499998 0.0244271" quat="0.707105 0 0 -0.707108" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_adaptor_2"/>
+      <geom pos="0.0575 0.0425 -0.046" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="bottomspacer"/>
+      <geom contype="0" conaffinity="0" pos="0.0575 0.0425 -0.046" quat="0.707105 0.707108 0 0" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="bottomspacer"/>
+      <geom pos="0 -0.0075 -0.0355" quat="0.707105 0 0 -0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="clamshell_bot_10417"/>
+      <geom contype="0" conaffinity="0" pos="0 -0.0075 -0.0355" quat="0.707105 0 0 -0.707108" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="clamshell_bot_10417"/>
+      <geom pos="0.0575 0.0425 -0.046" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="elexhousingcover"/>
+      <geom contype="0" conaffinity="0" pos="0.0575 0.0425 -0.046" quat="0.707105 0.707108 0 0" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="elexhousingcover"/>
+      <geom pos="0.0575 0.0425 -0.046" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="leaphousinglid"/>
+      <geom contype="0" conaffinity="0" pos="0.0575 0.0425 -0.046" quat="0.707105 0.707108 0 0" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="leaphousinglid"/>
+      <geom pos="0 -0.0075 -0.0355" quat="0.707105 0 0 -0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="clamshell_top_10416"/>
+      <geom contype="0" conaffinity="0" pos="0 -0.0075 -0.0355" quat="0.707105 0 0 -0.707108" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="clamshell_top_10416"/>
+      <geom pos="0.0075 -0.0275 0.0398354" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="6725k41_12_mm_wide_x_150_mm_long_rail_for_ball_bearing_carriage"/>
+      <geom contype="0" conaffinity="0" pos="0.0075 -0.0275 0.0398354" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="6725k41_12_mm_wide_x_150_mm_long_rail_for_ball_bearing_carriage"/>
+      <geom pos="-0.02866 0.0649998 0.0336729" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_dc15_a01_led_cap2_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.02866 0.0649998 0.0336729" quat="1 0 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_dc15_a01_led_cap2_dummy"/>
+      <geom pos="-0.02866 0.0574998 0.0160729" quat="1.7604e-12 1.32679e-06 -1 -1.32679e-06" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_case_m_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.02866 0.0574998 0.0160729" quat="1.7604e-12 1.32679e-06 -1 -1.32679e-06" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_case_m_dummy"/>
+      <geom pos="-0.02866 0.0574998 0.0355729" quat="1.7604e-12 1.32679e-06 -1 -1.32679e-06" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_b_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.02866 0.0574998 0.0355729" quat="1.7604e-12 1.32679e-06 -1 -1.32679e-06" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_b_dummy"/>
+      <geom pos="-0.02866 0.0574998 0.0383729" quat="9.38184e-07 9.38187e-07 -0.707108 -0.707105" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_idle_cap_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.02866 0.0574998 0.0383729" quat="9.38184e-07 9.38187e-07 -0.707108 -0.707105" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_idle_cap_dummy"/>
+      <geom pos="-0.02866 0.0574998 0.0367729" quat="9.38184e-07 9.38187e-07 -0.707108 -0.707105" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+      <geom contype="0" conaffinity="0" pos="-0.02866 0.0574998 0.0367729" quat="9.38184e-07 9.38187e-07 -0.707108 -0.707105" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+      <geom pos="-0.02096 0.0484998 0.0264729" quat="0.499998 0.5 0.500002 0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+      <geom contype="0" conaffinity="0" pos="-0.02096 0.0484998 0.0264729" quat="0.499998 0.5 0.500002 0.5" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+      <geom pos="-0.03636 0.0484998 0.0264729" quat="0.499998 0.5 -0.500002 -0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+      <geom contype="0" conaffinity="0" pos="-0.03636 0.0484998 0.0264729" quat="0.499998 0.5 -0.500002 -0.5" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+      <geom pos="-0.02866 0.0574998 0.0111729" quat="0.707105 -0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+      <geom contype="0" conaffinity="0" pos="-0.02866 0.0574998 0.0111729" quat="0.707105 -0.707108 0 0" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+      <geom pos="-0.02866 0.0574998 0.0160729" quat="1.76043e-12 1.32679e-06 -1 -1.32679e-06" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_f_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.02866 0.0574998 0.0160729" quat="1.76043e-12 1.32679e-06 -1 -1.32679e-06" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_f_dummy"/>
+      <geom pos="-0.02866 0.0574998 0.0356729" quat="1.32679e-06 0 0 -1" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.02866 0.0574998 0.0356729" quat="1.32679e-06 0 0 -1" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+      <geom pos="-0.02866 0.0574998 0.0124729" quat="0.707105 -0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_dc15_a01_horn_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.02866 0.0574998 0.0124729" quat="0.707105 -0.707108 0 0" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_dc15_a01_horn_dummy"/>
+      <geom pos="-0.02866 -0.0649998 0.0148271" quat="1.32679e-06 1 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_dc15_a01_led_cap2_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.02866 -0.0649998 0.0148271" quat="1.32679e-06 1 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_dc15_a01_led_cap2_dummy"/>
+      <geom pos="-0.02866 -0.0574998 0.0324271" quat="1.32679e-06 0 0 -1" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_case_m_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.02866 -0.0574998 0.0324271" quat="1.32679e-06 0 0 -1" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_case_m_dummy"/>
+      <geom pos="-0.02866 -0.0574998 0.0129271" quat="1.32679e-06 0 0 -1" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_b_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.02866 -0.0574998 0.0129271" quat="1.32679e-06 0 0 -1" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_b_dummy"/>
+      <geom pos="-0.02866 -0.0574998 0.0101271" quat="9.38184e-07 -9.38187e-07 0.707108 -0.707105" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_idle_cap_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.02866 -0.0574998 0.0101271" quat="9.38184e-07 -9.38187e-07 0.707108 -0.707105" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_idle_cap_dummy"/>
+      <geom pos="-0.02866 -0.0574998 0.0117271" quat="9.38184e-07 -9.38187e-07 0.707108 -0.707105" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+      <geom contype="0" conaffinity="0" pos="-0.02866 -0.0574998 0.0117271" quat="9.38184e-07 -9.38187e-07 0.707108 -0.707105" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+      <geom pos="-0.02096 -0.0484998 0.0220271" quat="0.499998 -0.5 0.500002 -0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+      <geom contype="0" conaffinity="0" pos="-0.02096 -0.0484998 0.0220271" quat="0.499998 -0.5 0.500002 -0.5" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+      <geom pos="-0.03636 -0.0484998 0.0220271" quat="0.499998 -0.5 -0.500002 0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+      <geom contype="0" conaffinity="0" pos="-0.03636 -0.0484998 0.0220271" quat="0.499998 -0.5 -0.500002 0.5" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+      <geom pos="-0.02866 -0.0574998 0.0373271" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+      <geom contype="0" conaffinity="0" pos="-0.02866 -0.0574998 0.0373271" quat="0.707105 0.707108 0 0" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+      <geom pos="-0.02866 -0.0574998 0.0324271" quat="1.32679e-06 0 0 -1" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_f_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.02866 -0.0574998 0.0324271" quat="1.32679e-06 0 0 -1" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_f_dummy"/>
+      <geom pos="-0.02866 -0.0574998 0.0128271" quat="1.76043e-12 1.32679e-06 -1 -1.32679e-06" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.02866 -0.0574998 0.0128271" quat="1.76043e-12 1.32679e-06 -1 -1.32679e-06" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+      <geom pos="-0.02866 -0.0574998 0.0360271" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_dc15_a01_horn_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.02866 -0.0574998 0.0360271" quat="0.707105 0.707108 0 0" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_dc15_a01_horn_dummy"/>
+      <body name="dc15_a01_hinge_1" pos="-0.02866 -0.0574998 0.00992714" quat="0.714176 0 0 0.699966">
+        <inertial pos="-0.0229371 0.0397568 0.01469" quat="0.364916 0.627809 -0.324256 0.606259" mass="0.027818" diaginertia="9.8249e-06 9.30924e-06 3.30776e-06"/>
+        <joint damping="0.1" armature="0.01" name="unitC-MCP-FLX" range="-0.2268 2.2" actuatorfrcrange="-0.95 0.95"/>
+        <geom pos="-0.0265 0.0286 0.0145" quat="9.38184e-07 -0.707105 -9.38187e-07 -0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_adaptor_1"/>
+        <geom contype="0" conaffinity="0" pos="-0.0265 0.0286 0.0145" quat="9.38184e-07 -0.707105 -9.38187e-07 -0.707108" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_adaptor_1"/>
+        <geom pos="0.000346084 0.017 0.0143151" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.701961 0.701961 0.701961 1" density="0" mesh="mcp_bracket"/>
+        <geom contype="0" conaffinity="0" pos="0.000346084 0.017 0.0143151" quat="1 0 0 0" type="mesh" rgba="0.701961 0.701961 0.701961 1" mesh="mcp_bracket"/>
+        <geom pos="-0.043 0.0235 0.0055" quat="0.707105 0 -0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.498039 0.498039 0.498039 1" density="0" mesh="cable_spacer"/>
+        <geom contype="0" conaffinity="0" pos="-0.043 0.0235 0.0055" quat="0.707105 0 -0.707108 0" type="mesh" rgba="0.498039 0.498039 0.498039 1" mesh="cable_spacer"/>
+        <geom pos="0 0.014 0.0145" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_hinge_1"/>
+        <geom contype="0" conaffinity="0" pos="0 0.014 0.0145" quat="1 0 0 0" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_hinge_1"/>
+        <geom pos="-0.0361 0.0306 0.0145" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_dc15_a01_led_cap2_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.0361 0.0306 0.0145" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_dc15_a01_led_cap2_dummy"/>
+        <geom pos="-0.0185 0.0381 0.0145" quat="9.38184e-07 -0.707105 -9.38187e-07 -0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_case_m_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.0185 0.0381 0.0145" quat="9.38184e-07 -0.707105 -9.38187e-07 -0.707108" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_case_m_dummy"/>
+        <geom pos="-0.038 0.0381 0.0145" quat="9.38184e-07 -0.707105 -9.38187e-07 -0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_b_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.038 0.0381 0.0145" quat="9.38184e-07 -0.707105 -9.38187e-07 -0.707108" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_b_dummy"/>
+        <geom pos="-0.0408 0.0381 0.0145" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_idle_cap_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.0408 0.0381 0.0145" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_idle_cap_dummy"/>
+        <geom pos="-0.0392 0.0381 0.0145" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+        <geom contype="0" conaffinity="0" pos="-0.0392 0.0381 0.0145" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+        <geom pos="-0.0289 0.0471 0.0068" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+        <geom contype="0" conaffinity="0" pos="-0.0289 0.0471 0.0068" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+        <geom pos="-0.0289 0.0471 0.0222" quat="0.707105 0 0 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+        <geom contype="0" conaffinity="0" pos="-0.0289 0.0471 0.0222" quat="0.707105 0 0 0.707108" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+        <geom pos="-0.0136 0.0381 0.0145" quat="0.499998 0.5 0.5 -0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+        <geom contype="0" conaffinity="0" pos="-0.0136 0.0381 0.0145" quat="0.499998 0.5 0.5 -0.500002" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+        <geom pos="-0.0185 0.0381 0.0145" quat="9.38184e-07 -0.707105 -9.38187e-07 -0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_f_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.0185 0.0381 0.0145" quat="9.38184e-07 -0.707105 -9.38187e-07 -0.707108" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_f_dummy"/>
+        <geom pos="-0.0381 0.0381 0.0145" quat="0.707105 0 -0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.0381 0.0381 0.0145" quat="0.707105 0 -0.707108 0" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+        <geom pos="-0.0149 0.0381 0.0145" quat="0.499998 0.5 0.5 -0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_dc15_a01_horn_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.0149 0.0381 0.0145" quat="0.499998 0.5 0.5 -0.500002" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_dc15_a01_horn_dummy"/>
+        <body name="dc15_a01_dummy_assy_idle_asm" pos="-0.012 0.0381 0.0145" quat="0.492577 0.507313 -0.492581 -0.507313">
+          <inertial pos="-0.00807161 -0.00021233 -0.0129864" quat="0.00300962 0.706559 -0.00212651 0.707645" mass="0.023" diaginertia="3.32782e-06 2.84301e-06 1.86347e-06"/>
+          <joint damping="0.1" armature="0.01" name="unitC-MCP-ABD" range="-1.458 1.458" actuatorfrcrange="-0.95 0.95"/>
+          <geom pos="-0.0075 0 -0.003" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_adaptor_2"/>
+          <geom contype="0" conaffinity="0" pos="-0.0075 0 -0.003" quat="0.707105 0.707108 0 0" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_adaptor_2"/>
+          <geom pos="-0.0225 0.0096 -0.013" quat="0.499998 -0.5 0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_dc15_a01_led_cap2_dummy"/>
+          <geom contype="0" conaffinity="0" pos="-0.0225 0.0096 -0.013" quat="0.499998 -0.5 0.5 0.500002" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_dc15_a01_led_cap2_dummy"/>
+          <geom pos="-0.015 -0.008 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_case_m_dummy"/>
+          <geom contype="0" conaffinity="0" pos="-0.015 -0.008 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_case_m_dummy"/>
+          <geom pos="-0.015 0.0115 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_b_dummy"/>
+          <geom contype="0" conaffinity="0" pos="-0.015 0.0115 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_b_dummy"/>
+          <geom pos="-0.015 0.0143 -0.013" quat="0.707105 0 -0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_idle_cap_dummy"/>
+          <geom contype="0" conaffinity="0" pos="-0.015 0.0143 -0.013" quat="0.707105 0 -0.707108 0" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_idle_cap_dummy"/>
+          <geom pos="-0.015 0.0127 -0.013" quat="0.707105 0 -0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+          <geom contype="0" conaffinity="0" pos="-0.015 0.0127 -0.013" quat="0.707105 0 -0.707108 0" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+          <geom pos="-0.006 0.0024 -0.0207" quat="1.76037e-12 -1.32679e-06 -1 1.32679e-06" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+          <geom contype="0" conaffinity="0" pos="-0.006 0.0024 -0.0207" quat="1.76037e-12 -1.32679e-06 -1 1.32679e-06" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+          <geom pos="-0.006 0.0024 -0.0053" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+          <geom contype="0" conaffinity="0" pos="-0.006 0.0024 -0.0053" quat="1 0 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+          <geom pos="-0.015 -0.0129 -0.013" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+          <geom contype="0" conaffinity="0" pos="-0.015 -0.0129 -0.013" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+          <geom pos="-0.015 -0.008 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_f_dummy"/>
+          <geom contype="0" conaffinity="0" pos="-0.015 -0.008 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_f_dummy"/>
+          <geom pos="-0.015 0.0116 -0.013" quat="0.499998 -0.5 -0.5 -0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+          <geom contype="0" conaffinity="0" pos="-0.015 0.0116 -0.013" quat="0.499998 -0.5 -0.5 -0.500002" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+          <geom pos="-0.015 -0.0116 -0.013" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_dc15_a01_horn_dummy"/>
+          <geom contype="0" conaffinity="0" pos="-0.015 -0.0116 -0.013" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_dc15_a01_horn_dummy"/>
+          <body name="dip_spacer" pos="-0.015 -0.0145 -0.013" quat="0.500278 -0.50028 -0.49972 -0.499722">
+            <inertial pos="0.00599825 -0.0327733 0.0143161" quat="0.322135 0.632496 -0.327414 0.623681" mass="0.0265667" diaginertia="5.21492e-06 4.93255e-06 3.79904e-06"/>
+            <joint damping="0.1" armature="0.01" name="unitC-PIP" range="-2 0.489" actuatorfrcrange="-0.95 0.95"/>
+            <geom pos="-0.007 -0.017 -0.002" quat="1.32679e-06 -1 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.921569 0.921569 0.921569 1" density="0" mesh="dip_spacer"/>
+            <geom contype="0" conaffinity="0" pos="-0.007 -0.017 -0.002" quat="1.32679e-06 -1 0 0" type="mesh" rgba="0.921569 0.921569 0.921569 1" mesh="dip_spacer"/>
+            <geom pos="0 -0.014 0.0145" quat="1.32679e-06 -1 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_hinge_1"/>
+            <geom contype="0" conaffinity="0" pos="0 -0.014 0.0145" quat="1.32679e-06 -1 0 0" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_hinge_1"/>
+            <geom pos="0.0075 -0.0261 0.0145" quat="1.76043e-12 -1.32679e-06 1 -1.32679e-06" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_adaptor_2"/>
+            <geom contype="0" conaffinity="0" pos="0.0075 -0.0261 0.0145" quat="1.76043e-12 -1.32679e-06 1 -1.32679e-06" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_adaptor_2"/>
+            <geom pos="-0.0075 -0.0361 0.0241" quat="0.707105 0 0 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_dc15_a01_led_cap2_dummy"/>
+            <geom contype="0" conaffinity="0" pos="-0.0075 -0.0361 0.0241" quat="0.707105 0 0 0.707108" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_dc15_a01_led_cap2_dummy"/>
+            <geom pos="0 -0.0361 0.0065" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_case_m_dummy"/>
+            <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0065" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_case_m_dummy"/>
+            <geom pos="0 -0.0361 0.026" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_b_dummy"/>
+            <geom contype="0" conaffinity="0" pos="0 -0.0361 0.026" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_b_dummy"/>
+            <geom pos="0 -0.0361 0.0288" quat="0.499998 0.5 -0.500002 -0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_idle_cap_dummy"/>
+            <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0288" quat="0.499998 0.5 -0.500002 -0.5" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_idle_cap_dummy"/>
+            <geom pos="0 -0.0361 0.0272" quat="0.499998 0.5 -0.500002 -0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+            <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0272" quat="0.499998 0.5 -0.500002 -0.5" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+            <geom pos="0.009 -0.0284 0.0169" quat="9.38184e-07 9.38187e-07 -0.707108 -0.707105" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+            <geom contype="0" conaffinity="0" pos="0.009 -0.0284 0.0169" quat="9.38184e-07 9.38187e-07 -0.707108 -0.707105" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+            <geom pos="0.009 -0.0438 0.0169" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+            <geom contype="0" conaffinity="0" pos="0.009 -0.0438 0.0169" quat="0.707105 0.707108 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+            <geom pos="0 -0.0361 0.0016" quat="0.499998 -0.5 -0.500002 0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+            <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0016" quat="0.499998 -0.5 -0.500002 0.5" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+            <geom pos="0 -0.0361 0.0065" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_f_dummy"/>
+            <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0065" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_f_dummy"/>
+            <geom pos="0 -0.0361 0.0261" quat="0.707105 0 0 -0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+            <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0261" quat="0.707105 0 0 -0.707108" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+            <geom pos="0 -0.0361 0.0029" quat="0.499998 -0.5 -0.500002 0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_dc15_a01_horn_dummy"/>
+            <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0029" quat="0.499998 -0.5 -0.500002 0.5" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_dc15_a01_horn_dummy"/>
+            <body name="finger_tip_bone" pos="0 -0.0361 0" quat="0.999992 0 0 0.00395113">
+              <inertial pos="1.97946e-08 -0.0194136 0.0144998" quat="0.707122 0.707091 3.62208e-06 -8.68445e-07" mass="0.00513092" diaginertia="1.72811e-06 1.26369e-06 7.80737e-07"/>
+              <joint damping="0.1" armature="0.01" name="unitC-DIP" range="-0.5 1.958" actuatorfrcrange="-0.95 0.95"/>
+              <geom pos="0 -0.014 0.0145" quat="1.32679e-06 -1 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_hinge_1"/>
+              <geom pos="0 -0.014 0.0145" quat="1.32679e-06 -1 0 0" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_hinge_1"/>
+              <geom pos="0.0095 -0.017 0.031" quat="1.32679e-06 0 0 -1" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.921569 0.921569 0.921569 1" density="0" mesh="finger_tip_bone" friction="10.0 0.05 0.01" condim="4" solref="0.0005 1" solimp="0.999 0.9999 0.0001"/>
+              <geom pos="0.0095 -0.017 0.031" quat="1.32679e-06 0 0 -1" type="mesh" rgba="0.921569 0.921569 0.921569 1" mesh="finger_tip_bone" friction="10.0 0.05 0.01" condim="4" solref="0.0005 1" solimp="0.999 0.9999 0.0001"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="dc15_a01_hinge_1_2" pos="-0.02866 0.0574998 0.0385729" quat="9.37823e-07 -0.706833 0.70738 -9.38549e-07">
+        <inertial pos="-0.0229371 0.0397568 0.01469" quat="0.364916 0.627809 -0.324257 0.606259" mass="0.027818" diaginertia="9.8249e-06 9.30923e-06 3.30777e-06"/>
+        <joint damping="0.1" armature="0.01" name="unitA-MCP-FLX" range="-0.2268 2.2" actuatorfrcrange="-0.95 0.95"/>
+        <geom pos="0 0.014 0.0145" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_hinge_1"/>
+        <geom contype="0" conaffinity="0" pos="0 0.014 0.0145" quat="1 0 0 0" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_hinge_1"/>
+        <geom pos="-0.043 0.0235 0.0055" quat="0.707105 0 -0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.498039 0.498039 0.498039 1" density="0" mesh="cable_spacer"/>
+        <geom contype="0" conaffinity="0" pos="-0.043 0.0235 0.0055" quat="0.707105 0 -0.707108 0" type="mesh" rgba="0.498039 0.498039 0.498039 1" mesh="cable_spacer"/>
+        <geom pos="0.000346084 0.017 0.0143151" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.701961 0.701961 0.701961 1" density="0" mesh="mcp_bracket"/>
+        <geom contype="0" conaffinity="0" pos="0.000346084 0.017 0.0143151" quat="1 0 0 0" type="mesh" rgba="0.701961 0.701961 0.701961 1" mesh="mcp_bracket"/>
+        <geom pos="-0.0265 0.0286 0.0145" quat="9.38184e-07 -0.707105 -9.38187e-07 -0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_adaptor_1"/>
+        <geom contype="0" conaffinity="0" pos="-0.0265 0.0286 0.0145" quat="9.38184e-07 -0.707105 -9.38187e-07 -0.707108" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_adaptor_1"/>
+        <geom pos="-0.0361 0.0306 0.0145" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_dc15_a01_led_cap2_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.0361 0.0306 0.0145" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_dc15_a01_led_cap2_dummy"/>
+        <geom pos="-0.0185 0.0381 0.0145" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_case_m_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.0185 0.0381 0.0145" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_case_m_dummy"/>
+        <geom pos="-0.038 0.0381 0.0145" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_b_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.038 0.0381 0.0145" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_b_dummy"/>
+        <geom pos="-0.0408 0.0381 0.0145" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_idle_cap_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.0408 0.0381 0.0145" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_idle_cap_dummy"/>
+        <geom pos="-0.0392 0.0381 0.0145" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+        <geom contype="0" conaffinity="0" pos="-0.0392 0.0381 0.0145" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+        <geom pos="-0.0289 0.0471 0.0068" quat="9.38184e-07 -0.707105 0.707108 -9.38187e-07" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+        <geom contype="0" conaffinity="0" pos="-0.0289 0.0471 0.0068" quat="9.38184e-07 -0.707105 0.707108 -9.38187e-07" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+        <geom pos="-0.0289 0.0471 0.0222" quat="0.707105 0 0 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+        <geom contype="0" conaffinity="0" pos="-0.0289 0.0471 0.0222" quat="0.707105 0 0 0.707108" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+        <geom pos="-0.0136 0.0381 0.0145" quat="0.499998 0.5 0.5 -0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+        <geom contype="0" conaffinity="0" pos="-0.0136 0.0381 0.0145" quat="0.499998 0.5 0.5 -0.500002" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+        <geom pos="-0.0185 0.0381 0.0145" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_f_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.0185 0.0381 0.0145" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_f_dummy"/>
+        <geom pos="-0.0381 0.0381 0.0145" quat="0.707105 0 -0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.0381 0.0381 0.0145" quat="0.707105 0 -0.707108 0" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+        <geom pos="-0.0149 0.0381 0.0145" quat="0.499998 0.5 0.5 -0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_dc15_a01_horn_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.0149 0.0381 0.0145" quat="0.499998 0.5 0.5 -0.500002" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_dc15_a01_horn_dummy"/>
+        <body name="dc15_a01_dummy_assy_idle_asm_2" pos="-0.012 0.0381 0.0145" quat="0.499998 0.5 -0.500002 -0.5">
+          <inertial pos="-0.00807161 -0.00021233 -0.0129864" quat="0.00300962 0.706559 -0.00212651 0.707645" mass="0.023" diaginertia="3.32782e-06 2.84301e-06 1.86347e-06"/>
+          <joint damping="0.1" armature="0.01" name="unitA-MCP-ABD" range="-1.458 1.458" actuatorfrcrange="-0.95 0.95"/>
+          <geom pos="-0.0075 0 -0.003" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_adaptor_2"/>
+          <geom contype="0" conaffinity="0" pos="-0.0075 0 -0.003" quat="0.707105 0.707108 0 0" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_adaptor_2"/>
+          <geom pos="-0.0225 0.0096 -0.013" quat="0.499998 -0.5 0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_dc15_a01_led_cap2_dummy"/>
+          <geom contype="0" conaffinity="0" pos="-0.0225 0.0096 -0.013" quat="0.499998 -0.5 0.5 0.500002" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_dc15_a01_led_cap2_dummy"/>
+          <geom pos="-0.015 -0.008 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_case_m_dummy"/>
+          <geom contype="0" conaffinity="0" pos="-0.015 -0.008 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_case_m_dummy"/>
+          <geom pos="-0.015 0.0115 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_b_dummy"/>
+          <geom contype="0" conaffinity="0" pos="-0.015 0.0115 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_b_dummy"/>
+          <geom pos="-0.015 0.0143 -0.013" quat="0.707105 0 -0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_idle_cap_dummy"/>
+          <geom contype="0" conaffinity="0" pos="-0.015 0.0143 -0.013" quat="0.707105 0 -0.707108 0" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_idle_cap_dummy"/>
+          <geom pos="-0.015 0.0127 -0.013" quat="0.707105 0 -0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+          <geom contype="0" conaffinity="0" pos="-0.015 0.0127 -0.013" quat="0.707105 0 -0.707108 0" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+          <geom pos="-0.006 0.0024 -0.0207" quat="1.76037e-12 -1.32679e-06 -1 1.32679e-06" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+          <geom contype="0" conaffinity="0" pos="-0.006 0.0024 -0.0207" quat="1.76037e-12 -1.32679e-06 -1 1.32679e-06" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+          <geom pos="-0.006 0.0024 -0.0053" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+          <geom contype="0" conaffinity="0" pos="-0.006 0.0024 -0.0053" quat="1 0 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+          <geom pos="-0.015 -0.0129 -0.013" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+          <geom contype="0" conaffinity="0" pos="-0.015 -0.0129 -0.013" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+          <geom pos="-0.015 -0.008 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_f_dummy"/>
+          <geom contype="0" conaffinity="0" pos="-0.015 -0.008 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_f_dummy"/>
+          <geom pos="-0.015 0.0116 -0.013" quat="0.499998 -0.5 -0.5 -0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+          <geom contype="0" conaffinity="0" pos="-0.015 0.0116 -0.013" quat="0.499998 -0.5 -0.5 -0.500002" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+          <geom pos="-0.015 -0.0116 -0.013" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_dc15_a01_horn_dummy"/>
+          <geom contype="0" conaffinity="0" pos="-0.015 -0.0116 -0.013" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_dc15_a01_horn_dummy"/>
+          <body name="dip_spacer_2" pos="-0.015 -0.0145 -0.013" quat="0.499807 -0.499804 -0.500196 -0.500192">
+            <inertial pos="0.00599825 -0.0327733 0.0143161" quat="0.322134 0.632496 -0.327415 0.623681" mass="0.0265667" diaginertia="5.21492e-06 4.93255e-06 3.79904e-06"/>
+            <joint damping="0.1" armature="0.01" name="unitA-PIP" range="-2 0.489" actuatorfrcrange="-0.95 0.95"/>
+            <geom pos="0.0075 -0.0261 0.0145" quat="1.76043e-12 -1.32679e-06 1 -1.32679e-06" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_adaptor_2"/>
+            <geom contype="0" conaffinity="0" pos="0.0075 -0.0261 0.0145" quat="1.76043e-12 -1.32679e-06 1 -1.32679e-06" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_adaptor_2"/>
+            <geom pos="0 -0.014 0.0145" quat="1.32679e-06 1 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_hinge_1"/>
+            <geom contype="0" conaffinity="0" pos="0 -0.014 0.0145" quat="1.32679e-06 1 0 0" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_hinge_1"/>
+            <geom pos="-0.007 -0.017 -0.002" quat="1.32679e-06 1 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.921569 0.921569 0.921569 1" density="0" mesh="dip_spacer"/>
+            <geom contype="0" conaffinity="0" pos="-0.007 -0.017 -0.002" quat="1.32679e-06 1 0 0" type="mesh" rgba="0.921569 0.921569 0.921569 1" mesh="dip_spacer"/>
+            <geom pos="-0.0075 -0.0361 0.0241" quat="0.707105 0 0 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_dc15_a01_led_cap2_dummy"/>
+            <geom contype="0" conaffinity="0" pos="-0.0075 -0.0361 0.0241" quat="0.707105 0 0 0.707108" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_dc15_a01_led_cap2_dummy"/>
+            <geom pos="0 -0.0361 0.0065" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_case_m_dummy"/>
+            <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0065" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_case_m_dummy"/>
+            <geom pos="0 -0.0361 0.026" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_b_dummy"/>
+            <geom contype="0" conaffinity="0" pos="0 -0.0361 0.026" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_b_dummy"/>
+            <geom pos="0 -0.0361 0.0288" quat="0.499998 0.5 -0.500002 -0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_idle_cap_dummy"/>
+            <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0288" quat="0.499998 0.5 -0.500002 -0.5" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_idle_cap_dummy"/>
+            <geom pos="0 -0.0361 0.0272" quat="0.499998 0.5 -0.500002 -0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+            <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0272" quat="0.499998 0.5 -0.500002 -0.5" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+            <geom pos="0.009 -0.0284 0.0169" quat="9.38184e-07 9.38187e-07 -0.707108 -0.707105" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+            <geom contype="0" conaffinity="0" pos="0.009 -0.0284 0.0169" quat="9.38184e-07 9.38187e-07 -0.707108 -0.707105" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+            <geom pos="0.009 -0.0438 0.0169" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+            <geom contype="0" conaffinity="0" pos="0.009 -0.0438 0.0169" quat="0.707105 0.707108 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+            <geom pos="0 -0.0361 0.0016" quat="0.499998 -0.5 -0.500002 0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+            <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0016" quat="0.499998 -0.5 -0.500002 0.5" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+            <geom pos="0 -0.0361 0.0065" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_f_dummy"/>
+            <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0065" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_f_dummy"/>
+            <geom pos="0 -0.0361 0.0261" quat="0.707105 0 0 -0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+            <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0261" quat="0.707105 0 0 -0.707108" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+            <geom pos="0 -0.0361 0.0029" quat="0.499998 -0.5 -0.500002 0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_dc15_a01_horn_dummy"/>
+            <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0029" quat="0.499998 -0.5 -0.500002 0.5" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_dc15_a01_horn_dummy"/>
+            <body name="finger_tip_bone_2" pos="0 -0.0361 0">
+              <inertial pos="1.97946e-08 -0.0194136 0.0144998" quat="0.707121 0.707092 3.62209e-06 -8.68467e-07" mass="0.00513092" diaginertia="1.72811e-06 1.26369e-06 7.80737e-07"/>
+              <joint damping="0.1" armature="0.01" name="unitA-DIP" range="-0.5 1.958" actuatorfrcrange="-0.95 0.95"/>
+              <geom pos="0 -0.014 0.0145" quat="1.32679e-06 1 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_hinge_1"/>
+              <geom pos="0 -0.014 0.0145" quat="1.32679e-06 1 0 0" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_hinge_1"/>
+              <geom pos="0.0095 -0.017 0.031" quat="1.32679e-06 0 0 -1" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.921569 0.921569 0.921569 1" density="0" mesh="finger_tip_bone" friction="10.0 0.05 0.01" condim="4" solref="0.0005 1" solimp="0.999 0.9999 0.0001"/>
+              <geom pos="0.0095 -0.017 0.031" quat="1.32679e-06 0 0 -1" type="mesh" rgba="0.921569 0.921569 0.921569 1" mesh="finger_tip_bone" friction="10.0 0.05 0.01" condim="4" solref="0.0005 1" solimp="0.999 0.9999 0.0001"/>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="dc15_a01_hinge_1_3" pos="-0.0104009 -0.012394 0.114611" quat="0.499998 0.5 0.500002 0.5">
+      <inertial pos="-0.0229371 0.0397568 0.01469" quat="0.364916 0.627809 -0.324257 0.606259" mass="0.027818" diaginertia="9.8249e-06 9.30923e-06 3.30777e-06"/>
+      <joint damping="0.1" armature="0.01" name="unitB-MCP-FLX" range="-0.2268 2.2" actuatorfrcrange="-0.95 0.95"/>
+      <geom pos="-0.043 0.0235 0.0055" quat="0.707105 0 -0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.498039 0.498039 0.498039 1" density="0" mesh="cable_spacer"/>
+      <geom contype="0" conaffinity="0" pos="-0.043 0.0235 0.0055" quat="0.707105 0 -0.707108 0" type="mesh" rgba="0.498039 0.498039 0.498039 1" mesh="cable_spacer"/>
+      <geom pos="-0.0265 0.0286 0.0145" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_adaptor_1"/>
+      <geom contype="0" conaffinity="0" pos="-0.0265 0.0286 0.0145" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_adaptor_1"/>
+      <geom pos="0.000346084 0.017 0.0143151" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.701961 0.701961 0.701961 1" density="0" mesh="mcp_bracket"/>
+      <geom contype="0" conaffinity="0" pos="0.000346084 0.017 0.0143151" quat="1 0 0 0" type="mesh" rgba="0.701961 0.701961 0.701961 1" mesh="mcp_bracket"/>
+      <geom pos="0 0.014 0.0145" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_hinge_1"/>
+      <geom contype="0" conaffinity="0" pos="0 0.014 0.0145" quat="1 0 0 0" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_hinge_1"/>
+      <geom pos="-0.0361 0.0306 0.0145" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_dc15_a01_led_cap2_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.0361 0.0306 0.0145" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_dc15_a01_led_cap2_dummy"/>
+      <geom pos="-0.0185 0.0381 0.0145" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_case_m_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.0185 0.0381 0.0145" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_case_m_dummy"/>
+      <geom pos="-0.038 0.0381 0.0145" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_b_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.038 0.0381 0.0145" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_b_dummy"/>
+      <geom pos="-0.0408 0.0381 0.0145" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_idle_cap_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.0408 0.0381 0.0145" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_idle_cap_dummy"/>
+      <geom pos="-0.0392 0.0381 0.0145" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+      <geom contype="0" conaffinity="0" pos="-0.0392 0.0381 0.0145" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+      <geom pos="-0.0289 0.0471 0.0068" quat="9.38184e-07 -0.707105 0.707108 -9.38187e-07" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+      <geom contype="0" conaffinity="0" pos="-0.0289 0.0471 0.0068" quat="9.38184e-07 -0.707105 0.707108 -9.38187e-07" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+      <geom pos="-0.0289 0.0471 0.0222" quat="0.707105 0 0 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+      <geom contype="0" conaffinity="0" pos="-0.0289 0.0471 0.0222" quat="0.707105 0 0 0.707108" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+      <geom pos="-0.0136 0.0381 0.0145" quat="0.499998 0.5 0.5 -0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+      <geom contype="0" conaffinity="0" pos="-0.0136 0.0381 0.0145" quat="0.499998 0.5 0.5 -0.500002" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+      <geom pos="-0.0185 0.0381 0.0145" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_f_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.0185 0.0381 0.0145" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_f_dummy"/>
+      <geom pos="-0.0381 0.0381 0.0145" quat="0.707105 0 -0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.0381 0.0381 0.0145" quat="0.707105 0 -0.707108 0" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+      <geom pos="-0.0149 0.0381 0.0145" quat="0.499998 0.5 0.5 -0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_dc15_a01_horn_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.0149 0.0381 0.0145" quat="0.499998 0.5 0.5 -0.500002" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_dc15_a01_horn_dummy"/>
+      <body name="dc15_a01_dummy_assy_idle_asm_3" pos="-0.012 0.0381 0.0145" quat="0.499998 0.5 -0.500002 -0.5">
+        <inertial pos="-0.00807161 -0.00021233 -0.0129864" quat="0.00300962 0.706559 -0.00212652 0.707645" mass="0.023" diaginertia="3.32782e-06 2.84301e-06 1.86347e-06"/>
+        <joint damping="0.1" armature="0.01" name="unitB-MCP-ABD" range="-1.458 1.458" actuatorfrcrange="-0.95 0.95"/>
+        <geom pos="-0.0075 0 -0.003" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_adaptor_2"/>
+        <geom contype="0" conaffinity="0" pos="-0.0075 0 -0.003" quat="0.707105 0.707108 0 0" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_adaptor_2"/>
+        <geom pos="-0.0225 0.0096 -0.013" quat="0.499998 -0.5 0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_dc15_a01_led_cap2_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.0225 0.0096 -0.013" quat="0.499998 -0.5 0.5 0.500002" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_dc15_a01_led_cap2_dummy"/>
+        <geom pos="-0.015 -0.008 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_case_m_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.015 -0.008 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_case_m_dummy"/>
+        <geom pos="-0.015 0.0115 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_b_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.015 0.0115 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_b_dummy"/>
+        <geom pos="-0.015 0.0143 -0.013" quat="0.707105 0 -0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_idle_cap_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.015 0.0143 -0.013" quat="0.707105 0 -0.707108 0" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_idle_cap_dummy"/>
+        <geom pos="-0.015 0.0127 -0.013" quat="0.707105 0 -0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+        <geom contype="0" conaffinity="0" pos="-0.015 0.0127 -0.013" quat="0.707105 0 -0.707108 0" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+        <geom pos="-0.006 0.0024 -0.0207" quat="1.76037e-12 -1.32679e-06 1 -1.32679e-06" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+        <geom contype="0" conaffinity="0" pos="-0.006 0.0024 -0.0207" quat="1.76037e-12 -1.32679e-06 1 -1.32679e-06" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+        <geom pos="-0.006 0.0024 -0.0053" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+        <geom contype="0" conaffinity="0" pos="-0.006 0.0024 -0.0053" quat="1 0 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+        <geom pos="-0.015 -0.0129 -0.013" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+        <geom contype="0" conaffinity="0" pos="-0.015 -0.0129 -0.013" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+        <geom pos="-0.015 -0.008 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_f_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.015 -0.008 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_f_dummy"/>
+        <geom pos="-0.015 0.0116 -0.013" quat="0.499998 -0.5 -0.5 -0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.015 0.0116 -0.013" quat="0.499998 -0.5 -0.5 -0.500002" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+        <geom pos="-0.015 -0.0116 -0.013" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_dc15_a01_horn_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.015 -0.0116 -0.013" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_dc15_a01_horn_dummy"/>
+        <body name="dip_spacer_3" pos="-0.015 -0.0145 -0.013" quat="0.499998 -0.5 -0.5 -0.500002">
+          <inertial pos="0.00599825 -0.0327733 0.0143161" quat="0.322135 0.632496 -0.327414 0.623681" mass="0.0265667" diaginertia="5.21492e-06 4.93255e-06 3.79904e-06"/>
+          <joint damping="0.1" armature="0.01" name="unitB-PIP" range="-2 0.489" actuatorfrcrange="-0.95 0.95"/>
+          <geom pos="0 -0.014 0.0145" quat="1.32679e-06 -1 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_hinge_1"/>
+          <geom contype="0" conaffinity="0" pos="0 -0.014 0.0145" quat="1.32679e-06 -1 0 0" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_hinge_1"/>
+          <geom pos="-0.007 -0.017 -0.002" quat="1.32679e-06 1 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.921569 0.921569 0.921569 1" density="0" mesh="dip_spacer"/>
+          <geom contype="0" conaffinity="0" pos="-0.007 -0.017 -0.002" quat="1.32679e-06 1 0 0" type="mesh" rgba="0.921569 0.921569 0.921569 1" mesh="dip_spacer"/>
+          <geom pos="0.0075 -0.0261 0.0145" quat="1.76043e-12 -1.32679e-06 1 -1.32679e-06" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_adaptor_2"/>
+          <geom contype="0" conaffinity="0" pos="0.0075 -0.0261 0.0145" quat="1.76043e-12 -1.32679e-06 1 -1.32679e-06" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_adaptor_2"/>
+          <geom pos="-0.0075 -0.0361 0.0241" quat="0.707105 0 0 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_dc15_a01_led_cap2_dummy"/>
+          <geom contype="0" conaffinity="0" pos="-0.0075 -0.0361 0.0241" quat="0.707105 0 0 0.707108" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_dc15_a01_led_cap2_dummy"/>
+          <geom pos="0 -0.0361 0.0065" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_case_m_dummy"/>
+          <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0065" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_case_m_dummy"/>
+          <geom pos="0 -0.0361 0.026" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_b_dummy"/>
+          <geom contype="0" conaffinity="0" pos="0 -0.0361 0.026" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_b_dummy"/>
+          <geom pos="0 -0.0361 0.0288" quat="0.499998 0.5 -0.500002 -0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_idle_cap_dummy"/>
+          <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0288" quat="0.499998 0.5 -0.500002 -0.5" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_idle_cap_dummy"/>
+          <geom pos="0 -0.0361 0.0272" quat="0.499998 0.5 -0.500002 -0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+          <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0272" quat="0.499998 0.5 -0.500002 -0.5" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+          <geom pos="0.009 -0.0284 0.0169" quat="9.38184e-07 9.38187e-07 -0.707108 -0.707105" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+          <geom contype="0" conaffinity="0" pos="0.009 -0.0284 0.0169" quat="9.38184e-07 9.38187e-07 -0.707108 -0.707105" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+          <geom pos="0.009 -0.0438 0.0169" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+          <geom contype="0" conaffinity="0" pos="0.009 -0.0438 0.0169" quat="0.707105 0.707108 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+          <geom pos="0 -0.0361 0.0016" quat="0.499998 -0.5 -0.500002 0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+          <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0016" quat="0.499998 -0.5 -0.500002 0.5" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+          <geom pos="0 -0.0361 0.0065" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_f_dummy"/>
+          <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0065" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_f_dummy"/>
+          <geom pos="0 -0.0361 0.0261" quat="0.707105 0 0 -0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+          <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0261" quat="0.707105 0 0 -0.707108" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+          <geom pos="0 -0.0361 0.0029" quat="0.499998 -0.5 -0.500002 0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_dc15_a01_horn_dummy"/>
+          <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0029" quat="0.499998 -0.5 -0.500002 0.5" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_dc15_a01_horn_dummy"/>
+          <body name="finger_tip_bone_3" pos="0 -0.0361 0" quat="1 0 0 -1e-12">
+            <inertial pos="1.97946e-08 -0.0194136 0.0144998" quat="0.707122 0.707091 3.62208e-06 -8.68445e-07" mass="0.00513092" diaginertia="1.72811e-06 1.26369e-06 7.80737e-07"/>
+            <joint damping="0.1" armature="0.01" name="unitB-DIP" range="-0.5 1.958" actuatorfrcrange="-0.95 0.95"/>
+            <geom pos="0 -0.014 0.0145" quat="1.32679e-06 -1 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_hinge_1"/>
+            <geom pos="0 -0.014 0.0145" quat="1.32679e-06 -1 0 0" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_hinge_1"/>
+            <geom pos="0.0095 -0.017 0.031" quat="1.32679e-06 0 0 -1" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.921569 0.921569 0.921569 1" density="0" mesh="finger_tip_bone" friction="10.0 0.05 0.01" condim="4" solref="0.0005 1" solimp="0.999 0.9999 0.0001"/>
+            <geom pos="0.0095 -0.017 0.031" quat="1.32679e-06 0 0 -1" type="mesh" rgba="0.921569 0.921569 0.921569 1" mesh="finger_tip_bone" friction="10.0 0.05 0.01" condim="4" solref="0.0005 1" solimp="0.999 0.9999 0.0001"/>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="dc15_a01_hinge_1_4" pos="0.0185991 0.102606 0.114611" quat="0.499998 0.5 -0.500002 -0.5">
+      <inertial pos="-0.0229371 0.0397568 0.01469" quat="0.364916 0.627809 -0.324257 0.606259" mass="0.027818" diaginertia="9.8249e-06 9.30923e-06 3.30777e-06"/>
+      <joint damping="0.1" armature="0.01" name="unitD-MCP-FLX" range="-0.2268 2.2" actuatorfrcrange="-0.95 0.95"/>
+      <geom pos="0 0.014 0.0145" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_hinge_1"/>
+      <geom contype="0" conaffinity="0" pos="0 0.014 0.0145" quat="1 0 0 0" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_hinge_1"/>
+      <geom pos="0.000346084 0.017 0.0143151" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.701961 0.701961 0.701961 1" density="0" mesh="mcp_bracket"/>
+      <geom contype="0" conaffinity="0" pos="0.000346084 0.017 0.0143151" quat="1 0 0 0" type="mesh" rgba="0.701961 0.701961 0.701961 1" mesh="mcp_bracket"/>
+      <geom pos="-0.0265 0.0286 0.0145" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_adaptor_1"/>
+      <geom contype="0" conaffinity="0" pos="-0.0265 0.0286 0.0145" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_adaptor_1"/>
+      <geom pos="-0.043 0.0235 0.0055" quat="0.707105 0 -0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.498039 0.498039 0.498039 1" density="0" mesh="cable_spacer"/>
+      <geom contype="0" conaffinity="0" pos="-0.043 0.0235 0.0055" quat="0.707105 0 -0.707108 0" type="mesh" rgba="0.498039 0.498039 0.498039 1" mesh="cable_spacer"/>
+      <geom pos="-0.0361 0.0306 0.0145" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_dc15_a01_led_cap2_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.0361 0.0306 0.0145" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_dc15_a01_led_cap2_dummy"/>
+      <geom pos="-0.0185 0.0381 0.0145" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_case_m_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.0185 0.0381 0.0145" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_case_m_dummy"/>
+      <geom pos="-0.038 0.0381 0.0145" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_b_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.038 0.0381 0.0145" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_b_dummy"/>
+      <geom pos="-0.0408 0.0381 0.0145" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_idle_cap_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.0408 0.0381 0.0145" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_idle_cap_dummy"/>
+      <geom pos="-0.0392 0.0381 0.0145" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+      <geom contype="0" conaffinity="0" pos="-0.0392 0.0381 0.0145" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+      <geom pos="-0.0289 0.0471 0.0068" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+      <geom contype="0" conaffinity="0" pos="-0.0289 0.0471 0.0068" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+      <geom pos="-0.0289 0.0471 0.0222" quat="0.707105 0 0 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+      <geom contype="0" conaffinity="0" pos="-0.0289 0.0471 0.0222" quat="0.707105 0 0 0.707108" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+      <geom pos="-0.0136 0.0381 0.0145" quat="0.499998 0.5 0.5 -0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+      <geom contype="0" conaffinity="0" pos="-0.0136 0.0381 0.0145" quat="0.499998 0.5 0.5 -0.500002" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+      <geom pos="-0.0185 0.0381 0.0145" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_f_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.0185 0.0381 0.0145" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_f_dummy"/>
+      <geom pos="-0.0381 0.0381 0.0145" quat="0.707105 0 -0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.0381 0.0381 0.0145" quat="0.707105 0 -0.707108 0" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+      <geom pos="-0.0149 0.0381 0.0145" quat="0.499998 0.5 0.5 -0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_dc15_a01_horn_dummy"/>
+      <geom contype="0" conaffinity="0" pos="-0.0149 0.0381 0.0145" quat="0.499998 0.5 0.5 -0.500002" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_dc15_a01_horn_dummy"/>
+      <body name="dc15_a01_dummy_assy_idle_asm_4" pos="-0.012 0.0381 0.0145" quat="0.500146 0.499852 -0.50015 -0.499852">
+        <inertial pos="-0.00807161 -0.00021233 -0.0129864" quat="0.00300962 0.706559 -0.00212652 0.707645" mass="0.023" diaginertia="3.32782e-06 2.84301e-06 1.86347e-06"/>
+        <joint damping="0.1" armature="0.01" name="unitD-MCP-ABD" range="-1.458 1.458" actuatorfrcrange="-0.95 0.95"/>
+        <geom pos="-0.0075 0 -0.003" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_adaptor_2"/>
+        <geom contype="0" conaffinity="0" pos="-0.0075 0 -0.003" quat="0.707105 0.707108 0 0" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_adaptor_2"/>
+        <geom pos="-0.0225 0.0096 -0.013" quat="0.499998 -0.5 0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_dc15_a01_led_cap2_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.0225 0.0096 -0.013" quat="0.499998 -0.5 0.5 0.500002" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_dc15_a01_led_cap2_dummy"/>
+        <geom pos="-0.015 -0.008 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_case_m_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.015 -0.008 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_case_m_dummy"/>
+        <geom pos="-0.015 0.0115 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_b_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.015 0.0115 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_b_dummy"/>
+        <geom pos="-0.015 0.0143 -0.013" quat="0.707105 0 -0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_idle_cap_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.015 0.0143 -0.013" quat="0.707105 0 -0.707108 0" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_idle_cap_dummy"/>
+        <geom pos="-0.015 0.0127 -0.013" quat="0.707105 0 -0.707108 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+        <geom contype="0" conaffinity="0" pos="-0.015 0.0127 -0.013" quat="0.707105 0 -0.707108 0" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+        <geom pos="-0.006 0.0024 -0.0207" quat="1.76037e-12 -1.32679e-06 1 -1.32679e-06" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+        <geom contype="0" conaffinity="0" pos="-0.006 0.0024 -0.0207" quat="1.76037e-12 -1.32679e-06 1 -1.32679e-06" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+        <geom pos="-0.006 0.0024 -0.0053" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+        <geom contype="0" conaffinity="0" pos="-0.006 0.0024 -0.0053" quat="1 0 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+        <geom pos="-0.015 -0.0129 -0.013" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+        <geom contype="0" conaffinity="0" pos="-0.015 -0.0129 -0.013" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+        <geom pos="-0.015 -0.008 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_f_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.015 -0.008 -0.013" quat="0.499998 0.5 -0.5 0.500002" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_f_dummy"/>
+        <geom pos="-0.015 0.0116 -0.013" quat="0.499998 -0.5 -0.5 -0.500002" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.015 0.0116 -0.013" quat="0.499998 -0.5 -0.5 -0.500002" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+        <geom pos="-0.015 -0.0116 -0.013" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_dc15_a01_horn_dummy"/>
+        <geom contype="0" conaffinity="0" pos="-0.015 -0.0116 -0.013" quat="9.38184e-07 -0.707105 9.38187e-07 0.707108" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_dc15_a01_horn_dummy"/>
+        <body name="dip_spacer_4" pos="-0.015 -0.0145 -0.013" quat="0.495326 -0.495323 -0.504634 -0.504631">
+          <inertial pos="0.00599825 -0.0327733 0.0143161" quat="0.322134 0.632496 -0.327415 0.623681" mass="0.0265667" diaginertia="5.21492e-06 4.93255e-06 3.79904e-06"/>
+          <joint damping="0.1" armature="0.01" name="unitD-PIP" range="-2 0.489" actuatorfrcrange="-0.95 0.95"/>
+          <geom pos="0 -0.014 0.0145" quat="1.32679e-06 1 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_hinge_1"/>
+          <geom contype="0" conaffinity="0" pos="0 -0.014 0.0145" quat="1.32679e-06 1 0 0" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_hinge_1"/>
+          <geom pos="-0.007 -0.017 -0.002" quat="1.32679e-06 1 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.921569 0.921569 0.921569 1" density="0" mesh="dip_spacer"/>
+          <geom contype="0" conaffinity="0" pos="-0.007 -0.017 -0.002" quat="1.32679e-06 1 0 0" type="mesh" rgba="0.921569 0.921569 0.921569 1" mesh="dip_spacer"/>
+          <geom pos="0.0075 -0.0261 0.0145" quat="1.76043e-12 -1.32679e-06 -1 1.32679e-06" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_adaptor_2"/>
+          <geom contype="0" conaffinity="0" pos="0.0075 -0.0261 0.0145" quat="1.76043e-12 -1.32679e-06 -1 1.32679e-06" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_adaptor_2"/>
+          <geom pos="-0.0075 -0.0361 0.0241" quat="0.707105 0 0 0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_dc15_a01_led_cap2_dummy"/>
+          <geom contype="0" conaffinity="0" pos="-0.0075 -0.0361 0.0241" quat="0.707105 0 0 0.707108" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_dc15_a01_led_cap2_dummy"/>
+          <geom pos="0 -0.0361 0.0065" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_case_m_dummy"/>
+          <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0065" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_case_m_dummy"/>
+          <geom pos="0 -0.0361 0.026" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_b_dummy"/>
+          <geom contype="0" conaffinity="0" pos="0 -0.0361 0.026" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_b_dummy"/>
+          <geom pos="0 -0.0361 0.0288" quat="0.499998 0.5 -0.500002 -0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.917647 0.917647 0.917647 1" density="0" mesh="motor_dc15_a01_idle_cap_dummy"/>
+          <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0288" quat="0.499998 0.5 -0.500002 -0.5" type="mesh" rgba="0.917647 0.917647 0.917647 1" mesh="motor_dc15_a01_idle_cap_dummy"/>
+          <geom pos="0 -0.0361 0.0272" quat="0.499998 0.5 -0.500002 -0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+          <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0272" quat="0.499998 0.5 -0.500002 -0.5" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+          <geom pos="0.009 -0.0284 0.0169" quat="9.38184e-07 9.38187e-07 -0.707108 -0.707105" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+          <geom contype="0" conaffinity="0" pos="0.009 -0.0284 0.0169" quat="9.38184e-07 9.38187e-07 -0.707108 -0.707105" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+          <geom pos="0.009 -0.0438 0.0169" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.901961 0.901961 0.901961 1" density="0" mesh="motor_b3b_eh"/>
+          <geom contype="0" conaffinity="0" pos="0.009 -0.0438 0.0169" quat="0.707105 0.707108 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="motor_b3b_eh"/>
+          <geom pos="0 -0.0361 0.0016" quat="0.499998 -0.5 -0.500002 0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_bts2_m2_6x8"/>
+          <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0016" quat="0.499998 -0.5 -0.500002 0.5" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_bts2_m2_6x8"/>
+          <geom pos="0 -0.0361 0.0065" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.647059 0.647059 0.647059 1" density="0" mesh="motor_dc15_a01_case_f_dummy"/>
+          <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0065" quat="9.38184e-07 0.707105 -0.707108 -9.38187e-07" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="motor_dc15_a01_case_f_dummy"/>
+          <geom pos="0 -0.0361 0.0261" quat="0.707105 0 0 -0.707108" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+          <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0261" quat="0.707105 0 0 -0.707108" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="motor_dc15_a01_horn_idle2_dummy"/>
+          <geom pos="0 -0.0361 0.0029" quat="0.499998 -0.5 -0.500002 0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.301961 0.301961 0.301961 1" density="0" mesh="motor_dc15_a01_horn_dummy"/>
+          <geom contype="0" conaffinity="0" pos="0 -0.0361 0.0029" quat="0.499998 -0.5 -0.500002 0.5" type="mesh" rgba="0.301961 0.301961 0.301961 1" mesh="motor_dc15_a01_horn_dummy"/>
+          <body name="finger_tip_bone_4" pos="0 -0.0361 0" quat="0.999992 0 0 0.00388557">
+            <inertial pos="1.97946e-08 -0.0194136 0.0144998" quat="0.707122 0.707091 3.62208e-06 -8.68445e-07" mass="0.00513092" diaginertia="1.72811e-06 1.26369e-06 7.80737e-07"/>
+            <joint damping="0.1" armature="0.01" name="unitD-DIP" range="-0.5 1.958" actuatorfrcrange="-0.95 0.95"/>
+            <geom pos="0.0095 -0.017 0.031" quat="1.32679e-06 0 0 -1" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.921569 0.921569 0.921569 1" density="0" mesh="finger_tip_bone" friction="10.0 0.05 0.01" condim="4" solref="0.0005 1" solimp="0.999 0.9999 0.0001"/>
+            <geom pos="0.0095 -0.017 0.031" quat="1.32679e-06 0 0 -1" type="mesh" rgba="0.921569 0.921569 0.921569 1" mesh="finger_tip_bone" friction="10.0 0.05 0.01" condim="4" solref="0.0005 1" solimp="0.999 0.9999 0.0001"/>
+            <geom pos="0 -0.014 0.0145" quat="1.32679e-06 -1 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.262745 0.282353 0.301961 1" density="0" mesh="dc15_a01_hinge_1"/>
+            <geom pos="0 -0.014 0.0145" quat="1.32679e-06 -1 0 0" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="dc15_a01_hinge_1"/>
+          </body>
+        </body>
+      </body>
+    </body>
+  </body>
+  </worldbody>
+  <actuator>
+    <motor name="m_unitA-MCP-FLX" joint="unitA-MCP-FLX" gear="1"/>
+    <motor name="m_unitA-MCP-ABD" joint="unitA-MCP-ABD" gear="1"/>
+    <motor name="m_unitA-PIP" joint="unitA-PIP" gear="1"/>
+    <motor name="m_unitA-DIP" joint="unitA-DIP" gear="1"/>
+    <motor name="m_unitB-MCP-FLX" joint="unitB-MCP-FLX" gear="1"/>
+    <motor name="m_unitB-MCP-ABD" joint="unitB-MCP-ABD" gear="1"/>
+    <motor name="m_unitB-PIP" joint="unitB-PIP" gear="1"/>
+    <motor name="m_unitB-DIP" joint="unitB-DIP" gear="1"/>
+    <motor name="m_unitC-MCP-FLX" joint="unitC-MCP-FLX" gear="1"/>
+    <motor name="m_unitC-MCP-ABD" joint="unitC-MCP-ABD" gear="1"/>
+    <motor name="m_unitC-PIP" joint="unitC-PIP" gear="1"/>
+    <motor name="m_unitC-DIP" joint="unitC-DIP" gear="1"/>
+    <motor name="m_unitD-MCP-FLX" joint="unitD-MCP-FLX" gear="1"/>
+    <motor name="m_unitD-MCP-ABD" joint="unitD-MCP-ABD" gear="1"/>
+    <motor name="m_unitD-PIP" joint="unitD-PIP" gear="1"/>
+    <motor name="m_unitD-DIP" joint="unitD-DIP" gear="1"/>
+  </actuator>
+  <keyframe>
+    <key name="stance1" qpos="0.000000 0.000000 0.210416 0.000000 1.000000 0.000000 0.000000 1.570800 0.000000 -1.400000 -0.200000 1.570800 0.000000 -1.400000 -0.200000 1.570800 0.000000 -1.400000 -0.200000 1.570800 0.000000 -1.400000 -0.200000"/>
+    <key name="stance2" qpos="0.000000 0.000000 0.222990 0.000000 1.000000 0.000000 0.000000 1.300000 0.000000 -1.600000 0.400000 1.300000 0.000000 -1.600000 0.400000 1.300000 0.000000 -1.600000 0.400000 1.300000 0.000000 -1.600000 0.400000"/>
+  </keyframe>
+</mujoco>
