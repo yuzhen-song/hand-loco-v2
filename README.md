@@ -16,6 +16,15 @@ encoder calibration path. See [SIM2REAL.md](SIM2REAL.md) for commands, evidence,
 a read-only device audit, and the remaining physical-validation requirements.
 There is no live robot motion executor and no claim of validated real walking.
 
+## Direction, terrain and jump exploration
+
+The CPU-only [locomotion experiments](LOCOMOTION_TASKS.md) add backward and sideways
+walking, inclined terrain, single low steps, and exploratory jump commands. Fifteen
+trials include all failures: backward/sideways and tested gentle slopes passed a
+narrow simulation screen; steps and jumps remain unsuccessful. A faster gait made
+limited progress on the tested 10-degree slope. The document includes exact results,
+reproduction commands, recorded-state video replay, and sim-to-real limitations.
+
 ## Highlights
 
 - Compiles the CAD URDF into a **free-base MuJoCo model** for locomotion, keeping only the
